@@ -1,0 +1,79 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: var(--btn-height);
+  padding: 0 24px 0 24px;
+
+  color: var(--color-secondary);
+  background-color: var(--color-transparent);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  width: auto;
+  white-space: nowrap;
+  min-width: fit-content;
+
+  border: var(--btn-border-default);
+  border-radius: var(--btn-border-radius);
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    color: var(--color-primary);
+    border: var(--btn-border-hover);
+  }
+}
+
+.btn.main span {
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 250ms ease;
+}
+
+.btn.main:hover span{
+  display: inline-block;
+  animation: centerToLeftLoop 2500ms linear infinite;
+}
+
+@keyframes centerToLeftLoop {
+  0% {
+    transform: translateX(0);
+  }
+
+  49.9% {
+    transform: translateX(-150%);
+  }
+
+  50% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.btn.secondary{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  &::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(/assets/icons/arrow_outward.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 100ms ease;
+  }
+
+  &:hover::after{
+    transform: translateX(5px) translateY(-3px);
+  }
+}

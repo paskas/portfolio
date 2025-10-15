@@ -1,0 +1,5 @@
+@if(external){
+<a href="href" class="link" [ngClass]="[variant]" target="_blank" rel="noopener noreferrer">{{label}}</a>
+}@else{
+<a class="link" [ngClass]="variant" [routerLink]="href"></a>
+}

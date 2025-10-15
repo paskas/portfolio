@@ -1,0 +1,6 @@
+<button class="btn" [ngClass]="[variant]" [disabled]="disabled" type="button">
+  <span>{{label}}</span>
+  @if (imgSrc) {
+  <img [src]="imgSrc" alt="imgage" />
+  }
+</button>
