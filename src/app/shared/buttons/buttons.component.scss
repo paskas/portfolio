@@ -19,6 +19,8 @@
   user-select: none;
   cursor: pointer;
   overflow: hidden;
+  line-height: 1;
+  will-change: transform;
 
   &:hover {
     color: var(--color-primary);
@@ -32,7 +34,7 @@
   transition: transform 250ms ease;
 }
 
-.btn.main:hover span{
+.btn.main:hover span {
   display: inline-block;
   animation: centerToLeftLoop 2500ms linear infinite;
 }
@@ -55,25 +57,22 @@
   }
 }
 
-.btn.secondary{
+.btn.secondary {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
 
-  &::after{
+  &::after {
     content: "";
     width: 20px;
     height: 20px;
-    background-image: url(/assets/icons/arrow_outward.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(/assets/icons/arrow_outward.svg) no-repeat center / contain;
     transition: transform 100ms ease;
   }
 
-  &:hover::after{
+  &:hover::after {
     transform: translateX(5px) translateY(-3px);
   }
 }

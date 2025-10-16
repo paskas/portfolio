@@ -1,11 +1,13 @@
 <header class="header-content">
-    <nav class="nav-container">
-      <app-language-switch></app-language-switch>
-      <app-link routerLink="" routerLinkActive="active"></app-link>
-      <app-link routerLink="" routerLinkActive="active"></app-link>
-      <app-link routerLink="" routerLinkActive="active"></app-link>
-    </nav>
-    <a href="" class="logo-link">
-      <img src="/assets/images/Logo.svg" alt="">
-    </a>
+  <nav>
+    <app-language-switch></app-language-switch>
+    <div class="menu">
+      <app-link label="About me" [isSection]="true" href="#aboutMe"></app-link>
+      <app-link label="Skills" [isSection]="true" href="#skills"></app-link>
+      <app-link label="Projects" [isSection]="true" href="#projects"></app-link>
+    </div>
+  </nav>
+  <a href="" class="logo-link">
+    <img src="/assets/images/Logo.svg" alt="">
+  </a>
 </header>

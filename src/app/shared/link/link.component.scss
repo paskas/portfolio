@@ -1,0 +1,53 @@
+.link {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-family: var(--font-fira-code);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-regular);
+
+  width: auto;
+  white-space: nowrap;
+  min-width: fit-content;
+  cursor: pointer;
+
+  transition: color 200ms ease;
+}
+
+.link.section::after {
+
+  content: "";
+  position: absolute;
+  top: 24px;
+  width: 8px;
+  height: 8px;
+  background: url("/assets/icons/radio_button_unchecked.svg") no-repeat center / contain;
+
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.link.section:hover{
+  color: var(--color-primary);
+}
+
+.link.section:hover::after{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.link.extern {
+  font-family: var(--font-karla);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}

@@ -1,5 +1,16 @@
-@if(external){
-<a href="href" class="link" [ngClass]="[variant]" target="_blank" rel="noopener noreferrer">{{label}}</a>
-}@else{
-<a class="link" [ngClass]="variant" [routerLink]="href"></a>
+@if (isExternal) {
+<!-- External link -->
+<a class="link" [ngClass]="variant" [href]="href" target="_blank" rel="noopener noreferrer">
+  {{ label }}
+</a>
+} @else if (isSection) {
+<!-- Internal link-->
+<a class="link" [ngClass]="variant" [href]="href">
+  {{ label }}
+</a>
+} @else {
+  <!-- Route link-->
+  <a class="link" [ngClass]="variant" [routerLink]="href" routerLinkActive="active">
+  {{ label }}
+</a>
 }

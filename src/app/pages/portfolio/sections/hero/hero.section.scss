@@ -11,7 +11,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 50%;                
+    left: 50%;
     transform: translateX(-50%);
     width: 100vw;
     height: 100%;
@@ -26,7 +26,21 @@
   align-items: center;
   flex-direction: column;
 
+  .hero-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   h2 {
     font-weight: var(--fw-regular);
+    margin-bottom: 12px;
   }
+}
+
+.hero-buttons{
+  display: flex;
+  gap: 48px;
+  margin-top: 40px;
 }
