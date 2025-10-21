@@ -1,11 +1,8 @@
 :host {
-  position: relative;
   width: 100%;
   min-height: 100dvh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 0;
 }
 
 .about-section {
@@ -14,6 +11,9 @@
   left: 0;
   width: 1240px;
   height: 708px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .info-media {

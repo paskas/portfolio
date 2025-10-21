@@ -1,16 +1,4 @@
 .layout-wrapper {
-  position: relative;
-  width: 100%;
-  min-height: 100dvh;
   background-color: var(--color-background);
   color: #FFFFFF;
-  overflow-x: hidden;
-}
-
-.layout-content {
-  width: min(100%, 1440px);
-  margin-inline: auto;
-  padding-inline: clamp(16px, 4vw, 32px);
-  display: flex;
-  flex-direction: column;
 }
