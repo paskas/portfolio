@@ -1,31 +1,6 @@
 <section class="about-section" id="aboutMe">
   <figure class="info-media">
-    <img src="" alt="IMAGE">
+    <img src="/assets/images/photo_hover.svg" alt="IMAGE">
   </figure>
-
-  <article class="info-box">
-    <h3>Who I Am</h3>
-    <div class="info-box_content">
-      <h2>About me</h2>
-      <p class="info-box_text">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-      </p>
-      <ul class="info-box_list">
-        <li><img src="" alt="">
-          <p>Where are you based? Would you be open to working remotely or potentially relocating?</p>
-        </li>
-        <li><img src="" alt="">
-          <p>Show that you are open-minded. Are you enthusiastic about learning new technologies and continually
-            improving your skills?</p>
-        </li>
-        <li><img src="" alt="">
-          <p>A brief description of your problem-solving approach.
-            Do you learn from each challenge as you search for the most efficient or elegant solution? You can include
-            some keywords like: analytical thinking, creativity, persistence and collaboration.</p>
-        </li>
-      </ul>
-    </div>
-  </article>
+  <app-info-box subtitle="Who I Am" title="About me" [text]="text" [infos]="infos"></app-info-box>
 </section>

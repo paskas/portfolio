@@ -1,0 +1,23 @@
+<article class="info-box">
+  <h3>{{subtitle}}</h3>
+  <div class="info-box_content">
+    <h2>{{title}}</h2>
+    @if (text) {
+    <p class="info-box_text">
+      {{text}}
+    </p>
+    }
+    @if (infos) {
+    <ul class="info-box_list">
+      @for (i of infos; track $index) {
+      <li>
+        @if (i.iconSrc) {
+        <img [src]="i.iconSrc"alt="">
+        }
+        <p>{{i.description}}</p>
+      </li>
+      }
+    </ul>
+    }
+  </div>
+</article>
