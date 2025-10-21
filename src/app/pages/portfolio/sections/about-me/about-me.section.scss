@@ -1,5 +1,31 @@
+:host {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
 .about-section {
-  // width: min(100%, 1240px);
-  // margin-inline: auto;
-  // padding-inline: clamp(16px, 4vw, 32px);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 1240px;
+  height: 708px;
+}
+
+.info-media {
+  position: absolute;
+  width: 568px;
+  height: 588px;
+}
+
+.info-box {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 568px;
+  height: 588px;
 }
