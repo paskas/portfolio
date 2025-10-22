@@ -1,8 +1,44 @@
 .skillset {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 72px;
-  padding-block: clamp(16px, 3vw, 32px);
+  width: 100%;
+  max-width: 632px;
 
-  .skill-card {}
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 72px;
+    padding-block: clamp(16px, 3vw, 48px);
+
+    li.skill-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      max-width: 98px;
+      gap: 8px;
+    }
+
+    img {
+      object-fit: contain;
+      width: 60px;
+      height: 60px;
+      transition: 200ms ease;
+    }
+
+    span {
+      font-family: var(--font-fira-code);
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-regular);
+      color: var(--color-secondary);
+      line-height: 1.2;
+      letter-spacing: -0.03rem;
+      text-align: center;
+    }
+  }
+}
+
+.skill-card img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .15);
 }
