@@ -1,0 +1,8 @@
+.skillset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+  padding-block: clamp(16px, 3vw, 32px);
+
+  .skill-card {}
+}

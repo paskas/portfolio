@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ABOUT_INFOS } from '../../content/info.content';
-import { Info } from '../../content/content.types';
+import type { Info } from '../../content/content.types';
 
 @Component({
   selector: 'app-info-box',

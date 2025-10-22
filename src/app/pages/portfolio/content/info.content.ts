@@ -1,4 +1,4 @@
-import { Info } from '../content/content.types';
+import type{ Info } from '../content/content.types';
 
 export const ABOUT_TEXT =
   "Hey there, I'm Pascal! Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?";

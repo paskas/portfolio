@@ -1,1 +1,10 @@
-<p>skills works!</p>
+<article class="skillset">
+  <ul >
+    @for (skill of skillsList; track trackById($index, skill)) {
+    <li class="skill-card">
+      <img ngSrc="{{ skill.iconSrc }}" alt="{{ skill.label }}" width="64" height="64" />
+      <span>{{ skill.label }}</span>
+    </li>
+    }
+  </ul>
+</article>

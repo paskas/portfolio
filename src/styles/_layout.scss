@@ -1,5 +1,6 @@
 :root {
   --container-max: 1440px;
+  --container-min-height: 100dvh;
 }
 
 .content-wrapper {
@@ -7,6 +8,13 @@
   max-width: var(--container-max);
   margin-inline: auto;
   padding-inline: clamp(16px, 4vw, 96px);
+}
+
+.content-section {
+  width: 100%;
+  min-height: var(--container-min-height);
+  display: flex;
+  align-items: center;
 }
 
 .flex-center {
@@ -22,7 +30,7 @@
   flex-direction: column;
 }
 
-ul{
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
