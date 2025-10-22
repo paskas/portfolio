@@ -1,7 +1,7 @@
 import { Info } from '../content/content.types';
 
 export const ABOUT_TEXT =
-  "Hey there, I'm Lukas! Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?";
+  "Hey there, I'm Pascal! Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?";
 
 export const ABOUT_INFOS: Info[] = [
   { iconSrc: '/assets/icons/location_on.svg', description: 'Flexible in terms of working environments, I can work effectivley both on-site remotely.' },
