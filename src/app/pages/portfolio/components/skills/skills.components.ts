@@ -1,5 +1,5 @@
 import { Component, Input, signal } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage} from '@angular/common';
 import type { Skill, Tooltip } from '../../content/content.types';
 
 @Component({
@@ -13,9 +13,10 @@ export class SkillsComponents {
   @Input({ required: true }) set skills(value: Skill[]) {
     this._skills.set(Array.isArray(value) ? value : []);
   }
-  @Input({ required: true }) set tooltips(value: Tooltip[]) {
+  @Input() set tooltips(value: Tooltip[] | undefined) {
     this._tooltips.set(Array.isArray(value) ? value : []);
   }
+
 
   private _skills = signal<Skill[]>([]);
   private _tooltips = signal<Tooltip[]>([]);
@@ -27,6 +28,6 @@ export class SkillsComponents {
     return this._skills();
   }
   public getTooltipById(id: string): Tooltip | undefined {
-    return this._tooltips().find(t => t.id === id);
+    return this._tooltips().find(tool => tool.id === id);
   }
 }

@@ -1,23 +1,26 @@
 <article class="skillset">
-  <ul >
+  <ul>
     @for (skill of skillsList; track trackById($index, skill)) {
     <li class="skill-card">
-      <img ngSrc="{{ skill.iconSrc }}" alt="{{ skill.label }}" width="64" height="64" [id]="skill.id" />
-
+      <img ngSrc="{{ skill.iconSrc }}" alt="{{ skill.label }}" width="64" height="64"  />
       <span>{{ skill.label }}</span>
-
       @if (skill.id === 'growth') {
-        @let tip = getTooltipById('growth');
-        @if (tip) {
-          
-        }
-        <div class="skill-tooltip">
-          <div>
-            <img src="" alt="">
-            <img src="" alt="">
+      @let tip = getTooltipById('growth');
+      @if (tip) {
+      <div class="skill-tooltip">
+        <div class="tooltip-wrapper">
+          <p class="tooltip-text">{{ tip.text }}</p>
+          <div class="tooltip-frame">
+            @for (img of tip.images; track $index) {
+            <div class="tip-frame">
+              <img ngSrc="{{ img.iconSrc }}" width="28" height="28" alt="{{ img.label }}" />
+              <span>{{ img.label }}</span>
+            </div>
+            }
           </div>
-          <p></p>
         </div>
+      </div>
+      }
       }
     </li>
     }

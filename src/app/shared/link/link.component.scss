@@ -20,24 +20,22 @@
 }
 
 .link.section::after {
-
   content: "";
   position: absolute;
   top: 24px;
   width: 8px;
   height: 8px;
   background: url("/assets/icons/radio_button_unchecked.svg") no-repeat center / contain;
-
   opacity: 0;
   transform: translateY(4px);
   transition: opacity 200ms ease, transform 200ms ease;
 }
 
-.link.section:hover{
+.link.section:hover {
   color: var(--color-primary);
 }
 
-.link.section:hover::after{
+.link.section:hover::after {
   opacity: 1;
   transform: translateY(0);
 }

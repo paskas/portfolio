@@ -1,5 +1,4 @@
 .skillset {
-  position: relative;
   width: 100%;
   max-width: 632px;
 
@@ -11,6 +10,7 @@
     padding-block: clamp(16px, 3vw, 48px);
 
     li.skill-card {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -27,6 +27,12 @@
       transition: 200ms ease;
     }
 
+    .skill-card:hover {
+      img {
+        transform: translateY(-4px);
+      }
+    }
+
     span {
       font-family: var(--font-fira-code);
       font-size: var(--fs-sm);
@@ -35,16 +41,80 @@
       line-height: 1.2;
       letter-spacing: -0.03rem;
       text-align: center;
+      transition: color 200ms ease;
+    }
+  }
+}
+
+.skillset li.skill-card:hover {
+  .skill-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  span {
+    color: var(--color-primary);
+  }
+}
+
+.skill-tooltip {
+  position: absolute;
+  bottom: 90px;
+  right: -84px;
+  background: url('/assets/icons/skills/text-bubble.svg') no-repeat center/contain;
+  background-size: 100% 100%;
+  min-width: 188px;
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms ease, transform 300ms ease;
+  z-index: 10;
+
+  .tooltip-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .tooltip-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .tip-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    span {
+      font-family: var(--font-karla);
+      font-size: var(--fs-xxxs);
+      font-weight: var(--fw-regular);
+      color: var(--color-primary);
+      line-height: 1;
     }
   }
 
-  .skill-tooltip {
-    
+  .tooltip-text {
+    font-family: var(--font-karla);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-regular);
+    color: var(--color-primary);
+    line-height: 1;
+    text-align: center;
   }
 }
-
-.skill-card img:hover {
-  transform: translateY(-4px);
-}
-
-#growth:hover {}

@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { InfoBoxComponent } from '../../components/info-box/info-box.component';
-import { SKILL_QUESTION, SKILL_QUESTTEXT, SKILL_TEXT, SKILLS_DEFAULT } from '../../content/skills.content';
+import { SKILL_QUESTION, SKILL_QUESTTEXT, SKILL_TEXT, SKILL_TOOLTIP, SKILLS_DEFAULT } from '../../content/skills.content';
 import { SkillsComponents } from '../../components/skills/skills.components';
-// import { SHARED_UI } from '../../../../shared';
 
 @Component({
   selector: 'app-skills-section',
@@ -16,4 +15,5 @@ export class SkillsSection {
   skills = SKILLS_DEFAULT;
   question = SKILL_QUESTION;
   questionText = SKILL_QUESTTEXT;
+  tooltips = SKILL_TOOLTIP;
 }
