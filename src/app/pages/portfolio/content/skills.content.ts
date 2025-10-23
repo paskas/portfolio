@@ -1,4 +1,4 @@
-import type { Skill, Skillquestion } from '../content/content.types';
+import type { Skill, Skillquestion, Tooltip } from '../content/content.types';
 
 export const SKILLS_DEFAULT: Skill[] = [
   { id: 'html', label: 'HTML', iconSrc: 'assets/icons/skills/HTML.svg' },
@@ -22,3 +22,12 @@ export const SKILL_QUESTION: Skillquestion[] = [
 ];
 
 export const SKILL_QUESTTEXT = "Feel free to contact me. I look forward to expanding on my previous knowledge.";
+
+export const SKILL_TOOLTIP: Tooltip[] = [
+  {
+    id: 'growth', text: 'I love learning new frameworks', images: [
+      { iconSrc: 'assets/icons/skills/React.svg', label: 'React' },
+      { iconSrc: 'assets/icons/skills/Vue.svg', label: 'Vue.js' },
+    ]
+  }
+];
