@@ -1,18 +1,21 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ABOUT_INFOS } from '../../content/info.content';
-import type { Info } from '../../content/content.types';
+import type { Info, Skillquestion } from '../../content/content.types';
+import { SHARED_UI } from '../../../../shared';
 
 @Component({
   selector: 'app-info-box',
   standalone: true,
-  imports: [CommonModule],
+  imports: [...SHARED_UI, CommonModule],
   templateUrl: './info-box.component.html',
   styleUrl: './info-box.component.scss'
 })
 export class InfoBoxComponent {
   @Input() subtitle: string = '';
   @Input() title: string = '';
-  @Input() text: string = '';
-  @Input() infos: Info[] = ABOUT_INFOS;
+  @Input() aboutText: string = '';
+  @Input() skillText: string = '';
+  @Input() infos?: Info[];
+  @Input() question?: Skillquestion[] = [];
+  @Input() questionText: string = '';
 }

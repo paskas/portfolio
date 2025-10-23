@@ -8,3 +8,8 @@ export interface Skill {
   label:string;
   iconSrc:string;
 }
+
+export interface Skillquestion {
+  text: string;
+  highlight?: boolean;
+}

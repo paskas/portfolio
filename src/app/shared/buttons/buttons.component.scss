@@ -36,7 +36,7 @@
 
 .btn.main:hover span {
   display: inline-block;
-  animation: centerToLeftLoop 2500ms linear infinite;
+  animation: centerToLeftLoop 2000ms linear infinite;
 }
 
 @keyframes centerToLeftLoop {

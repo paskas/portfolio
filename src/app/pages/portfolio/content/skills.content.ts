@@ -1,4 +1,4 @@
-import type { Skill } from '../content/content.types';
+import type { Skill, Skillquestion } from '../content/content.types';
 
 export const SKILLS_DEFAULT: Skill[] = [
   { id: 'html', label: 'HTML', iconSrc: 'assets/icons/skills/HTML.svg' },
@@ -13,3 +13,12 @@ export const SKILLS_DEFAULT: Skill[] = [
   { id: 'scrum', label: 'Scrum', iconSrc: 'assets/icons/skills/Scrum.svg' },
   { id: 'growth', label: 'Growth mindset', iconSrc: 'assets/icons/skills/GrowthMindset.svg' },
 ];
+
+export const SKILL_TEXT = "A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.";
+
+export const SKILL_QUESTION: Skillquestion[] = [
+  { text: 'You need ', highlight: false },
+  { text: 'another skill?', highlight: true },
+];
+
+export const SKILL_QUESTTEXT = "Feel free to contact me. I look forward to expanding on my previous knowledge.";

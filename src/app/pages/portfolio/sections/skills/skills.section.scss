@@ -1,5 +1,4 @@
 :host {
-  // min-height: 695px;
   align-items: flex-start;
 }
 
@@ -10,4 +9,8 @@
   align-items: flex-start;
   justify-content: center;
   gap: 96px;
+
+  .skill-box{
+    max-width: 520px;
+  }
 }
