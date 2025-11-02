@@ -15,6 +15,7 @@ export class InfoBoxComponent {
   @Input() title: string = '';
   @Input() aboutText: string = '';
   @Input() skillText: string = '';
+  @Input() projectText: string = '';
   @Input() infos?: Info[];
   @Input() question?: Skillquestion[] = [];
   @Input() questionText: string = '';

@@ -19,3 +19,8 @@ export interface Skillquestion {
   text: string;
   highlight?: boolean;
 }
+
+export interface Projects {
+  label: string;
+  skill: string;
+}
