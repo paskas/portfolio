@@ -1,7 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import type { Info, Skillquestion } from '../../content/content.types';
 import { SHARED_UI } from '../../../../shared';
+
+
+export type InfoBoxVariant = 'default' | 'about' | 'skills' | 'projects' | 'contact';
 
 @Component({
   selector: 'app-info-box',
@@ -11,6 +14,8 @@ import { SHARED_UI } from '../../../../shared';
   styleUrl: './info-box.component.scss'
 })
 export class InfoBoxComponent {
+  @Input() variant: InfoBoxVariant = 'default';
+
   @Input() subtitle: string = '';
   @Input() title: string = '';
   @Input() aboutText: string = '';
@@ -18,4 +23,7 @@ export class InfoBoxComponent {
   @Input() infos?: Info[];
   @Input() question?: Skillquestion[] = [];
   @Input() questionText: string = '';
+
+  @HostBinding('class') get hostClass() { return `variant-${this.variant}`; }
+
 }

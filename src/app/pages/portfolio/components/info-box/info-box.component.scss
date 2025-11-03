@@ -68,30 +68,38 @@
   }
 }
 
-.info-box_question {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 16px;
+@mixin infox-box-variants {
+  :host(.variant-borderbox) .info-box {}
 
-  .question {
-    font-family: var(--font-fira-code);
-    font-size: var(--fs-lg);
-    font-weight: var(--fw-bold);
-    color: var(--color-secondary);
+  :host(.variant-skills) .info-box {
+    .info-box_question {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 16px;
 
-    .highlight {
-      color: var(--color-primary);
+      .question {
+        font-family: var(--font-fira-code);
+        font-size: var(--fs-lg);
+        font-weight: var(--fw-bold);
+        color: var(--color-secondary);
+
+        .highlight {
+          color: var(--color-primary);
+        }
+      }
+
+      .question-text {
+        font-family: var(--font-karla);
+        font-size: var(--fs-xs);
+        font-weight: var(--fw-regular);
+      }
+
+      .question-btn {
+        margin-top: 24px;
+      }
     }
   }
 
-  .question-text {
-    font-family: var(--font-karla);
-    font-size: var(--fs-xs);
-    font-weight: var(--fw-regular);
-  }
-
-  .question-btn {
-    margin-top: 24px;
-  }
+  :host(.variant-projects) .info-box {}
 }
