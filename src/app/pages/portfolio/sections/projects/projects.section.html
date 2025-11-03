@@ -1,4 +1,9 @@
 <section class="projects-section">
-  <app-info-box class="" subtitle="Portfolio" title="Featured Projects" [aboutText]="text"></app-info-box>
+  <app-info-box [variant]="'projects'" [content]="{
+      subtitle: 'Portfolio',
+      title: 'Featured Projects',
+      text: text
+    }">
+  </app-info-box>
   <app-project-card></app-project-card>
 </section>

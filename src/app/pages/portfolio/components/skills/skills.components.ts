@@ -1,5 +1,5 @@
 import { Component, Input, signal } from '@angular/core';
-import { NgOptimizedImage} from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import type { Skill, Tooltip } from '../../content/content.types';
 
 @Component({

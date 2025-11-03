@@ -1,0 +1,34 @@
+<article class="info-box">
+  <span class="info-subtitle">{{ content.subtitle }}</span>
+
+  <div class="info-box_content">
+    <h2>{{ content.title }}</h2>
+
+    @if (content.text) {
+    <p class="info-box_text">{{ content.text }}</p>
+    }
+
+    @if (content.question?.length && content.questionText) {
+    <div class="info-box_question">
+      <p class="question">
+        @for (part of content.question; track $index) {
+        <span [class.highlight]="part.highlight">{{ part.text }}</span>
+        }
+      </p>
+      <p class="question-text">{{ content.questionText }}</p>
+      <app-buttons class="question-btn" label="Let´s Talk"></app-buttons>
+    </div>
+    }
+
+    @if (content.infos?.length) {
+    <ul class="info-box_list">
+      @for (i of content.infos; track $index) {
+      <li>
+        @if (i.iconSrc) { <img [src]="i.iconSrc" alt=""> }
+        <p>{{ i.description }}</p>
+      </li>
+      }
+    </ul>
+    }
+  </div>
+</article>

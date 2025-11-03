@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { InfoBoxComponent } from "../../components/info-box/info-box.component";
+import { InfoBoxComponent } from "../../../../shared/info-box/info-box.component";
 import { ProjectCardComponent } from "../../components/project-card/project-card.component";
-import { ABOUT_INFOS, ABOUT_TEXT } from '../../content/info.content';
+import { ABOUT_INFOS, ABOUT_TEXT } from '../../content/about.content';
 
 @Component({
   selector: 'app-projects',

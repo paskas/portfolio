@@ -1,4 +1,13 @@
-export interface Info {
+export interface InfoBoxContent {
+  subtitle: string;
+  title: string;
+  text?: string;
+  question?: Skillquestion[];
+  questionText?: string;
+  infos?: About[];
+}
+
+export interface About {
   iconSrc?: string;
   description?: string;
 }

@@ -1,6 +1,11 @@
 <section class="skills-section">
-  <app-info-box [variant]="'skills'" subtitle="Technologies" title="Skill Set" [skillText]="text" [question]="question"
-    [questionText]="questionText">
+  <app-info-box class="skill-box" [variant]="'skills'" [content]="{
+      subtitle: 'Technologies',
+      title: 'Skill Set',
+      text: text,
+      question: question,
+      questionText: questionText
+    }">
   </app-info-box>
   <app-skills [skills]="skills" [tooltips]="tooltips"></app-skills>
 </section>

@@ -2,5 +2,7 @@
   <figure class="info-media">
     <img src="/assets/images/photo_hover.svg" alt="IMAGE">
   </figure>
-  <app-info-box class="info-about" subtitle="Who I Am" title="About me" [aboutText]="text" [infos]="infos"></app-info-box>
+  <app-info-box [variant]="'about'" class="info-about"
+    [content]="{ subtitle: 'Who I Am', title: 'About me', text: text, infos: infos }">
+  </app-info-box>
 </section>
