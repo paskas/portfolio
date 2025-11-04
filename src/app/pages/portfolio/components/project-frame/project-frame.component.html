@@ -9,5 +9,10 @@
     </li>
     }
   </ul>
+  @if (project.image) {
+  <figure class="project-image">
+    <img [src]="project.image" [alt]="project.label" loading="lazy">
+  </figure>
+  }
 </article>
 }
