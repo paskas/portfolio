@@ -10,9 +10,16 @@
   padding-inline: clamp(16px, 4vw, 96px);
 }
 
-.content-section {
+.content-section-min {
   width: 100%;
   min-height: var(--container-min-height);
+  display: flex;
+  align-items: center;
+}
+
+.content-section-max {
+  width: 100%;
+  max-height: var(--container-min-height);
   display: flex;
   align-items: center;
 }

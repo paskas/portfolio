@@ -31,5 +31,5 @@ export interface Skillquestion {
 
 export interface Projects {
   label: string;
-  skill: string;
+  skills: string[];
 }
