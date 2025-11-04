@@ -34,3 +34,8 @@ export interface Projects {
   skills: string[];
   image: string;
 }
+
+export interface Slidecard {
+  text: string;
+  author: string;
+}
