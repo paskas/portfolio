@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RefSlideComponent } from '../../components/ref-slide/ref-slide.component';
+import { REF_SLIDECARD } from '../../content/refereces.content';
 
 
 @Component({
@@ -9,5 +10,5 @@ import { RefSlideComponent } from '../../components/ref-slide/ref-slide.componen
   styleUrl: './references.section.scss'
 })
 export class ReferencesSection {
-
+  slideshow = REF_SLIDECARD;
 }

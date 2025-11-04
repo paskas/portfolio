@@ -10,4 +10,41 @@ import { Slidecard } from '../../content/content.types';
 })
 export class RefSlideComponent {
   @Input() slideshow: Slidecard[] = [];
+
+  private currentIndex: number = 0;
+  private getRelativeCardPosition(index: number, totalCards: number): number {
+    let relativePosition = (index - this.currentIndex) % totalCards;
+    if (relativePosition < 0) {
+      relativePosition += totalCards;
+    }
+    if (relativePosition > totalCards / 2) {
+      relativePosition -= totalCards;
+    }
+    return relativePosition;
+  }
+  private getCssClassForPosition(relativePosition: number): string {
+    if (relativePosition === 0) { return 'is-center'; }
+    if (relativePosition === -1) { return 'is-left'; }
+    if (relativePosition === 1) { return 'is-right'; }
+    if (relativePosition <= -2) { return 'is-off-left'; }
+    return 'is-off-right';
+  }
+
+  getClassFor(index: number): string {
+    const totalCards = this.slideshow.length;
+    if (totalCards === 0) { return ''; }
+    const relativePosition = this.getRelativeCardPosition(index, totalCards);
+    return this.getCssClassForPosition(relativePosition);
+  }
+
+  showNextCard(): void {
+    if (!this.slideshow.length) { return; }
+    this.currentIndex = (this.currentIndex + 1) % this.slideshow.length;
+  }
+
+  showPreviousCard(): void {
+    if (!this.slideshow.length) { return; }
+    this.currentIndex = (this.currentIndex - 1 + this.slideshow.length) % this.slideshow.length;
+  }
+
 }

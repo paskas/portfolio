@@ -1,0 +1,63 @@
+ :host{
+  position: absolute;    
+  inset: 0;
+ }
+ 
+ .slideshow {
+   position: relative;
+   width: 100%;
+   height: 100%;
+
+   .card {
+     position: absolute;
+     top: 0;
+     left: 50%;
+     width: 100%;
+     max-width: 358px;
+     height: 100%;
+     padding: 40px;
+
+     border-radius: 32px;
+     border: var(--btn-border);
+     background-color: var(--color-sec-background);
+
+     opacity: 0;
+     pointer-events: none;
+     transform: translateX(-50%) translateX(0);
+     transition: transform 200ms ease, opacity 200ms ease, filter 200ms ease;
+   }
+ }
+
+ /* Bewegung der Karten */
+ .is-center {
+   transform: translateX(-50%) translateX(0);
+   opacity: 1!important;
+   z-index: 3;
+   filter: none;
+   pointer-events: auto;
+ }
+
+ .is-left {
+   transform: translateX(-50%) translateX(-115%);
+   opacity: 0.6;
+   z-index: 2;
+ }
+
+ .is-right {
+   transform: translateX(-50%) translateX(115%);
+   opacity: 0.6;
+   z-index: 2;
+ }
+
+ /* Offscreen (für mehr als 3 Items) */
+ .is-off-left {
+   transform: translateX(-50%) translateX(-230%);
+   opacity: 0;
+   z-index: 1;
+ }
+
+ .is-off-right {
+   transform: translateX(-50%) translateX(230%);
+   opacity: 0;
+   z-index: 1;
+ }
