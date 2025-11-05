@@ -18,38 +18,13 @@
   }
 
   .fade-show {
-    // position: relative;
-    // width: 100%;
-    // min-height: 248px;
-    // overflow: hidden;
-
     position: relative;
-    /* Bühne für die Karten */
     width: 100%;
-    max-width: 700px;
+    max-width: 1440px;
     height: 280px;
-    /* fixe Sichtfläche */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-  }
-
-  .fade-frame {
-    width: 358px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    border-radius: 30px;
-    border: var(--btn-border);
-    background-color: var(--color-sec-background);
-    padding: 32px;
-  }
-
-  .team-partner {
-    display: flex;
-    align-items: center;
-    gap: 16px;
   }
 }

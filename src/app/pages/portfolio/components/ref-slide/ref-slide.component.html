@@ -1,8 +1,6 @@
-<div class="slideshow">
-  @for (card of slideshow; track $index) {
-  <article class="card {{ getClassFor($index) }}">
-    <p>“{{ card.text }}”</p>
-    <span>{{ card.author }}</span>
-  </article>
-  }
-</div>
+@for (card of slideshow; track $index) {
+<article class="slide-card {{ getClassFor($index) }}">
+  <p>“{{ card.text }}”</p>
+  <span>{{ card.author }}</span>
+</article>
+}

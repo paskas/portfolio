@@ -11,9 +11,13 @@ import { Component, Input } from '@angular/core';
 
 export class ButtonsComponent {
   @Input() label: string = '';
-  @Input() variant: 'main' | 'secondary' = 'main';
+  @Input() variant: 'main' | 'secondary' | 'arrow-left' | 'arrow-right' = 'main';
   @Input() type: 'button' | 'submit' | 'reset' = 'button';
   @Input() imgSrc?: string;
   @Input() disabled: boolean = false;
+
+  get isArrowVariant(): boolean {
+    return this.variant === 'arrow-left' || this.variant === 'arrow-right';
+  }
 }
 
