@@ -1,6 +1,10 @@
-@for (card of slideshow; track $index) {
-<article class="slide-card {{ getClassFor($index) }}">
-  <p>“{{ card.text }}”</p>
-  <span>{{ card.author }}</span>
-</article>
-}
+<div class="slideshow" [class.is-animating]="isAnimating">
+  @for (card of slideshow; track $index) {
+  <article class="slide-card {{ getClassFor($index) }}">
+    <p class="card-text">“{{ card.text }}”</p>
+    <div class="card-ref-partner">
+      <div class="divider"></div><span class="card-partner">{{ card.author }}</span>
+    </div>
+  </article>
+  }
+</div>

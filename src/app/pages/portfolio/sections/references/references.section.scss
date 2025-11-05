@@ -26,5 +26,26 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, var(--color-background) 0%, transparent 100%);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, var(--color-background) 0%, transparent 100%);
+    }
   }
 }

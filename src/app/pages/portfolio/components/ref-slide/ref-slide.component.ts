@@ -11,15 +11,14 @@ import { Slidecard } from '../../content/content.types';
 export class RefSlideComponent {
   @Input() slideshow: Slidecard[] = [];
 
+  protected isAnimating: boolean = false;
+
+  private readonly animationTime = 1000;
   private currentIndex: number = 0;
   private getRelativeCardPosition(index: number, totalCards: number): number {
     let relativePosition = (index - this.currentIndex) % totalCards;
-    if (relativePosition < 0) {
-      relativePosition += totalCards;
-    }
-    if (relativePosition > totalCards / 2) {
-      relativePosition -= totalCards;
-    }
+    if (relativePosition < 0) { relativePosition += totalCards; }
+    if (relativePosition > totalCards / 2) { relativePosition -= totalCards; }
     return relativePosition;
   }
   private getCssClassForPosition(relativePosition: number): string {
@@ -38,13 +37,16 @@ export class RefSlideComponent {
   }
 
   showNextCard(): void {
-    if (!this.slideshow.length) { return; }
+    if (!this.slideshow.length || this.isAnimating) { return; }
+    this.isAnimating = true;
     this.currentIndex = (this.currentIndex + 1) % this.slideshow.length;
+    setTimeout(() => this.isAnimating = false, this.animationTime);
   }
 
   showPreviousCard(): void {
-    if (!this.slideshow.length) { return; }
+    if (!this.slideshow.length || this.isAnimating) { return; }
+    this.isAnimating = true;
     this.currentIndex = (this.currentIndex - 1 + this.slideshow.length) % this.slideshow.length;
+    setTimeout(() => this.isAnimating = false, this.animationTime);
   }
-
 }

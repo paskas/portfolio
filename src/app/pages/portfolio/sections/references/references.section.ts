@@ -18,7 +18,7 @@ export class ReferencesSection {
   showNextCard(): void {
     this.refSlide.showNextCard();
   }
-  
+
   showPreviousCard(): void {
     this.refSlide.showPreviousCard();
   }
