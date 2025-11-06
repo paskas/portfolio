@@ -8,6 +8,19 @@
   align-items: flex-start;
   flex-direction: column;
 
+  &::before {
+    content: "";
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    width: 200px;
+    height: 85%;
+    background: #08463B;
+    filter: blur(80px);
+    opacity: 0.5;
+    z-index: 0;
+  }
+
   .info-media {
     position: absolute;
     width: 568px;

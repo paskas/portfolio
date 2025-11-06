@@ -3,13 +3,27 @@
 }
 
 .skills-section {
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: 96px;
   padding-bottom: 144px;
 
-  .skill-box{
+  &::before {
+    content: "";
+    position: absolute;
+    left: -100px;
+    top: 0;
+    width: 200px;
+    height: 90%;
+    background: #08463B;
+    filter: blur(80px);
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+  .skill-box {
     max-width: 520px;
   }
 }
