@@ -13,4 +13,3 @@ import { PROJECT_TEXT } from '../../content/projects.content';
 export class ProjectsSection {
   text = PROJECT_TEXT;
 }
-2222

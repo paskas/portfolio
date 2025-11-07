@@ -1,4 +1,4 @@
-import type { Skill, Skillquestion, Tooltip } from './content.types';
+import type { Skill, Question, Tooltip } from './content.types';
 
 export const SKILLS_DEFAULT: Skill[] = [
   { id: 'html', label: 'HTML', iconSrc: 'assets/icons/skills/HTML.svg' },
@@ -16,7 +16,7 @@ export const SKILLS_DEFAULT: Skill[] = [
 
 export const SKILL_TEXT = "A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.";
 
-export const SKILL_QUESTION: Skillquestion[] = [
+export const SKILL_QUESTION: Question[] = [
   { text: 'You need ', highlight: false },
   { text: 'another skill?', highlight: true },
 ];

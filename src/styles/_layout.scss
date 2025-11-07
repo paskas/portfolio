@@ -37,6 +37,13 @@
   flex-direction: column;
 }
 
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 h1,
 h2,
 h3,

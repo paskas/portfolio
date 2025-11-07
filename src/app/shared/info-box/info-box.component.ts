@@ -17,12 +17,5 @@ export class InfoBoxComponent {
   @Input({ required: true }) content!: InfoBoxContent;
   @Input() variant: InfoBoxVariant = 'default';
 
-  @Input() subtitle: string = '';
-  @Input() title: string = '';
-  @Input() aboutText: string = '';
-  @Input() projectText: string = '';
-  @Input() infos?: About[];
-
   @HostBinding('class') get hostClass() { return `variant-${this.variant}`; }
-
 }

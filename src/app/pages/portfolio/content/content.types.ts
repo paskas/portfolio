@@ -1,8 +1,9 @@
 export interface InfoBoxContent {
   subtitle: string;
   title: string;
+  secondaryTitle?: string; 
   text?: string;
-  question?: Skillquestion[];
+  question?: Question[];
   questionText?: string;
   infos?: About[];
 }
@@ -24,7 +25,7 @@ export interface Tooltip {
   images: { iconSrc: string; label?: string }[];
 }
 
-export interface Skillquestion {
+export interface Question {
   text: string;
   highlight?: boolean;
 }
