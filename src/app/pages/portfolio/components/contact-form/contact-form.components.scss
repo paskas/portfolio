@@ -1,0 +1,140 @@
+.contact-form {
+  width: 100%;
+  max-width: 616px;
+  gap: 40px;
+}
+
+.contact-labels {
+  flex-direction: column;
+
+  .label-frame {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 32px;
+    border-top: 1px solid color-mix(in srgb, var(--color-primary) 50%, transparent);
+
+    span {
+      font-family: var(--font-fira-code);
+      font-size: var(--fs-lg);
+      font-weight: var(--fw-medium);
+      color: var(--color-primary);
+      line-height: 1.2;
+      padding-bottom: 16px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: var(--font-karla);
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-regular);
+      color: color-mix(in srgb, var(--color-secondary) 80%, transparent);
+      line-height: 1.2;
+      resize: none;
+      overflow: hidden;
+      cursor: pointer;
+
+      &.ng-invalid.ng-touched:placeholder-shown::placeholder {
+        opacity: 0;
+
+      }
+    }
+  }
+
+  .error {
+    position: absolute;
+    width: 100%;
+    bottom: 12px;
+    font-family: var(--font-karla);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-regular);
+    color: color-mix(in srgb, var(--color-error) 80%, transparent);
+    line-height: 1.2;
+    transform: translateY(6px);
+    transition: transform 300ms ease;
+  }
+
+  input.ng-invalid.ng-touched:placeholder-shown+.error,
+  textarea.ng-invalid.ng-touched:placeholder-shown+.error {
+    position: absolute;
+    width: 100%;
+    bottom: 32px;
+    transform: translateY(0px);
+    transition: transform 300ms ease;
+  }
+
+  .privacy {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    gap: 5px;
+    padding-top: 40px;
+
+    span {
+      font-family: var(--font-karla);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-regular);
+      color: var(--color-secondary);
+      line-height: 1.2;
+    }
+
+    .checkbox-error {
+      position: absolute;
+      width: 100%;
+      bottom: 2px;
+      font-family: var(--font-karla);
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-regular);
+      color: color-mix(in srgb, var(--color-error) 80%, transparent);
+      line-height: 1.2;
+      transform: translateY(25px);
+    }
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--color-primary);
+    border-radius: 4px;
+    background-color: transparent;
+    transition: all 250ms ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
+      box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-primary) 10%, transparent);
+    }
+
+    &:checked {
+      background-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
+      box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-primary) 10%, transparent);
+
+      &::after {
+        content: "";
+        width: 9px;
+        height: 4px;
+        border-left: 2px solid var(--color-primary);
+        border-bottom: 2px solid var(--color-primary);
+        transform: rotate(-45deg);
+        transition: all 200ms ease;
+      }
+    }
+  }
+
+  .success {
+    color: var(--color-primary)
+  }
+}

@@ -120,3 +120,13 @@
   background-color: var(--color-primary);
   transform: translateX(-4px);
 }
+
+button.is-disabled,
+button:disabled {
+  pointer-events: none !important;
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+  color: color-mix(in srgb, var(--color-secondary) 80%, transparent);
+  opacity: 0.6;
+}

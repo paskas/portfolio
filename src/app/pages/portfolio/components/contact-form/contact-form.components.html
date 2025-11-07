@@ -1,0 +1,43 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()" novalidate class="contact-form flex-column">
+  <div class="contact-labels flex-start">
+    <label class="label-frame">
+      <span>What's your name?</span>
+      <input type="text" formControlName="name" placeholder="Your name goes here" />
+      @if (formGroup.controls['name'].touched && formGroup.controls['name'].invalid) {
+      <small class="error">Oops! it seems your name is missing</small>
+      }
+    </label>
+
+    <label class="label-frame">
+      <span>What's your email?</span>
+      <input type="email" formControlName="email" placeholder="youremail@email.com" inputmode="email" />
+      @if (formGroup.controls['email'].touched && formGroup.controls['email'].invalid) {
+      <small class="error">Hoppla! your email is required</small>
+      }
+    </label>
+
+    <label class="label-frame">
+      <span>How can I help you?</span>
+      <textarea formControlName="message" rows="1" placeholder="Hello Pascal, I am interested in..."></textarea>
+      @if (formGroup.controls['message'].touched && formGroup.controls['message'].invalid) {
+      <small class="error">What do you need to develop?</small>
+      }
+    </label>
+
+    <label class="privacy">
+      <input type="checkbox" formControlName="privacy" />
+      <span>I've read the <app-link target="_blank" label="privacy policy" variant="route"
+          href="/privacy-policy"></app-link>and agree to the processing of my data as outlined.</span>
+      @if (formGroup.controls['privacy'].touched && formGroup.controls['privacy'].invalid) {
+      <small class="checkbox-error">Please confirm.</small>
+      }
+    </label>
+  </div>
+
+  <app-buttons label="Say Hello ;)" type="submit" [disabled]="formGroup.invalid || isSending">
+    @if (isSending) { Senden… } @else { Send }
+  </app-buttons>
+
+  <!-- @if (sendSuccess) { <p class="success">Thank you! Your message has been sent.</p> }
+  @if (sendError) { <p class="error">{{ sendError }}</p> } -->
+</form>
