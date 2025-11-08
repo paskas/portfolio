@@ -26,7 +26,7 @@
 
     <label class="privacy">
       <input type="checkbox" formControlName="privacy" />
-      <span>I've read the <app-link target="_blank" label="privacy policy" variant="route"
+      <span>I've read the <app-link label="privacy policy" variant="contact" [isExternal]="true"
           href="/privacy-policy"></app-link>and agree to the processing of my data as outlined.</span>
       @if (formGroup.controls['privacy'].touched && formGroup.controls['privacy'].invalid) {
       <small class="checkbox-error">Please confirm.</small>

@@ -7,10 +7,13 @@
 <!-- Internal link-->
 <a class="link" [ngClass]="variant" [href]="href">
   {{ label }}
+  @if (iconSrc) {
+  <img [src]="iconSrc" [alt]="iconAlt" class="link-logo" />
+  }
 </a>
 } @else {
-  <!-- Route link-->
-  <a class="link" [ngClass]="variant" [routerLink]="href" routerLinkActive="active">
+<!-- Route link-->
+<a class="link" [ngClass]="variant" [routerLink]="href" target="_blank" routerLinkActive="active">
   {{ label }}
 </a>
 }

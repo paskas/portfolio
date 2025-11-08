@@ -1,12 +1,20 @@
-<footer>
-footer
-  <div></div>
-  <div></div>
-  <div>
-    <a href=""></a>
-    <a href=""></a>
-    <a href=""></a>
-    <a routerLink="" routerLinkActive="active"></a>
+<footer class="content-wrapper footer-content">
+  <div class="footer-info">
+    <div class="footer-logo">
+      <app-link [isSection]="true" variant="logo" href="#header" iconSrc="/assets/icons/logo.svg"
+        iconAlt="Footer Logo"></app-link>
+    </div>
+    <div class="footer-info-text">
+      <span>Web Developer</span>
+      <span>Marl Germany</span>
+    </div>
   </div>
-  
+  <span class="copyright">© Pascal Kasbeitzer 2025</span>
+  <div class="footer-links">
+    <app-link label="GitHub" variant="footer" [isExternal]="true" href="https://github.com/paskas"></app-link>
+    <app-link label="LinkedIn" variant="footer" [isExternal]="true"
+      href="https://www.linkedin.com/in/pascal-kasbeitzer-3638602bb/"></app-link>
+    <app-link label="Email" variant="footer" [isExternal]="true" href="#"></app-link>
+    <app-link label="Legal Notice" variant="footer" href="/impressum"></app-link>
+  </div>
 </footer>

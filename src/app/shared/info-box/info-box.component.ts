@@ -16,6 +16,6 @@ export type InfoBoxVariant = 'default' | 'about' | 'skills' | 'projects' | 'cont
 export class InfoBoxComponent {
   @Input({ required: true }) content!: InfoBoxContent;
   @Input() variant: InfoBoxVariant = 'default';
-
+  
   @HostBinding('class') get hostClass() { return `variant-${this.variant}`; }
 }
