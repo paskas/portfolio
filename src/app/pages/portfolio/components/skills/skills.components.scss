@@ -31,6 +31,10 @@
       img {
         transform: translateY(-4px);
       }
+
+      span {
+        color: var(--color-primary);
+      }
     }
 
     span {
@@ -46,16 +50,14 @@
   }
 }
 
-li.skill-card:hover {
-  .skill-tooltip {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  span {
-    color: var(--color-primary);
-  }
+.skill-card .skill-img:hover~.skill-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 10;
+  pointer-events: auto;
 }
+
+
 
 .skill-tooltip {
   position: absolute;
