@@ -1,6 +1,6 @@
 .link {
   position: relative;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -12,6 +12,7 @@
   white-space: nowrap;
   min-width: fit-content;
   cursor: pointer;
+  pointer-events: auto;
   transition: color 200ms ease;
 }
 
@@ -29,6 +30,63 @@
 
 .link.section:hover {
   color: var(--color-primary);
+
+  &:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lateral-mail {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-family: var(--font-karla);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-regular);
+  line-height: 1.2;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: color 200ms ease;
+
+  .link-label {
+    writing-mode: sideways-lr;
+    text-orientation: mixed;
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.lateral-icon {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-family: var(--font-karla);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-regular);
+  line-height: 1.2;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: color 200ms ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -12px;
+    width: 8px;
+    height: 8px;
+    background: url("/assets/icons/radio_button_unchecked.svg") no-repeat center / contain;
+    opacity: 0;
+    transform: translateX(4px);
+    transition: opacity 200ms ease, transform 200ms ease;
+  }
 
   &:hover::after {
     opacity: 1;

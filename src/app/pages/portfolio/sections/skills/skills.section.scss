@@ -3,11 +3,12 @@
 }
 
 .skills-section {
+  width: 100%;
+  max-width: 1248px;
   position: relative;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
-  gap: 96px;
+  justify-content: space-between;
   padding-bottom: 144px;
 
   &::before {

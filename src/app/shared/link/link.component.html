@@ -1,7 +1,10 @@
 @if (isExternal) {
 <!-- External link -->
 <a class="link" [ngClass]="variant" [href]="href" target="_blank" rel="noopener noreferrer">
-  {{ label }}
+    <span class="link-label">{{ label }}</span>
+  @if (iconSrc) {
+  <img [src]="iconSrc" [alt]="iconAlt" class="link-logo" />
+  }
 </a>
 } @else if (isSection) {
 <!-- Internal link-->

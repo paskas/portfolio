@@ -1,8 +1,13 @@
+:host {
+  padding: 144px 0 144px 0;
+}
+
 .about-section {
   position: relative;
   top: 0;
   left: 0;
-  width: 1240px;
+  width: 100%;
+  max-width: 1248px;
   height: 708px;
   display: flex;
   align-items: flex-start;

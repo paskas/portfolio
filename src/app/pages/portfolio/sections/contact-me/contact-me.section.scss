@@ -1,4 +1,12 @@
+:host {
+  max-width: 1248px;
+  padding: 144px 0 144px 0;
+}
+
 .contact-me-section {
-  gap: 64px;
+  width: 100%;
+  display: flex;
   align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
 }

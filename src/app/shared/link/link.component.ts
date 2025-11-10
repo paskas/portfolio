@@ -13,7 +13,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class LinkComponent {
   @Input() label: string = '';
   @Input() href: string = '';
-  @Input() variant: 'section' | 'logo' | 'contact' | 'footer' = 'section';
+  @Input() variant: 'section' | 'logo' | 'contact' | 'footer' | 'lateral-mail' | 'lateral-icon' = 'section';
   @Input() isExternal: boolean = false;
   @Input() isSection: boolean = false;
   @Input() iconSrc?: string;
