@@ -17,18 +17,32 @@
                 <app-link label="pascal.kasbeitzer@gmail.com" variant="lateral-mail" [isExternal]="true"
                     href="#"></app-link>
                 <div class="social-lateral">
-                    <app-link variant="lateral-icon" [isExternal]="true" href="#"
+                    <app-link variant="lateral-icon" [isExternal]="true" href="https://github.com/paskas"
                         iconSrc="/assets/icons/social/github.svg" iconHoverSrc="/assets/icons/social/github_hover.svg"
                         iconAlt="GitHub"></app-link>
-                    <app-link variant="lateral-icon" [isExternal]="true" href="#"
-                        iconSrc="/assets/icons/social/linkedin.svg" iconHoverSrc="/assets/icons/social/linkedin_hover.svg"
-                        iconAlt="GitHub"></app-link>
+                    <app-link variant="lateral-icon" [isExternal]="true"
+                        href="https://www.linkedin.com/in/pascal-kasbeitzer-3638602bb/"
+                        iconSrc="/assets/icons/social/linkedin.svg"
+                        iconHoverSrc="/assets/icons/social/linkedin_hover.svg" iconAlt="GitHub"></app-link>
                 </div>
                 <div class="straight-line"></div>
             </aside>
         </div>
-
-
     </div>
-    <div class="marquee-container"></div>
+    <div class="marquee">
+        <div class="marquee-content">
+            @for (item of marqueeContent; track $index) {
+            <div class="content">
+                <span>{{item.text}}</span>
+                <img [src]="item.icon" alt="point icon" />
+            </div>
+            }
+            @for (item of marqueeContent; track $index) {
+            <div class="content">
+                <span>{{item.text}}</span>
+                <img [src]="item.icon" alt="point icon" />
+            </div>
+            }
+        </div>
+    </div>
 </section>

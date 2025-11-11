@@ -40,3 +40,8 @@ export interface Slidecard {
   text: string;
   author: string;
 }
+
+export interface MarqueeItem {
+  text: string;
+  icon: string;
+}
