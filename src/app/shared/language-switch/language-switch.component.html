@@ -1,1 +1,9 @@
-<p>language-switch works!</p>
+<div class="language-switch" role="radiogroup" aria-label="Language switch">
+  <input id="lang-en" name="lang" type="radio" class="toggle" [checked]="currentLang === 'en'"
+    (change)="setLanguage('en')" />
+  <input id="lang-de" name="lang" type="radio" class="toggle" [checked]="currentLang === 'de'"
+    (change)="setLanguage('de')" />
+  <label for="lang-en" class="btn en">EN</label>
+  <label for="lang-de" class="btn de">DE</label>
+  <span class="slider" aria-hidden="true"></span>
+</div>

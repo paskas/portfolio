@@ -1,0 +1,88 @@
+.language-switch {
+  position: relative;
+  width: 84px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: var(--btn-border);
+  border-radius: var(--btn-border-radius);
+  z-index: 1;
+  overflow: visible;
+
+  &:hover {
+    border-color: var(--color-secondary);
+  }
+
+  .toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(100%);
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 11px;
+    position: relative;
+    color: var(--color-primary);
+    font-family: var(--font-fira-code);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-regular);
+    line-height: 1.2;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+    transition: color 120ms ease, opacity 200ms ease;
+  }
+
+  #lang-en:checked~.en {
+    color: var(--color-secondary);
+    opacity: 1;
+  }
+
+  #lang-de:checked~.de {
+    color: var(--color-secondary);
+    opacity: 1;
+  }
+
+  #lang-en:checked~.de {
+    opacity: 0.5;
+  }
+
+  #lang-de:checked~.en {
+    opacity: 0.5;
+  }
+
+  &:hover #lang-en:checked~.de {
+    opacity: 1;
+  }
+
+  &:hover #lang-de:checked~.en {
+    opacity: 1;
+  }
+
+  .slider {
+    position: absolute;
+    inset: -1px;
+    width: calc(50% + 1px);
+    height: calc(100% + 1px);
+    border-radius: var(--btn-border-radius);
+    background: var(--color-primary);
+    z-index: 0;
+    transform: translateX(0);
+    transition: transform 250ms ease;
+    pointer-events: none;
+  }
+
+  #lang-de:checked~.slider {
+    transform: translateX(100%);
+  }
+
+}
