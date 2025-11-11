@@ -18,4 +18,5 @@ export class LinkComponent {
   @Input() isSection: boolean = false;
   @Input() iconSrc?: string;
   @Input() iconAlt?: string;
+  @Input() iconHoverSrc?: string;
 }

@@ -1,9 +1,14 @@
 @if (isExternal) {
 <!-- External link -->
 <a class="link" [ngClass]="variant" [href]="href" target="_blank" rel="noopener noreferrer">
-    <span class="link-label">{{ label }}</span>
+  <span class="link-label">{{ label }}</span>
   @if (iconSrc) {
-  <img [src]="iconSrc" [alt]="iconAlt" class="link-logo" />
+  <span class="logo">
+    <img [src]="iconSrc" [alt]="iconAlt" class="link-logo base" />
+    @if (iconHoverSrc) {
+    <img [src]="iconHoverSrc" [alt]="iconAlt" class="link-logo hover" />
+    }
+  </span>
   }
 </a>
 } @else if (isSection) {
@@ -11,7 +16,12 @@
 <a class="link" [ngClass]="variant" [href]="href">
   {{ label }}
   @if (iconSrc) {
-  <img [src]="iconSrc" [alt]="iconAlt" class="link-logo" />
+  <span class="logo">
+    <img [src]="iconSrc" [alt]="iconAlt" class="link-logo base" />
+    @if (iconHoverSrc) {
+    <img [src]="iconHoverSrc" [alt]="iconAlt" class="link-logo hover" />
+    }
+  </span>
   }
 </a>
 } @else {
