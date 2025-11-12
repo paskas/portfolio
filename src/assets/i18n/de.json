@@ -3,5 +3,16 @@
     "about": "Über mich",
     "skills": "Fähigkeiten",
     "projects": "Projekte"
+  },
+  "hero": {
+    "h2": "Frontend Entwickler",
+    "button1": "Meine Arbeit überprüfen",
+    "button2": "Kontaktieren Sie mich",
+    "marquee": {
+      "role": "Frontend Entwickler",
+      "location": "Aus Marl",
+      "open": "Offen für Jobs",
+      "remote": "Remote verfügbar"
+    }
   }
 }

@@ -42,6 +42,6 @@ export interface Slidecard {
 }
 
 export interface MarqueeItem {
-  text: string;
+  textKey: string;
   icon: string;
 }

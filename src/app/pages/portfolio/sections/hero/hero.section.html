@@ -1,10 +1,10 @@
 <section class="hero-section">
     <div class="hero-title">
-        <h2>Frontend Developer</h2>
+        <h2>{{ 'hero.h2' | translate }}</h2>
         <h1>Pascal Kasbeitzer</h1>
         <div class="hero-buttons">
-            <app-buttons label="Check my work" type="button" (click)="scrollToContact('projects')"></app-buttons>
-            <app-buttons label="Contact me" type="button" (click)="scrollToContact('contact')"></app-buttons>
+            <app-buttons [label]="'hero.button1' | translate" type="button" (click)="scrollToContact('projects')"></app-buttons>
+            <app-buttons [label]="'hero.button2' | translate" type="button" (click)="scrollToContact('contact')"></app-buttons>
         </div>
     </div>
     <div class="hero-overlay">
@@ -33,13 +33,13 @@
         <div class="marquee-content">
             @for (item of marqueeContent; track $index) {
             <div class="content">
-                <span>{{item.text}}</span>
+                <span>{{ item.textKey | translate }}</span>
                 <img [src]="item.icon" alt="point icon" />
             </div>
             }
             @for (item of marqueeContent; track $index) {
             <div class="content">
-                <span>{{item.text}}</span>
+                <span>{{ item.textKey | translate }}</span>
                 <img [src]="item.icon" alt="point icon" />
             </div>
             }
