@@ -2,9 +2,9 @@
   <nav>
     <app-language-switch></app-language-switch>
     <div class="menu">
-      <app-link label="About me" [isSection]="true" href="#aboutMe"></app-link>
-      <app-link label="Skills" [isSection]="true" href="#skills"></app-link>
-      <app-link label="Projects" [isSection]="true" href="#projects"></app-link>
+      <app-link [label]="'nav.about' | translate" [isSection]="true" href="#aboutMe"></app-link>
+      <app-link [label]="'nav.skills' | translate" [isSection]="true" href="#skills"></app-link>
+      <app-link [label]="'nav.projects' | translate" [isSection]="true" href="#projects"></app-link>
     </div>
   </nav>
   <div class="header-logo">

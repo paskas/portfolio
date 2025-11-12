@@ -1,24 +1,27 @@
-import { CommonModule } from '@angular/common';
-import { Component, HostBinding } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-language-switch',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './language-switch.component.html',
   styleUrl: './language-switch.component.scss'
 })
 export class LanguageSwitchComponent {
-  currentLang: 'en' | 'de' = 'en';
+  private translate = inject(TranslateService);
+  currentLang: 'en' | 'de';
+
+  constructor() {
+    const saved = localStorage.getItem('language') as 'en' | 'de' | null;
+    const lang = saved ?? this.translate.getCurrentLang();
+    this.currentLang = (lang === 'de' || lang === 'en') ? lang : 'en';
+    this.translate.use(this.currentLang);
+  }
 
   setLanguage(lang: 'en' | 'de') {
     this.currentLang = lang;
-    console.log(
-      `Language switched to: ${lang === 'en' ? 'English' : 'German'}`
-    );
-  }
-
-  toggleLanguage() {
-    this.currentLang = this.currentLang === 'en' ? 'de' : 'en';
+    this.translate.use(lang);
+    localStorage.setItem('language', lang);
   }
 }
