@@ -14,5 +14,16 @@
       "open": "Offen für Jobs",
       "remote": "Remote verfügbar"
     }
+  },
+  "about": {
+    "subtitle": "Wer ich bin",
+    "title": "Über mich",
+    "text": "Hey, ich bin Pascal! Schreibe hier ein paar Informationen über dich im IT-Kontext. Warum bist du leidenschaftlich beim Programmieren? Was inspiriert dich, deine Fähigkeiten ständig zu verbessern?",
+    "info1": "Ich bin flexibel, was Arbeitsumgebungen betrifft – ich kann sowohl vor Ort als auch remote effektiv arbeiten.",
+    "info2": "Ich bin offen und immer auf der Suche nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten stetig zu erweitern.",
+    "info3": "Für mich ist Programmieren mehr als Code schreiben – es ist eine kreative Form des Problemlösens. Ich habe Freude daran, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln, um Ziele zu erreichen und Visionen zum Leben zu bringen."
+  },
+  "info": {
+    "letsTalk": "Lass uns reden"
   }
 }

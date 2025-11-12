@@ -14,5 +14,16 @@
       "open": "Open to work",
       "remote": "Available for remote work"
     }
+  },
+  "about": {
+    "subtitle": "Who I Am",
+    "title": "About Me",
+    "text": "Hey there, I'm Pascal! Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
+    "info1": "Flexible in terms of working environments, I can work effectively both on-site and remotely.",
+    "info2": "I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.",
+    "info3": "In my profession, programming isn't just about writing code – it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life."
+  },
+  "info": {
+    "letsTalk": "Let's Talk"
   }
 }

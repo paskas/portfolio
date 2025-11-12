@@ -17,7 +17,7 @@
       </p>
       @if (variant === 'skills' && content.questionText) {
       <p class="question-text">{{ content.questionText }}</p>
-      <app-buttons type="button" class="question-btn" label="Let´s Talk" (click)="scrollToContact('contact')"></app-buttons>
+      <app-buttons type="button" class="question-btn" [label]="'info.letsTalk' | translate" (click)="scrollToContact('contact')"></app-buttons>
       }
     </div>
     }
@@ -26,7 +26,7 @@
       @for (i of content.infos; track $index) {
       <li>
         @if (i.iconSrc) { <img [src]="i.iconSrc" alt=""> }
-        <p>{{ i.description }}</p>
+        <p>{{ i.descriptionKey | translate }}</p>
       </li>
       }
     </ul>

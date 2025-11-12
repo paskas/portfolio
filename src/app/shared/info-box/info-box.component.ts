@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import type { InfoBoxContent } from '../../pages/portfolio/content/content.types';
 import { SHARED_UI } from '..';
 import { NavigationService } from '../../core/services/navigation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 export type InfoBoxVariant = 'default' | 'about' | 'skills' | 'projects' | 'contact';
@@ -10,7 +11,7 @@ export type InfoBoxVariant = 'default' | 'about' | 'skills' | 'projects' | 'cont
 @Component({
   selector: 'app-info-box',
   standalone: true,
-  imports: [...SHARED_UI, CommonModule],
+  imports: [...SHARED_UI, CommonModule, TranslateModule],
   templateUrl: './info-box.component.html',
   styleUrl: './info-box.component.scss'
 })

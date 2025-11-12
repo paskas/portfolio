@@ -10,7 +10,7 @@ export interface InfoBoxContent {
 
 export interface About {
   iconSrc?: string;
-  description?: string;
+  descriptionKey: string;
 }
 
 export interface Skill {
