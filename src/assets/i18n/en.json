@@ -25,5 +25,20 @@
   },
   "info": {
     "letsTalk": "Let's Talk"
+  },
+  "skills": {
+    "subtitle": "Technologies",
+    "title": "Skill Set",
+    "text": "A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.",
+    "question": {
+      "part1": "You need ",
+      "part2": "another skill?"
+    },
+    "questionText": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "tooltip": {
+      "growth": {
+        "text": "I love learning new frameworks"
+      }
+    }
   }
 }

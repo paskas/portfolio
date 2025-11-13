@@ -1,11 +1,12 @@
 import { Component, Input, signal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import type { Skill, Tooltip } from '../../content/content.types';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, TranslateModule],
   templateUrl: './skills.components.html',
   styleUrl: './skills.components.scss'
 })

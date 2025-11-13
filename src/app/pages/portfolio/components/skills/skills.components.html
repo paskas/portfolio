@@ -9,7 +9,7 @@
       @if (tip) {
       <div class="skill-tooltip">
         <div class="tooltip-wrapper">
-          <p class="tooltip-text">{{ tip.text }}</p>
+          <p class="tooltip-text">{{ tip.text | translate  }}</p>
           <div class="tooltip-frame">
             @for (img of tip.images; track $index) {
             <div class="tip-frame">

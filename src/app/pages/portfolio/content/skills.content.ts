@@ -14,18 +14,14 @@ export const SKILLS_DEFAULT: Skill[] = [
   { id: 'growth', label: 'Growth mindset', iconSrc: 'assets/icons/skills/GrowthMindset.svg' },
 ];
 
-export const SKILL_TEXT = "A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.";
-
 export const SKILL_QUESTION: Question[] = [
-  { text: 'You need ', highlight: false },
-  { text: 'another skill?', highlight: true },
+  { text: 'skills.question.part1', highlight: false },
+  { text: 'skills.question.part2', highlight: true },
 ];
-
-export const SKILL_QUEST_TEXT = "Feel free to contact me. I look forward to expanding on my previous knowledge.";
 
 export const SKILL_TOOLTIP: Tooltip[] = [
   {
-    id: 'growth', text: 'I love learning new frameworks', images: [
+    id: 'growth', text: 'skills.tooltip.growth.text', images: [
       { iconSrc: 'assets/icons/skills/React.svg', label: 'React' },
       { iconSrc: 'assets/icons/skills/Vue.svg', label: 'Vue.js' },
     ]

@@ -12,11 +12,11 @@
     <div class="info-box_question">
       <p class="question">
         @for (part of content.question; track $index) {
-        <span [class.highlight]="part.highlight">{{ part.text }}</span>
+        <span [class.highlight]="part.highlight">{{ part.text | translate }}</span>
         }
       </p>
       @if (variant === 'skills' && content.questionText) {
-      <p class="question-text">{{ content.questionText }}</p>
+      <p class="question-text">{{ content.questionText | translate }}</p>
       <app-buttons type="button" class="question-btn" [label]="'info.letsTalk' | translate" (click)="scrollToContact('contact')"></app-buttons>
       }
     </div>

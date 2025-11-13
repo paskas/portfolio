@@ -25,5 +25,20 @@
   },
   "info": {
     "letsTalk": "Lass uns reden"
+  },
+  "skills": {
+    "subtitle": "Technologien",
+    "title": "Skill Set",
+    "text": "Eine kurze Einleitung zu deinen Skills. Hebe deine Erfahrung mit verschiedenen Frontend-Technologien hervor und betone deine Offenheit, neue Technologien zu lernen und dich anzupassen. Zeige, wie wichtig es dir ist, mit den schnellen Veränderungen in der Webentwicklung Schritt zu halten.",
+    "question": {
+      "part1": "Du brauchst ",
+      "part2": "einen weiteren Skill?"
+    },
+    "questionText": "Melde dich gerne – ich freue mich darauf, mein Wissen weiter auszubauen.",
+    "tooltip": {
+      "growth": {
+        "text": "Ich liebe es, neue Frameworks zu lernen"
+      }
+    }
   }
 }

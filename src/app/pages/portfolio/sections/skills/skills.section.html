@@ -1,10 +1,10 @@
 <section class="skills-section">
   <app-info-box class="skill-box" [variant]="'skills'" [content]="{
-      subtitle: 'Technologies',
-      title: 'Skill Set',
-      text: text,
+      subtitle: ('skills.subtitle' | translate),
+      title: ('skills.title' | translate),
+      text: ('skills.text' | translate),
       question: question,
-      questionText: questionText
+      questionText: ('skills.questionText' | translate)
     }">
   </app-info-box>
   <app-skills [skills]="skills" [tooltips]="tooltips"></app-skills>
