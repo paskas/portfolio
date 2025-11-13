@@ -14,7 +14,23 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ReferencesSection {
   slideshow = REF_SLIDECARD;
 
+  private isViewInitialized = false;
+
   @ViewChild(RefSlideComponent) refSlide!: RefSlideComponent;
+
+  ngAfterViewInit(): void {
+    this.isViewInitialized = true;
+  }
+
+  getProgress(): number {
+    const totalCards = this.slideshow.length;
+    if (!totalCards) { return 0; }
+    if (!this.isViewInitialized) { return 0; }
+    const currentIndex = this.refSlide.current;
+    const oneBasedIndex = currentIndex + 1;
+    const progressPercentage = (oneBasedIndex / totalCards) * 100;
+    return progressPercentage;
+  }
 
   showNextCard(): void {
     this.refSlide.showNextCard();

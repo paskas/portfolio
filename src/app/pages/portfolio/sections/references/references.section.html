@@ -5,11 +5,15 @@
     <app-ref-slide [slideshow]="slideshow"></app-ref-slide>
   </article>
 
-  <div class="flex-center">
-    <app-buttons variant="arrow-left" type="button" (click)="showPreviousCard()"></app-buttons>
-    <img src="/assets/icons/radio_button_checked.svg" alt="">
-    <img src="/assets/icons/radio_button_checked.svg" alt="">
-    <img src="/assets/icons/radio_button_checked.svg" alt="">
-    <app-buttons variant="arrow-right" type="button" (click)="showNextCard()"></app-buttons>
+  <div class="flex-center slider-status">
+    <app-buttons class="slide-arrow" variant="arrow-left" type="button" (click)="showPreviousCard()"></app-buttons>
+
+    <div class="status">
+      <div class="progress">
+        <div class="bar" [style.width.%]="getProgress()"></div>
+      </div>
+    </div>
+
+    <app-buttons class="slide-arrow" variant="arrow-right" type="button" (click)="showNextCard()"></app-buttons>
   </div>
 </section>

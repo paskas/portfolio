@@ -50,4 +50,8 @@ export class RefSlideComponent {
     this.currentIndex = (this.currentIndex - 1 + this.slideshow.length) % this.slideshow.length;
     setTimeout(() => this.isAnimating = false, this.animationTime);
   }
+
+  get current(): number {
+    return this.currentIndex;
+  }
 }

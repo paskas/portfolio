@@ -21,14 +21,8 @@
     color: var(--color-primary);
   }
 
-  .flex-center {
-    max-width: 184px;
-    gap: 20px;
-
-    .arrow {
-      width: 40px;
-      height: 40px;
-    }
+  .slider-status {
+    gap: 8px;
   }
 
   .fade-show {
@@ -61,5 +55,32 @@
       right: 0;
       background: linear-gradient(to left, var(--color-background) 0%, transparent 100%);
     }
+  }
+}
+
+.slide-arrow {
+  width: 40px;
+  height: 40px;
+}
+
+.status {
+  min-width: 110px;
+  display: flex;
+  align-items: center;
+
+  .progress {
+    position: relative;
+    flex: 1;
+    height: 8px;
+    border-radius: var(--btn-border-radius);
+    background-color: color-mix(in srgb, var(--color-primary) 10%, var(--color-transparent));
+    overflow: hidden;
+  }
+
+  .bar {
+    height: 100%;
+    width: 0;
+    background: var(--color-primary);
+    transition: width 1000ms ease-in-out;
   }
 }
