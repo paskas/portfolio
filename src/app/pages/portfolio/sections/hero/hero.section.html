@@ -29,7 +29,7 @@
             </aside>
         </div>
     </div>
-    <div class="marquee">
+    <div class="marquee" [class.is-ready]="marqueeReady">
         <div class="marquee-content">
             @for (item of marqueeContent; track $index) {
             <div class="content">

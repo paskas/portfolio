@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { SHARED_UI } from '../../../../shared';
 import { NavigationService } from '../../../../core/services/navigation.service';
 import { MARQUEE_CONTENT } from '../../content/marquee.content';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero',
@@ -14,7 +14,19 @@ import { TranslateModule } from '@ngx-translate/core';
 export class HeroSection {
   constructor(private navigation: NavigationService) { }
   marqueeContent = MARQUEE_CONTENT;
-  
+  marqueeReady = true;
+
+  ngAfterViewInit(): void {
+    this.restartMarquee();
+  }
+
+  private restartMarquee(): void {
+    this.marqueeReady = false;
+    setTimeout(() => {
+      this.marqueeReady = true;
+    }, 0);
+  }
+
   scrollToContact(sectionId: string): void {
     this.navigation.scrollTo(sectionId);
   }

@@ -142,6 +142,11 @@
   align-items: center;
   pointer-events: auto;
 
+  &.is-ready .marquee-content {
+    animation: marqueeMove 10000ms linear infinite;
+    animation-delay: 1ms;
+  }
+
   .marquee-content {
     display: flex;
     align-items: center;
@@ -149,8 +154,6 @@
     width: max-content;
     white-space: nowrap;
     will-change: transform;
-    animation: marqueeMove 10000ms linear infinite;
-    animation-delay: 1ms;
     gap: 0;
   }
 
