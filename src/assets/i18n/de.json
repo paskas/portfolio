@@ -1,27 +1,28 @@
 {
   "nav": {
     "about": "Über mich",
-    "skills": "Fähigkeiten",
+    "skills": "Skills",
     "projects": "Projekte"
   },
   "hero": {
     "h2": "Frontend Entwickler",
-    "button1": "Meine Arbeit überprüfen",
-    "button2": "Kontaktieren Sie mich",
+    "button1": "Meine Projekte",
+    "button2": "Kontakt",
     "marquee": {
       "role": "Frontend Entwickler",
       "location": "Aus Marl",
-      "open": "Offen für Jobs",
-      "remote": "Remote verfügbar"
+      "open": "Offen für neue Möglichkeiten",
+      "remote": "Remote verfügbar",
+      "mindset": "Lernbereit & lösungsorientiert"
     }
   },
   "about": {
     "subtitle": "Wer ich bin",
     "title": "Über mich",
-    "text": "Hey, ich bin Pascal! Schreibe hier ein paar Informationen über dich im IT-Kontext. Warum bist du leidenschaftlich beim Programmieren? Was inspiriert dich, deine Fähigkeiten ständig zu verbessern?",
-    "info1": "Ich bin flexibel, was Arbeitsumgebungen betrifft – ich kann sowohl vor Ort als auch remote effektiv arbeiten.",
-    "info2": "Ich bin offen und immer auf der Suche nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten stetig zu erweitern.",
-    "info3": "Für mich ist Programmieren mehr als Code schreiben – es ist eine kreative Form des Problemlösens. Ich habe Freude daran, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln, um Ziele zu erreichen und Visionen zum Leben zu bringen."
+    "text": "Hey, ich bin Pascal! Ich entwickle moderne, performante Webanwendungen und liebe es, Ideen in funktionierende Lösungen zu verwandeln. Programmieren bedeutet für mich nicht nur Code – sondern kreatives Problemlösen und stetiges Weiterentwickeln.",
+    "info1": "Ich bin flexibel und arbeite sowohl vor Ort als auch remote effizient und zuverlässig.",
+    "info2": "Ich bin offen, motiviert und immer bereit, neue Technologien und Herausforderungen anzugehen, um meine Skills kontinuierlich auszubauen.",
+    "info3": "Mir macht es Spaß, komplexe Anforderungen in klare, nutzerfreundliche Lösungen zu übersetzen und Projekte sauber, strukturiert und zielführend umzusetzen."
   },
   "info": {
     "letsTalk": "Lass uns reden"

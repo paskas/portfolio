@@ -6,22 +6,23 @@
   },
   "hero": {
     "h2": "Frontend Developer",
-    "button1": "Check my work",
-    "button2": "Contact me",
+    "button1": "My Projects",
+    "button2": "Contact",
     "marquee": {
       "role": "Frontend Developer",
       "location": "Based in Marl",
-      "open": "Open to work",
-      "remote": "Available for remote work"
+      "open": "Open to new opportunities",
+      "remote": "Available for remote work",
+      "mindset": "Eager to learn & solution-oriented"
     }
   },
   "about": {
-    "subtitle": "Who I Am",
-    "title": "About Me",
-    "text": "Hey there, I'm Pascal! Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
-    "info1": "Flexible in terms of working environments, I can work effectively both on-site and remotely.",
-    "info2": "I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.",
-    "info3": "In my profession, programming isn't just about writing code – it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life."
+    "subtitle": "Who I am",
+    "title": "About me",
+    "text": "Hey, I'm Pascal! I develop modern, high-performance web applications and enjoy turning ideas into clean and functional solutions. For me, programming is more than code – it's creative problem-solving and constant improvement.",
+    "info1": "I’m flexible and work efficiently and reliably both on-site and remotely.",
+    "info2": "I’m open-minded, motivated, and always ready to learn new technologies and take on new challenges to grow my skills.",
+    "info3": "I enjoy translating complex requirements into clear, user-friendly solutions and delivering projects in a structured, clean, and goal-oriented way."
   },
   "info": {
     "letsTalk": "Let's Talk"
