@@ -88,5 +88,41 @@
       "text": "Pascal contributed significantly to our project through his technical strength and solution oriented thinking. His reliability and teamwork were highly appreciated.",
       "author": "S. Kasbeitzer – Trusted Reference"
     }
+  },
+  "contact": {
+    "subtitle": "Contact me",
+    "title": "Let's get started together",
+    "text": "Tell me about your project, your product, or your idea—I will help you turn it into a clean, high-performance, and modern solution.",
+    "secondaryTitle": "Do you have a project in mind?",
+    "question": {
+      "part1": "Do you need a front-end developer? ",
+      "part2": "Let's talk about it."
+    },
+    "form": {
+      "name": {
+        "label": "What's your name?",
+        "placeholder": "Your name goes here",
+        "error": "Oops! It seems your name is missing."
+      },
+      "email": {
+        "label": "What's your email?",
+        "placeholder": "youremail@email.com",
+        "error": "Hoppla! Your email is required."
+      },
+      "message": {
+        "label": "How can I help you?",
+        "placeholder": "Hello Pascal, I am interested in...",
+        "error": "What do you need to develop?"
+      },
+      "privacy": {
+        "prefix": "I've read the ",
+        "link": "privacy policy",
+        "suffix": " and agree to the processing of my data as outlined.",
+        "error": "Please confirm."
+      },
+      "submitLabel": "Let's go 😎",
+      "success": "Thank you! Your message has been sent.",
+      "error": "Error sending. Please try again later."
+    }
   }
 }

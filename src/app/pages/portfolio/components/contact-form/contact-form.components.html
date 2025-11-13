@@ -1,43 +1,40 @@
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" novalidate class="contact-form flex-column">
   <div class="contact-labels flex-start">
     <label class="label-frame">
-      <span>What's your name?</span>
-      <input type="text" formControlName="name" placeholder="Your name goes here" />
+      <span>{{ 'contact.form.name.label' | translate }}</span>
+      <input type="text" formControlName="name" [placeholder]="'contact.form.name.placeholder' | translate" />
       @if (formGroup.controls['name'].touched && formGroup.controls['name'].invalid) {
-      <small class="error">Oops! it seems your name is missing</small>
+      <small class="error">{{ 'contact.form.name.error' | translate }}</small>
       }
     </label>
 
     <label class="label-frame">
-      <span>What's your email?</span>
-      <input type="email" formControlName="email" placeholder="youremail@email.com" inputmode="email" />
+      <span>{{ 'contact.form.email.label' | translate }}</span>
+      <input type="email" formControlName="email" [placeholder]="'contact.form.email.placeholder' | translate" inputmode="email" />
       @if (formGroup.controls['email'].touched && formGroup.controls['email'].invalid) {
-      <small class="error">Hoppla! your email is required</small>
+      <small class="error">{{ 'contact.form.email.error' | translate }}</small>
       }
     </label>
 
     <label class="label-frame">
-      <span>How can I help you?</span>
-      <textarea formControlName="message" rows="1" placeholder="Hello Pascal, I am interested in..."></textarea>
+      <span>{{ 'contact.form.message.label' | translate }}</span>
+      <textarea formControlName="message" rows="1" [placeholder]="'contact.form.message.placeholder' | translate"></textarea>
       @if (formGroup.controls['message'].touched && formGroup.controls['message'].invalid) {
-      <small class="error">What do you need to develop?</small>
+      <small class="error">{{ 'contact.form.message.error' | translate }}</small>
       }
     </label>
 
     <label class="privacy">
       <input type="checkbox" formControlName="privacy" />
-      <span>I've read the <app-link label="privacy policy" variant="contact" [isExternal]="true"
-          href="/privacy-policy"></app-link>and agree to the processing of my data as outlined.</span>
+      <span>{{ 'contact.form.privacy.prefix' | translate }}<app-link [label]="'contact.form.privacy.link' | translate" variant="contact" [isExternal]="true"
+          href="/privacy-policy"></app-link>{{ 'contact.form.privacy.suffix' | translate }}</span>
       @if (formGroup.controls['privacy'].touched && formGroup.controls['privacy'].invalid) {
-      <small class="checkbox-error">Please confirm.</small>
+      <small class="checkbox-error">{{ 'contact.form.privacy.error' | translate }}</small>
       }
     </label>
   </div>
 
-  <app-buttons label="Say Hello ;)" type="submit" [disabled]="formGroup.invalid || isSending">
-    @if (isSending) { Senden… } @else { Send }
-  </app-buttons>
-
-  <!-- @if (sendSuccess) { <p class="success">Thank you! Your message has been sent.</p> }
-  @if (sendError) { <p class="error">{{ sendError }}</p> } -->
+  <app-buttons [label]="'contact.form.submitLabel' | translate" type="submit" [disabled]="formGroup.invalid || isSending"></app-buttons>
+  @if (sendSuccess) { <p class="submit-success">{{ 'contact.form.sending' | translate }}</p> }
+  @if (sendError) { <p class="submit-error">{{ sendError | translate }}</p> }
 </form>

@@ -15,7 +15,7 @@ export const SKILLS_DEFAULT: Skill[] = [
 ];
 
 export const SKILL_QUESTION: Question[] = [
-  { text: 'skills.question.part1', highlight: false },
+  { text: 'skills.question.part1', highlight: false, paragraphBreak: false },
   { text: 'skills.question.part2', highlight: true },
 ];
 

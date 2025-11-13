@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MailContactService } from '../../../../core/services/mail-contact.service';
 import { SHARED_UI } from '../../../../shared';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [...SHARED_UI, ReactiveFormsModule],
+  imports: [...SHARED_UI, ReactiveFormsModule, TranslateModule],
   templateUrl: './contact-form.components.html',
   styleUrl: './contact-form.components.scss'
 })
@@ -43,7 +44,7 @@ export class ContactFormComponents {
       },
       error: () => {
         this.isSending = false;
-        this.sendError = 'Error sending. Please try again later.';
+        this.sendError = 'contact.form.error';
       }
     });
   }

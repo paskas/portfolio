@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import type { InfoBoxContent } from '../../pages/portfolio/content/content.types';
 import { SHARED_UI } from '..';
 import { NavigationService } from '../../core/services/navigation.service';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 export type InfoBoxVariant = 'default' | 'about' | 'skills' | 'projects' | 'contact';
@@ -16,11 +16,20 @@ export type InfoBoxVariant = 'default' | 'about' | 'skills' | 'projects' | 'cont
   styleUrl: './info-box.component.scss'
 })
 export class InfoBoxComponent {
-  constructor(private navigation: NavigationService) { }
+  constructor(private navigation: NavigationService,
+    private translate: TranslateService,) { }
   @Input({ required: true }) content!: InfoBoxContent;
   @Input() variant: InfoBoxVariant = 'default';
 
   @HostBinding('class') get hostClass() { return `variant-${this.variant}`; }
+
+  get currentLang(): string {
+    return (
+      this.translate.getCurrentLang() ||
+      this.translate.getFallbackLang() ||
+      'en'
+    );
+  }
 
   scrollToContact(sectionId: string): void {
     this.navigation.scrollTo(sectionId);

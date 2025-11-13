@@ -28,6 +28,7 @@ export interface Tooltip {
 export interface Question {
   text: string;
   highlight?: boolean;
+  paragraphBreak?: boolean;
 }
 
 export interface Projects {

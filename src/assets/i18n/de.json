@@ -88,5 +88,41 @@
       "text": "Pascal arbeitet äußerst strukturiert, präzise und lösungsfokussiert. Seine Teamfähigkeit und sein Engagement machen jede Zusammenarbeit effizient und angenehm.",
       "author": "S. Kasbeitzer – Vertrauensreferenz"
     }
+  },
+  "contact": {
+    "subtitle": "Kontaktiere mich",
+    "title": "Lass uns gemeinsam durchstarten",
+    "text": "Erzähl mir von deinem Projekt, deinem Produkt oder deiner Idee – ich unterstütze dich dabei, daraus eine saubere, performante und moderne Lösung zu entwickeln.",
+    "secondaryTitle": "Du hast ein Projekt im Kopf?",
+    "question": {
+      "part1": "Du brauchst einen Frontend-Entwickler? ",
+      "part2": "Lass uns darüber reden."
+    },
+    "form": {
+      "name": {
+        "label": "Wie heißt du?",
+        "placeholder": "Dein Name",
+        "error": "Ups! Dein Name fehlt noch."
+      },
+      "email": {
+        "label": "Wie lautet deine E-Mail?",
+        "placeholder": "deine@mailadresse.de",
+        "error": "Hoppla! Deine E-Mail wird benötigt."
+      },
+      "message": {
+        "label": "Wobei kann ich dir helfen?",
+        "placeholder": "Hallo Pascal, ich interessiere mich für...",
+        "error": "Was möchtest du entwickeln?"
+      },
+      "privacy": {
+        "prefix": "Ich habe die ",
+        "link": "Datenschutzerklärung",
+        "suffix": " gelesen und stimme der Verarbeitung meiner Daten zu.",
+        "error": "Bitte bestätige dies."
+      },
+      "submitLabel": "Los geht’s 😎",
+      "success": "Vielen Dank! Deine Nachricht wurde gesendet.",
+      "error": "Fehler beim Senden. Bitte versuche es später erneut."
+    }
   }
 }
