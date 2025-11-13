@@ -22,7 +22,7 @@
       @if (variant === 'skills' && content.questionText) {
       <p class="question-text">{{ content.questionText | translate }}</p>
       <app-buttons type="button" class="question-btn" [label]="'info.letsTalk' | translate"
-        (click)="scrollToContact('contact')"></app-buttons>
+        (buttonClick)="scrollToContact('contact')"></app-buttons>
       }
     </div>
     }

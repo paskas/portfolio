@@ -3,8 +3,8 @@
         <h2>{{ 'hero.h2' | translate }}</h2>
         <h1>Pascal Kasbeitzer</h1>
         <div class="hero-buttons">
-            <app-buttons [label]="'hero.button1' | translate" type="button" (click)="scrollToContact('projects')"></app-buttons>
-            <app-buttons [label]="'hero.button2' | translate" type="button" (click)="scrollToContact('contact')"></app-buttons>
+            <app-buttons [label]="'hero.button1' | translate" type="button" (buttonClick)="scrollToContact('projects')"></app-buttons>
+            <app-buttons [label]="'hero.button2' | translate" type="button" (buttonClick)="scrollToContact('contact')"></app-buttons>
         </div>
     </div>
     <div class="hero-overlay">

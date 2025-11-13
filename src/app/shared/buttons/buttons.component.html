@@ -1,5 +1,5 @@
-<button [ngClass]="isArrowVariant ? variant : ['btn', variant]"
-  [disabled]="disabled" [attr.type]="type">
+<button [ngClass]="isArrowVariant ? variant : ['btn', variant]" [disabled]="disabled" [attr.type]="type"
+  (click)="buttonClick.emit()">
   <span>{{label}}</span>
   @if (imgSrc) {
   <img [src]="imgSrc" alt="imgage" />

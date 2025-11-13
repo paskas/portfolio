@@ -29,25 +29,25 @@
   "skills": {
     "subtitle": "Technologien",
     "title": "Skill Set",
-    "text": "Eine kurze Einleitung zu deinen Skills. Hebe deine Erfahrung mit verschiedenen Frontend-Technologien hervor und betone deine Offenheit, neue Technologien zu lernen und dich anzupassen. Zeige, wie wichtig es dir ist, mit den schnellen Veränderungen in der Webentwicklung Schritt zu halten.",
+    "text": "Ein Überblick über die Technologien, mit denen ich arbeite. Ich lege großen Wert auf sauberen Code, moderne Frontend-Patterns und kontinuierliches Lernen – besonders in einer Branche, die sich ständig weiterentwickelt.",
     "question": {
       "part1": "Du brauchst ",
       "part2": "einen weiteren Skill?"
     },
-    "questionText": "Melde dich gerne – ich freue mich darauf, mein Wissen weiter auszubauen.",
+    "questionText": "Melde dich einfach – ich lerne schnell und arbeite mich gerne in neue Technologien ein.",
     "tooltip": {
       "growth": {
-        "text": "Ich liebe es, neue Frameworks zu lernen"
+        "text": "Ich lerne gerne neue Frameworks"
       }
     }
   },
   "projects": {
     "subtitle": "Portfolio",
     "title": "Ausgewählte Projekte",
-    "text": "Entdecken Sie hier eine Auswahl meiner Arbeiten – interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
+    "text": "Eine Auswahl meiner besten Projekte – entdecke meine Arbeit und Skills in Aktion."
   },
   "references": {
-    "headline": "Was Kolleginnen und Kollegen über mich sagen",
+    "headline": "Das sagen andere über mich",
     "Burdick": {
       "text": "Pascal hat sich als zuverlässiges und engagiertes Teammitglied erwiesen. Sein starkes technisches Wissen und sein lösungsorientiertes Denken haben maßgeblich zum Erfolg unseres Projekts beigetragen.",
       "author": "M. Burdick – Teampartner"
@@ -124,5 +124,9 @@
       "success": "Vielen Dank! Deine Nachricht wurde gesendet.",
       "error": "Fehler beim Senden. Bitte versuche es später erneut."
     }
+  },
+  "footer": {
+    "info1": "Webentwickler",
+    "info2": "Marl Deutschland"
   }
 }

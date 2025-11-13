@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-buttons',
@@ -15,6 +15,8 @@ export class ButtonsComponent {
   @Input() type: 'button' | 'submit' | 'reset' = 'button';
   @Input() imgSrc?: string;
   @Input() disabled: boolean = false;
+
+  @Output() buttonClick = new EventEmitter<void>();
 
   get isArrowVariant(): boolean {
     return this.variant === 'arrow-left' || this.variant === 'arrow-right';

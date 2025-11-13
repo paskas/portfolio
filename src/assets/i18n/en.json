@@ -29,25 +29,25 @@
   "skills": {
     "subtitle": "Technologies",
     "title": "Skill Set",
-    "text": "A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.",
+    "text": "An overview of the technologies I work with. I value clean code, modern frontend patterns, and continuous learning – especially in a field that evolves so quickly.",
     "question": {
       "part1": "You need ",
       "part2": "another skill?"
     },
-    "questionText": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "questionText": "Just reach out — I learn quickly and enjoy diving into new technologies.",
     "tooltip": {
       "growth": {
-        "text": "I love learning new frameworks"
+        "text": "I enjoy learning new frameworks"
       }
     }
   },
   "projects": {
     "subtitle": "Portfolio",
     "title": "Featured Projects",
-    "text": "Explore a selection of my work here - Interact with projects to see my skills in action."
+    "text": "A selection of my best projects – explore my work and skills in action."
   },
   "references": {
-    "headline": "What my colleagues say about me",
+    "headline": "What others say about me",
     "Burdick": {
       "text": "Pascal has proven to be a reliable and committed team member. His strong technical knowledge and problem-solving mindset contributed greatly to our project success.",
       "author": "M. Burdick – Team Partner"
@@ -124,5 +124,9 @@
       "success": "Thank you! Your message has been sent.",
       "error": "Error sending. Please try again later."
     }
+  },
+  "footer": {
+    "info1": "Web Developer",
+    "info2": "Marl Germany"
   }
 }
