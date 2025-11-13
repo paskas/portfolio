@@ -1,7 +1,7 @@
 export interface InfoBoxContent {
   subtitle: string;
   title: string;
-  secondaryTitle?: string; 
+  secondaryTitle?: string;
   text?: string;
   question?: Question[];
   questionText?: string;
@@ -37,8 +37,8 @@ export interface Projects {
 }
 
 export interface Slidecard {
-  text: string;
-  author: string;
+  textKey: string;
+  authorKey: string;
 }
 
 export interface MarqueeItem {

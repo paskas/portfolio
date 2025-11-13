@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Slidecard } from '../../content/content.types';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-ref-slide',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './ref-slide.component.html',
   styleUrl: './ref-slide.component.scss'
 })

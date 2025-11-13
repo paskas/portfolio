@@ -1,8 +1,8 @@
 <section class="projects-section">
   <app-info-box [variant]="'projects'" [content]="{
-      subtitle: 'Portfolio',
-      title: 'Featured Projects',
-      text: text,
+      subtitle: ('projects.subtitle' | translate),
+      title: ('projects.title' | translate),
+      text: ('projects.text' | translate),
     }">
   </app-info-box>
   <app-project-frame></app-project-frame>

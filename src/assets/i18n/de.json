@@ -40,5 +40,53 @@
         "text": "Ich liebe es, neue Frameworks zu lernen"
       }
     }
+  },
+  "projects": {
+    "subtitle": "Portfolio",
+    "title": "Ausgewählte Projekte",
+    "text": "Entdecken Sie hier eine Auswahl meiner Arbeiten – interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
+  },
+  "references": {
+    "headline": "Was Kolleginnen und Kollegen über mich sagen",
+    "Burdick": {
+      "text": "Pascal hat sich als zuverlässiges und engagiertes Teammitglied erwiesen. Sein starkes technisches Wissen und sein lösungsorientiertes Denken haben maßgeblich zum Erfolg unseres Projekts beigetragen.",
+      "author": "M. Burdick – Teampartner"
+    },
+    "Marrocu": {
+      "text": "Die Zusammenarbeit mit Pascal war eine großartige Erfahrung. Er zeigte durchgehend Verantwortungsbewusstsein, Fachkompetenz und eine proaktive Arbeitsweise.",
+      "author": "M. Marrocu – Teampartner"
+    },
+    "Heim": {
+      "text": "Pascal spielte eine zentrale Rolle für den Erfolg unseres Teams. Sein Engagement und seine Fähigkeit, qualitativ hochwertige Arbeit zu liefern, hatten einen klaren positiven Einfluss auf unsere Ergebnisse.",
+      "author": "S. Heim – Teampartner"
+    },
+    "Gilles": {
+      "text": "Pascal zeigte exzellente Zusammenarbeit und technische Kompetenz. Seine klare Kommunikation und seine Struktur halfen dem Team, stets fokussiert und effizient zu bleiben.",
+      "author": "S. Gilles – Teampartner"
+    },
+    "Cecilia": {
+      "text": "Die Zusammenarbeit mit Pascal war eine Freude. Er ist zuverlässig, detailorientiert und jederzeit bereit, andere zu unterstützen, um einen reibungslosen Projektablauf sicherzustellen.",
+      "author": "Cecilia – Teampartnerin"
+    },
+    "Rangosch": {
+      "text": "Pascal trug durch seine technische Stärke und sein lösungsorientiertes Denken erheblich zu unserem Projekt bei. Seine Zuverlässigkeit und Teamfähigkeit wurden sehr geschätzt.",
+      "author": "C. Rangosch – Vertrauensreferenz"
+    },
+    "Heidenreich": {
+      "text": "Pascal hat unser Projekt mit seiner technischen Expertise und seinem strukturierten Denken wesentlich vorangebracht. Seine Verlässlichkeit und seine Teamarbeit waren herausragend.",
+      "author": "N. Heidenreich – Vertrauensreferenz"
+    },
+    "Tappe": {
+      "text": "Pascal überzeugt durch technisches Know-how und lösungsorientiertes Arbeiten. Seine ruhige, effiziente Art macht ihn zu einem wertvollen Bestandteil jedes Teams.",
+      "author": "M. Tappe – Vertrauensreferenz"
+    },
+    "Rudnick": {
+      "text": "Durch seine technische Kompetenz und sein analytisches Denken hat Pascal unser Projekt stark unterstützt. Seine Zuverlässigkeit ist außergewöhnlich.",
+      "author": "S. Rudnick – Vertrauensreferenz"
+    },
+    "S-Kasbeitzer": {
+      "text": "Pascal arbeitet äußerst strukturiert, präzise und lösungsfokussiert. Seine Teamfähigkeit und sein Engagement machen jede Zusammenarbeit effizient und angenehm.",
+      "author": "S. Kasbeitzer – Vertrauensreferenz"
+    }
   }
 }

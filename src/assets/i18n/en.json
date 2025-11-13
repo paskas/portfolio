@@ -40,5 +40,53 @@
         "text": "I love learning new frameworks"
       }
     }
+  },
+  "projects": {
+    "subtitle": "Portfolio",
+    "title": "Featured Projects",
+    "text": "Explore a selection of my work here - Interact with projects to see my skills in action."
+  },
+  "references": {
+    "headline": "What my colleagues say about me",
+    "Burdick": {
+      "text": "Pascal has proven to be a reliable and committed team member. His strong technical knowledge and problem-solving mindset contributed greatly to our project success.",
+      "author": "M. Burdick – Team Partner"
+    },
+    "Marrocu": {
+      "text": "Working with Pascal was a great experience. He consistently demonstrated responsibility, technical expertise, and a proactive attitude throughout the project.",
+      "author": "M. Marrocu – Team Partner"
+    },
+    "Heim": {
+      "text": "Pascal played a key role in our team success. His ability to take initiative and deliver high quality work made a strong positive impact on our results.",
+      "author": "S. Heim – Team Partner"
+    },
+    "Gilles": {
+      "text": "Pascal showed excellent collaboration and technical competence. His dedication and clear communication helped the team stay organized and efficient.",
+      "author": "S. Gilles – Team Partner"
+    },
+    "Cecilia": {
+      "text": "It was a pleasure working with Pascal. He is reliable, detail oriented, and always willing to support others to ensure the project runs smoothly.",
+      "author": "Cecilia – Team Partner"
+    },
+    "Rangosch": {
+      "text": "Pascal contributed significantly to our project through his technical strength and solution oriented thinking. His reliability and teamwork were highly appreciated.",
+      "author": "C. Rangosch – Trusted Reference"
+    },
+    "Heidenreich": {
+      "text": "Pascal contributed significantly to our project through his technical strength and solution oriented thinking. His reliability and teamwork were highly appreciated.",
+      "author": "N. Heidenreich – Trusted Reference"
+    },
+    "Tappe": {
+      "text": "Pascal contributed significantly to our project through his technical strength and solution oriented thinking. His reliability and teamwork were highly appreciated.",
+      "author": "M. Tappe – Trusted Reference"
+    },
+    "Rudnick": {
+      "text": "Pascal contributed significantly to our project through his technical strength and solution oriented thinking. His reliability and teamwork were highly appreciated.",
+      "author": "S. Rudnick – Trusted Reference"
+    },
+    "S-Kasbeitzer": {
+      "text": "Pascal contributed significantly to our project through his technical strength and solution oriented thinking. His reliability and teamwork were highly appreciated.",
+      "author": "S. Kasbeitzer – Trusted Reference"
+    }
   }
 }

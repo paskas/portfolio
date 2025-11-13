@@ -2,11 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 import { RefSlideComponent } from '../../components/ref-slide/ref-slide.component';
 import { REF_SLIDECARD } from '../../content/refereces.content';
 import { SHARED_UI } from '../../../../shared';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-references',
-  imports: [...SHARED_UI, RefSlideComponent],
+  imports: [...SHARED_UI, RefSlideComponent, TranslateModule],
   templateUrl: './references.section.html',
   styleUrl: './references.section.scss'
 })
