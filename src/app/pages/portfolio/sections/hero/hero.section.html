@@ -3,8 +3,10 @@
         <h2>{{ 'hero.h2' | translate }}</h2>
         <h1>Pascal Kasbeitzer</h1>
         <div class="hero-buttons">
-            <app-buttons [label]="'hero.button1' | translate" type="button" (buttonClick)="scrollToContact('projects')"></app-buttons>
-            <app-buttons [label]="'hero.button2' | translate" type="button" (buttonClick)="scrollToContact('contact')"></app-buttons>
+            <app-buttons [label]="'hero.button1' | translate" type="button"
+                (buttonClick)="scrollToContact('projects')"></app-buttons>
+            <app-buttons [label]="'hero.button2' | translate" type="button"
+                (buttonClick)="scrollToContact('contact')"></app-buttons>
         </div>
     </div>
     <div class="hero-overlay">
@@ -15,7 +17,7 @@
             </aside>
             <aside class="right-lateral">
                 <app-link label="pascal.kasbeitzer@gmail.com" variant="lateral-mail" [isExternal]="true"
-                    href="#"></app-link>
+                    href="mailto:pascal.kasbeitzer@gmail.com"></app-link>
                 <div class="social-lateral">
                     <app-link variant="lateral-icon" [isExternal]="true" href="https://github.com/paskas"
                         iconSrc="/assets/icons/social/github.svg" iconHoverSrc="/assets/icons/social/github_hover.svg"
