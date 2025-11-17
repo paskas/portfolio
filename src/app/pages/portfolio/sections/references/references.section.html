@@ -1,19 +1,15 @@
 <section class="references-section flex-column">
   <h2>{{ 'references.headline' | translate }}</h2>
-
   <article class="fade-show">
     <app-ref-slide [slideshow]="slideshow"></app-ref-slide>
   </article>
-
   <div class="flex-center slider-status">
     <app-buttons class="slide-arrow" variant="arrow-left" type="button" (click)="showPreviousCard()"></app-buttons>
-
     <div class="status">
       <div class="progress">
         <div class="bar" [style.width.%]="getProgress()"></div>
       </div>
     </div>
-
     <app-buttons class="slide-arrow" variant="arrow-right" type="button" (click)="showNextCard()"></app-buttons>
   </div>
 </section>
