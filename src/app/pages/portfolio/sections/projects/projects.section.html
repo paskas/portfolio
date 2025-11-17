@@ -5,5 +5,7 @@
       text: ('projects.text' | translate),
     }">
   </app-info-box>
-  <app-project-frame></app-project-frame>
+  <app-project-frame (selectProject)="onSelectProject($event)"></app-project-frame>
+  <app-project-overlay [projectKey]="selectedProjectKey" [isOpen]="!!selectedProjectKey" (close)="closeOverlay()">
+  </app-project-overlay>
 </section>

@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { PROJECT_FRAME } from '../../content/projects.content';
 
 @Component({
@@ -9,4 +9,10 @@ import { PROJECT_FRAME } from '../../content/projects.content';
 })
 export class ProjectFrameComponent {
   projects = PROJECT_FRAME;
+
+  @Output() selectProject = new EventEmitter<string>();
+
+  onProjectClick(key: string): void {
+    this.selectProject.emit(key);
+  }
 }

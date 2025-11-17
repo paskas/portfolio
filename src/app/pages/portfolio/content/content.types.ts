@@ -32,6 +32,7 @@ export interface Question {
 }
 
 export interface Projects {
+  key: string;
   label: string;
   skills: string[];
   image: string;

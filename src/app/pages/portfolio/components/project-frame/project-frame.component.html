@@ -1,5 +1,5 @@
 @for (project of projects; track $index) {
-<article class="project-row">
+<article class="project-row" (click)="onProjectClick(project.key)">
   <h3>{{project.label}}</h3>
   <ul class="project-skills">
     @for (skill of project.skills; track $index) {

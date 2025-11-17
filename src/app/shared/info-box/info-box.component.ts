@@ -6,7 +6,7 @@ import { NavigationService } from '../../core/services/navigation.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
-export type InfoBoxVariant = 'default' | 'about' | 'skills' | 'projects' | 'contact';
+export type InfoBoxVariant = 'default' | 'about' | 'skills' | 'projects' | 'contact' | 'project-overlay';
 
 @Component({
   selector: 'app-info-box',
@@ -27,7 +27,7 @@ export class InfoBoxComponent {
     return (
       this.translate.getCurrentLang() ||
       this.translate.getFallbackLang() ||
-      'en'
+      'de'
     );
   }
 

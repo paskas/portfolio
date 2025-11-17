@@ -168,6 +168,57 @@
       padding-bottom: 16px;
     }
   }
+
+  :host(.variant-project-overlay) .info-box {
+    .info-box_content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .info-subtitle {
+      font-family: var(--font-karla);
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-display);
+      line-height: 100px;
+      letter-spacing: -2px;
+    }
+
+    h2 {
+      font-family: var(--font-karla);
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-hero);
+      color: var(--color-secondary);
+      padding-bottom: 40px;
+      line-height: 1;
+      letter-spacing: -3px;
+    }
+
+    .info-box_text {
+      padding-bottom: 20px;
+    }
+
+    .info-box_text,
+    .info-box_question {
+      width: 100%;
+      max-width: 480px;
+      font-family: var(--font-karla);
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-regular);
+      color: var(--color-secondary);
+      line-height: 1.2;
+    }
+
+    .issue-question {
+      font-family: var(--font-fira-code);
+      font-size: var(--fs-lg);
+      font-weight: var(--fw-bold);
+      color: var(--color-primary);
+      line-height: 1.2;
+      padding-bottom: 16px;
+    }
+  }
 }
 
 @include infox-box-variants;

@@ -2,7 +2,7 @@
   <span class="info-subtitle">{{ content.subtitle }}</span>
   <div class="info-box_content">
     <h2>{{ content.title }}</h2>
-    @if (variant === 'contact') {
+    @if (variant === 'contact' || variant === 'project-overlay') {
     <span class="issue-question">{{ content.secondaryTitle }}</span>
     }
     @if (content.text) {

@@ -45,7 +45,25 @@
   "projects": {
     "subtitle": "Portfolio",
     "title": "Featured Projects",
-    "text": "A selection of my best projects – explore my work and skills in action."
+    "text": "A selection of my best projects – explore my work and skills in action.",
+    "overlay": {
+      "secondaryTitle": "What is this project about?",
+      "join": {
+        "subtitle": "01",
+        "title": "JOIN",
+        "text": "A modern task-management tool that simplifies team collaboration. Tasks can be planned, prioritized, and structured – including a clear board view and intuitive drag-and-drop support."
+      },
+      "sharkie": {
+        "subtitle": "02",
+        "title": "Sharkie",
+        "text": "A browser-based 2D game with canvas graphics, animations, and multiple enemy types. A small arcade-style adventure that runs directly in the browser."
+      },
+      "pokemon": {
+        "subtitle": "03",
+        "title": "Pokédex",
+        "text": "An interactive application for browsing, filtering, and viewing Pokémon in detail. Perfect for quickly exploring types, attributes, and data of individual Pokémon."
+      }
+    }
   },
   "references": {
     "headline": "What others say about me",

@@ -1,0 +1,27 @@
+@if (isOpen && projectKey) {
+<div class="project-overlay-position">
+  <article class="project-overlay">
+    <app-buttons class="overlay-close" type="button" variant="close" imgSrc="/assets/icons/close-small.svg"
+      iconHoverSrc="/assets/icons/close-small-hover.svg" (click)="onClose()">
+    </app-buttons>
+    <div class="overlay-content">
+      <div class="overlay-info-btn">
+        <app-info-box [variant]="'project-overlay'" [content]="{
+      subtitle: ('projects.overlay.' + projectKey + '.subtitle' | translate),
+          title: ('projects.overlay.' + projectKey + '.title' | translate),
+          secondaryTitle: ('projects.overlay.secondaryTitle' | translate),
+          text: ('projects.overlay.' + projectKey + '.text' | translate)
+    }"></app-info-box>
+        <div class="overlay-btn">
+          <app-buttons label="GitHub" variant="secondary"></app-buttons>
+          <app-buttons label="Live Test" variant="secondary"></app-buttons>
+        </div>
+      </div>
+      <div class="overlay-skills"></div>
+      <img src="/assets/images/screenshot-Join.jpg" alt="">
+    </div>
+
+  </article>
+</div>
+
+}

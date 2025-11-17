@@ -9,7 +9,7 @@
   padding: 0;
 }
 
-html{
+html {
   font-size: 16px;
 }
 
@@ -32,4 +32,8 @@ html{
   background-color: #08463B;
   border-radius: 10px;
   border: 3px solid #1C1C1C;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
