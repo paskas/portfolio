@@ -19,7 +19,9 @@ export class ReferencesSection {
   @ViewChild(RefSlideComponent) refSlide!: RefSlideComponent;
 
   ngAfterViewInit(): void {
-    this.isViewInitialized = true;
+    setTimeout(() => {
+      this.isViewInitialized = true;
+    }, 0);
   }
 
   getProgress(): number {

@@ -14,14 +14,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class HeroSection {
   constructor(private navigation: NavigationService) { }
   marqueeContent = MARQUEE_CONTENT;
-  marqueeReady = true;
+  marqueeReady = false;
 
-  ngAfterViewInit(): void {
-    this.restartMarquee();
+  ngOnInit(): void {
+    this.initMarquee();
   }
 
-  private restartMarquee(): void {
-    this.marqueeReady = false;
+  private initMarquee(): void {
     setTimeout(() => {
       this.marqueeReady = true;
     }, 0);
