@@ -28,12 +28,31 @@
     align-items: center;
     justify-content: space-between;
 
-    img {
+    .project-img {
       width: 520px;
       border-radius: 32px;
     }
+  }
 
-    .overlay-skills {}
+  .overlay-skills-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 16px;
+
+    .overlay-skill {
+      gap: 4px;
+    }
+
+    .label {
+      font-family: var(--font-karla);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-regular);
+      color: var(--color-secondary);
+      line-height: 1.2;
+    }
+
   }
 
   .overlay-info-btn {

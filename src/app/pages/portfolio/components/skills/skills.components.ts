@@ -18,7 +18,6 @@ export class SkillsComponents {
     this._tooltips.set(Array.isArray(value) ? value : []);
   }
 
-
   private _skills = signal<Skill[]>([]);
   private _tooltips = signal<Tooltip[]>([]);
 

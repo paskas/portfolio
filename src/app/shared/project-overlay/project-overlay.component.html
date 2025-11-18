@@ -12,15 +12,27 @@
           secondaryTitle: ('projects.overlay.secondaryTitle' | translate),
           text: ('projects.overlay.' + projectKey + '.text' | translate)
     }"></app-info-box>
+        @if (projectKey) {
+        @for (item of projectskills; track item.key) {
+        @if (item.key === projectKey) {
+        <div class="overlay-skills-row">
+          @for (skill of item.skills; let i = $index; track i) {
+          <div class="flex-center overlay-skill">
+            <img class="project-icon" [ngSrc]="item.iconSrc[i]" [alt]="skill" width="24" height="24" />
+            <span class="label">{{ skill }}</span>
+          </div>
+          }
+        </div>
+        }
+        }
+        }
         <div class="overlay-btn">
           <app-buttons label="GitHub" variant="secondary"></app-buttons>
           <app-buttons label="Live Test" variant="secondary"></app-buttons>
         </div>
       </div>
-      <div class="overlay-skills"></div>
-      <img src="/assets/images/screenshot-Join.jpg" alt="">
+      <img class="project-img" src="/assets/images/screenshot-Join.jpg" alt="">
     </div>
-
   </article>
 </div>
 

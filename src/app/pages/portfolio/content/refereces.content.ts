@@ -1,4 +1,4 @@
-import { Slidecard } from "./content.types";
+import type { Slidecard } from "./content.types";
 
 export const REF_SLIDECARD: Slidecard[] = [
   { textKey: 'references.Burdick.text', authorKey: 'references.Burdick.author' },

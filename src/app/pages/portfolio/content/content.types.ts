@@ -38,6 +38,13 @@ export interface Projects {
   image: string;
 }
 
+export interface Projectskills {
+  key: string;
+  label: string;
+  skills: string[];
+  iconSrc: string[];
+}
+
 export interface Slidecard {
   textKey: string;
   authorKey: string;

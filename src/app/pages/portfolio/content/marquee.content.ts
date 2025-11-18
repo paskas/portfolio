@@ -1,4 +1,4 @@
-import { MarqueeItem } from '../../portfolio/content/content.types';
+import type { MarqueeItem } from '../../portfolio/content/content.types';
 
 export const MARQUEE_CONTENT: MarqueeItem[] = [
   { textKey: 'hero.marquee.role', icon: '/assets/icons/radio_button_unchecked.svg' },
