@@ -1,6 +1,5 @@
 .btn,
-.main,
-.secondary {
+.main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -61,25 +60,44 @@
   }
 }
 
-.btn,
 .secondary {
-  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 8px;
+  width: auto;
+  white-space: nowrap;
+  min-width: fit-content;
+  border: none;
+  background: none;
+  user-select: none;
+  cursor: pointer;
+  line-height: 1.2;
+  will-change: transform;
+
+  span {
+    font-family: var(--font-karla);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-regular);
+    color: var(--color-primary);
+    transition: color 200ms ease;
+
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
 
   &::after {
     content: "";
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url(/assets/icons/arrow-outward-prime.svg) no-repeat center / contain;
-    transition: transform 200ms ease;
+    width: 32px;
+    height: 32px;
+    background: url(/assets/icons/arrow_forward_hover.svg) no-repeat center / contain;
+    transition: transform 150ms ease-in;
   }
 
   &:hover::after {
-    transform: translateX(5px) translateY(-2px);
+    transform: translateX(5px);
   }
 }
 

@@ -29,7 +29,6 @@
     justify-content: space-between;
 
     .project-img {
-      width: 520px;
       border-radius: 32px;
     }
   }
@@ -72,6 +71,12 @@
   .overlay-close {
     position: absolute;
     top: 56px;
+    right: 80px;
+  }
+
+  .overlay-next{
+    position: absolute;
+    bottom: 56px;
     right: 80px;
   }
 }

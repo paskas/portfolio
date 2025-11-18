@@ -12,28 +12,30 @@
           secondaryTitle: ('projects.overlay.secondaryTitle' | translate),
           text: ('projects.overlay.' + projectKey + '.text' | translate)
     }"></app-info-box>
-        @if (projectKey) {
-        @for (item of projectskills; track item.key) {
-        @if (item.key === projectKey) {
+        @if (currentOverlaySkills) {
         <div class="overlay-skills-row">
-          @for (skill of item.skills; let i = $index; track i) {
+          @for (skill of currentOverlaySkills.skills; let i = $index; track i) {
           <div class="flex-center overlay-skill">
-            <img class="project-icon" [ngSrc]="item.iconSrc[i]" [alt]="skill" width="24" height="24" />
+            <img class="project-icon" [ngSrc]="currentOverlaySkills.iconSrc[i]" [alt]="skill" width="24" height="24" />
             <span class="label">{{ skill }}</span>
           </div>
           }
         </div>
         }
-        }
-        }
+        @if (currentProjectLinks) {
         <div class="overlay-btn">
-          <app-buttons label="GitHub" variant="secondary"></app-buttons>
-          <app-buttons label="Live Test" variant="secondary"></app-buttons>
+          <app-link label="GitHub" variant="overlay-btn" [isExternal]="true" [href]="currentProjectLinks.github">
+          </app-link>
+          <app-link label="Live Test" variant="overlay-btn" [isExternal]="true" [href]="currentProjectLinks.live">
+          </app-link>
         </div>
+        }
       </div>
-      <img class="project-img" src="/assets/images/screenshot-Join.jpg" alt="">
+      @if (currentProjectImage) {
+      <img class="project-img" [ngSrc]="currentProjectImage" alt="Project screenshot" width="520" height="370" />
+      }
     </div>
+    <app-buttons class="overlay-next" [label]="'projects.overlay.nextBtn' | translate" variant="secondary" (click)="showNextProject()"></app-buttons>
   </article>
 </div>
-
 }

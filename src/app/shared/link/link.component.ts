@@ -10,10 +10,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './link.component.html',
   styleUrl: './link.component.scss'
 })
+
 export class LinkComponent {
   @Input() label: string = '';
   @Input() href: string = '';
-  @Input() variant: 'section' | 'logo' | 'contact' | 'footer' | 'lateral-mail' | 'lateral-icon' = 'section';
+  @Input() variant: 'section' | 'logo' | 'contact' | 'footer' | 'lateral-mail' | 'lateral-icon' | 'overlay-btn' = 'section';
   @Input() isExternal: boolean = false;
   @Input() isSection: boolean = false;
   @Input() iconSrc?: string;

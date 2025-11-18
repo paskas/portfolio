@@ -48,6 +48,7 @@
     "text": "A selection of my best projects – explore my work and skills in action.",
     "overlay": {
       "secondaryTitle": "What is this project about?",
+      "nextBtn": "Next project",
       "join": {
         "subtitle": "01",
         "title": "JOIN",

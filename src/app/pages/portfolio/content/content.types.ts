@@ -45,6 +45,12 @@ export interface Projectskills {
   iconSrc: string[];
 }
 
+export interface ProjectLinks {
+  key: string;
+  github: string;
+  live: string;
+}
+
 export interface Slidecard {
   textKey: string;
   authorKey: string;

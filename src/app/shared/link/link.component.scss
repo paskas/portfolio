@@ -177,3 +177,43 @@
     transform: translateY(0);
   }
 }
+
+.overlay-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: var(--btn-height);
+  padding: 0 24px 0 24px;
+  color: var(--color-secondary);
+  background-color: var(--color-transparent);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  width: auto;
+  white-space: nowrap;
+  min-width: fit-content;
+  border: var(--btn-border-default);
+  border-radius: var(--btn-border-radius);
+  user-select: none;
+  cursor: pointer;
+  will-change: transform;
+
+  &:hover {
+    color: var(--color-primary);
+    border: var(--btn-border);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(/assets/icons/arrow-outward-prime.svg) no-repeat center / contain;
+    transition: transform 200ms ease;
+  }
+
+  &:hover::after {
+    transform: translateX(5px) translateY(-2px);
+  }
+}
