@@ -14,6 +14,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class LinkComponent {
   @Input() label: string = '';
   @Input() href: string = '';
+  @Input() routerLink?: string | any[];
+  @Input() fragment?: string;
   @Input() variant: 'section' | 'logo' | 'contact' | 'footer' | 'lateral-mail' | 'lateral-icon' | 'overlay-btn' = 'section';
   @Input() isExternal: boolean = false;
   @Input() isSection: boolean = false;

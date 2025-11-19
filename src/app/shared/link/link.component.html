@@ -13,7 +13,7 @@
 </a>
 } @else if (isSection) {
 <!-- Internal link-->
-<a class="link" [ngClass]="variant" [href]="href">
+<a class="link" [ngClass]="variant" [routerLink]="routerLink || ['/']" [fragment]="fragment" routerLinkActive="active">
   {{ label }}
   @if (iconSrc) {
   <span class="logo">
@@ -26,7 +26,7 @@
 </a>
 } @else {
 <!-- Route link-->
-<a class="link" [ngClass]="variant" [routerLink]="href" target="_blank" routerLinkActive="active">
+<a class="link" [ngClass]="variant" [routerLink]="routerLink" routerLinkActive="active">
   {{ label }}
 </a>
 }
