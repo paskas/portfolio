@@ -5,6 +5,7 @@ import { SHARED_UI } from '../../shared';
 
 @Component({
   selector: 'app-legal-notice',
+  standalone: true,
   imports: [...SHARED_UI, MainLayout, TranslateModule],
   templateUrl: './legal-notice.page.html',
   styleUrl: './legal-notice.page.scss'

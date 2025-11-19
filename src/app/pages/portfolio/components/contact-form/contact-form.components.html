@@ -10,7 +10,8 @@
 
     <label class="label-frame">
       <span>{{ 'contact.form.email.label' | translate }}</span>
-      <input type="email" formControlName="email" [placeholder]="'contact.form.email.placeholder' | translate" inputmode="email" />
+      <input type="email" formControlName="email" [placeholder]="'contact.form.email.placeholder' | translate"
+        inputmode="email" />
       @if (formGroup.controls['email'].touched && formGroup.controls['email'].invalid) {
       <small class="error">{{ 'contact.form.email.error' | translate }}</small>
       }
@@ -18,7 +19,8 @@
 
     <label class="label-frame">
       <span>{{ 'contact.form.message.label' | translate }}</span>
-      <textarea formControlName="message" rows="1" [placeholder]="'contact.form.message.placeholder' | translate"></textarea>
+      <textarea formControlName="message" rows="1"
+        [placeholder]="'contact.form.message.placeholder' | translate"></textarea>
       @if (formGroup.controls['message'].touched && formGroup.controls['message'].invalid) {
       <small class="error">{{ 'contact.form.message.error' | translate }}</small>
       }
@@ -26,15 +28,17 @@
 
     <label class="privacy">
       <input type="checkbox" formControlName="privacy" />
-      <span>{{ 'contact.form.privacy.prefix' | translate }}<app-link [label]="'contact.form.privacy.link' | translate" variant="contact" [isExternal]="true"
-          href="/privacy-policy"></app-link>{{ 'contact.form.privacy.suffix' | translate }}</span>
+      <span>{{ 'contact.form.privacy.prefix' | translate }}<app-link [label]="'contact.form.privacy.link' | translate"
+          variant="contact" routerLink="/privacy-policy"></app-link>{{ 'contact.form.privacy.suffix'
+        | translate }}</span>
       @if (formGroup.controls['privacy'].touched && formGroup.controls['privacy'].invalid) {
       <small class="checkbox-error">{{ 'contact.form.privacy.error' | translate }}</small>
       }
     </label>
   </div>
 
-  <app-buttons [label]="'contact.form.submitLabel' | translate" type="submit" [disabled]="formGroup.invalid || isSending"></app-buttons>
+  <app-buttons [label]="'contact.form.submitLabel' | translate" type="submit"
+    [disabled]="formGroup.invalid || isSending"></app-buttons>
   @if (sendSuccess) { <p class="submit-success">{{ 'contact.form.sending' | translate }}</p> }
   @if (sendError) { <p class="submit-error">{{ sendError | translate }}</p> }
 </form>
