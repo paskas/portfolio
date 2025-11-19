@@ -149,5 +149,28 @@
     "info1": "Webentwickler",
     "info2": "Marl Deutschland",
     "link": "Impressum"
+  },
+  "legal": {
+    "headline": "Impressum",
+    "providerTitle": "Informationen über den Diensteanbieter",
+    "contactTitle": "Kontakt",
+    "imageNoticeTitle": "Bildernachweis",
+    "imageNoticeText": "Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich geschützt.",
+    "imageRightsTitle": "Bilderrechte",
+    "imageRightsText": "Die Bilderrechte liegen bei:",
+    "otherPresenceTitle": "Weitere Onlineauftritte",
+    "otherPresenceText": "Dieses Impressum gilt auch für:",
+    "copyrightTitle": "Alle Texte sind urheberrechtlich geschützt.",
+    "copyrightSource": "Quelle: Erstellt mit dem Impressum Generator von AdSimple",
+    "address": {
+      "name": "Pascal Kasbeitzer",
+      "street": "Maria-Jacobi-Str. 8",
+      "city": "45770 Marl",
+      "country": "Deutschland"
+    },
+    "contact": {
+      "phoneLabel": "Telefon",
+      "emailLabel": "E-Mail"
+    }
   }
 }

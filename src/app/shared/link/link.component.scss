@@ -38,23 +38,18 @@
 }
 
 .lateral-mail {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: var(--color-secondary);
   font-family: var(--font-karla);
-  font-size: var(--fs-md);
-  font-weight: var(--fw-regular);
   line-height: 1.2;
-  cursor: pointer;
-  pointer-events: auto;
-  transition: color 200ms ease;
 
-  .link-label {
-    writing-mode: sideways-lr;
-    text-orientation: mixed;
+  &:hover {
+    color: var(--color-primary);
   }
+}
+
+.legal-link {
+  font-family: var(--font-karla);
+  font-size: var(--fs-xs);
+  line-height: 1.2;
 
   &:hover {
     color: var(--color-primary);

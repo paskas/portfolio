@@ -149,5 +149,28 @@
     "info1": "Web Developer",
     "info2": "Marl Germany",
     "link": "legal notice"
+  },
+  "legal": {
+    "headline": "Legal Notice",
+    "providerTitle": "Information about the Service Provider",
+    "contactTitle": "Contact",
+    "imageNoticeTitle": "Image Credits",
+    "imageNoticeText": "The images, photos, and graphics on this website are protected by copyright.",
+    "imageRightsTitle": "Image Rights",
+    "imageRightsText": "The image rights are held by:",
+    "otherPresenceTitle": "Additional Online Profiles",
+    "otherPresenceText": "This legal notice also applies to:",
+    "copyrightTitle": "All texts are protected by copyright.",
+    "copyrightSource": "Source: Created using the Impressum Generator by AdSimple",
+    "address": {
+      "name": "Pascal Kasbeitzer",
+      "street": "Maria-Jacobi-Str. 8",
+      "city": "45770 Marl",
+      "country": "Germany"
+    },
+    "contact": {
+      "phoneLabel": "Phone",
+      "emailLabel": "Email"
+    }
   }
 }

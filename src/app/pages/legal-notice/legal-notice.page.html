@@ -1,4 +1,52 @@
 <app-main-layout>
   <section class="content-wrapper">
+    <article class="content-section-min legal-notice">
+      <h1 class="headline">{{ 'legal.headline' | translate }}</h1>
+      <div class="content">
+        <div>
+          <h2>{{ 'legal.providerTitle' | translate }}</h2>
+          <ul class="list legal-links">
+            <li>{{ 'legal.address.name' | translate }}</li>
+            <li>{{ 'legal.address.street' | translate }}</li>
+            <li>{{ 'legal.address.city' | translate }}</li>
+            <li>{{ 'legal.address.country' | translate }}</li>
+          </ul>
+        </div>
+        <div>
+          <h2>{{ 'legal.contactTitle' | translate }}</h2>
+          <ul class="list">
+            <li>{{ 'legal.contact.phoneLabel' | translate }}:
+              <app-link label="01714851400" variant="legal-link" href="tel:01714851400"></app-link>
+            </li>
+            <li>{{ 'legal.contact.emailLabel' | translate }}:
+              <app-link label="pascal.kasbeitzer@gmail.com" variant="legal-link" [isExternal]="true"
+                href="mailto:pascal.kasbeitzer@gmail.com"></app-link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>{{ 'legal.imageNoticeTitle' | translate }}</h2>
+          <p>{{ 'legal.imageNoticeText' | translate }}</p>
+        </div>
+        <div>
+          <h2>{{ 'legal.imageRightsTitle' | translate }}</h2>
+          <p>{{ 'legal.imageRightsText' | translate }} <span class="highlight-name">{{ 'legal.address.name' | translate
+              }}</span></p>
+        </div>
+        <div>
+          <h2>{{ 'legal.otherPresenceTitle' | translate }}</h2>
+          <p>{{ 'legal.otherPresenceText' | translate }}</p>
+          <ul class="list legal-links">
+            <li><app-link label="LinkedIn" variant="legal-link" href="…" [isExternal]="true"></app-link></li>
+            <li><app-link label="GitHub" variant="legal-link" href="…" [isExternal]="true"></app-link></li>
+          </ul>
+        </div>
+        <div>
+          <h2>{{ 'legal.copyrightTitle' | translate }}</h2>
+          <p>{{ 'legal.copyrightSource' | translate }}</p>
+        </div>
+
+      </div>
+    </article>
   </section>
 </app-main-layout>

@@ -98,6 +98,11 @@
     align-items: center;
     gap: 24px;
 
+    .email-sideway {
+      writing-mode: sideways-lr;
+      text-orientation: mixed;
+    }
+
     .social-lateral {
       display: flex;
       flex-direction: column;
