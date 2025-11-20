@@ -1,126 +1,102 @@
 <app-main-layout>
   <section class="content-wrapper">
     <article class="content-section-min privacy-policy">
-      <div id='generator_results'>
-        <div id='generator_results_content'>
-          <h1>{{'privacyPolicy.headline'| translate}}</h1>
+      <h1 class="headline" [innerHTML]="'privacyPolicy.headline' | translate"></h1>
+      <div class="content">
+        <div>
           <h2>{{'privacyPolicy.controller.heading'| translate}}</h2>
           <p>{{'privacyPolicy.controller.intro'| translate}}</p>
-          <p>Pascal Kasbeitzer</p>
+          <p>{{ 'privacyPolicy.controller.name' | translate }}</p>
+        </div>
+        <div>
           <h2>{{'privacyPolicy.rights.heading'| translate}}</h2>
-          <p>Unter den angegebenen Kontaktdaten können Sie gemäß EU-Datenschutz-Grundverordnung (DSGVO) jederzeit
-            folgende Rechte ausüben:</p>
-          <ul>
-            <li>Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO),</li>
-            <li>Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO),</li>
-            <li>Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO),</li>
-            <li>Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht
-              löschen dürfen (Art. 18 DSGVO),</li>
-            <li>Widerspruch gegen die Verarbeitung Ihrer Daten bei uns (Art. 21 DSGVO) und</li>
-            <li>Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns
-              abgeschlossen haben (Art. 20 DSGVO).</li>
+          <p>{{ 'privacyPolicy.rights.intro' | translate }}</p>
+          <ul class="list">
+            <li>{{ 'privacyPolicy.rights.items.access' | translate }}</li>
+            <li>{{ 'privacyPolicy.rights.items.rectification' | translate }}</li>
+            <li>{{ 'privacyPolicy.rights.items.erasure' | translate }}</li>
+            <li>{{ 'privacyPolicy.rights.items.restriction' | translate }}</li>
+            <li>{{ 'privacyPolicy.rights.items.objection' | translate }}</li>
+            <li>{{ 'privacyPolicy.rights.items.portability' | translate }}</li>
           </ul>
-          <p>Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft
-            widerrufen.</p>
-          <p>Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige
-            Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige
-            Behörde.</p>
-          <p>Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter: <a
-              href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html">https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>.
+          <p>{{ 'privacyPolicy.rights.revocation' | translate }}</p>
+          <p>{{ 'privacyPolicy.rights.complaint' | translate }}</p>
+          <p>{{ 'privacyPolicy.rights.supervisoryListHtml' | translate }}
+            <app-link label="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
+              variant="legal-link"
+              href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
+              [isExternal]="true"></app-link>
           </p>
-          <h2>Verarbeitungstätigkeiten</h2>
-          <h3>Erfassung allgemeiner Informationen beim Besuch unserer Website</h3>
-          <h4>Art und Zweck der Verarbeitung</h4>
-          <p>Wenn Sie auf unsere Website zugreifen, d.h., wenn Sie sich nicht registrieren oder anderweitig
-            Informationen übermitteln, werden automatisch Informationen allgemeiner Natur erfasst. Diese Informationen
-            (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen
-            Ihres Internet-Service-Providers, Ihre IP-Adresse und ähnliches.</p>
-          <p>Sie werden insbesondere zu folgenden Zwecken verarbeitet:</p>
-          <ul>
-            <li>Sicherstellung einer reibungslosen Nutzung der Website</li>
+        </div>
+        <div>
+          <h2>{{ 'processing.heading' | translate }}</h2>
+          <h3>{{ 'processing.logs.heading' | translate }}</h3>
+          <h4>{{ 'processing.logs.typePurposeHeading' | translate }}</h4>
+          <p>{{ 'processing.logs.typePurposeText1' | translate }}</p>
+          <p>{{ 'processing.logs.typePurposeText2' | translate }}</p>
+          <ul class="list">
+            <li>{{ 'processing.logs.typePurposeListSmoothOperation' | translate }}</li>
           </ul>
-          <p>Wir verwenden Ihre Daten nicht, um Rückschlüsse auf Ihre Person zu ziehen. Allerdings behalten wir uns vor,
-            die Server-Logfiles nachträglich zu überprüfen, sollten konkrete Anhaltspunkte auf eine rechtswidrige
-            Nutzung hinweisen.</p>
-          <h4>Rechtsgrundlage und berechtigtes Interesse</h4>
-          <p>Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der
-            Verbesserung der Stabilität und Funktionalität unserer Website sowie der Sicherstellung der Systemsicherheit
-            und Missbrauchserkennung.</p>
-          <h4>Empfänger</h4>
-          <p>Empfänger der Daten sind ggf. technische Dienstleister, die für den Betrieb und die Wartung unserer
-            Webseite als Auftragsverarbeiter tätig werden.</p>
-          <h4>Speicherdauer</h4>
-          <p>Daten werden in Server-Log-Dateien in einer Form, die die Identifizierung der betroffenen Personen
-            ermöglicht, maximal für [Bitte Informationen ergänzen] gespeichert; es sei denn, dass ein
-            sicherheitsrelevantes Ereignis auftritt (z.B. ein DDoS-Angriff).</p>
-          <p>Im Falle eines solchen Ereignisses werden Server-Log-Dateien bis zur Beseitigung und vollständigen
-            Aufklärung des sicherheitsrelevanten Ereignisses gespeichert.</p>
-          <h4>Bereitstellung vorgeschrieben oder erforderlich</h4>
-          <p>Die Bereitstellung der vorgenannten personenbezogenen Daten ist weder gesetzlich noch vertraglich
-            vorgeschrieben. Ohne die IP-Adresse ist jedoch der Dienst und die Funktionsfähigkeit unserer Website nicht
-            gewährleistet. Zudem können einzelne Dienste und Services nicht verfügbar oder eingeschränkt sein.</p>
-          <h4>Widerspruch</h4>
-          <p>Lesen Sie dazu die Informationen über Ihr Widerspruchsrecht nach Art. 21 DSGVO weiter unten.</p>
-          <h3>Kontaktaufnahme</h3>
-          <p>Art und Zweck der Verarbeitung</p>
-          <p>Auf unserer Website ist ein Kontaktformular vorhanden, welches für die elektronische Kontaktaufnahme
-            genutzt werden kann. Nimmt ein Nutzer diese Möglichkeit wahr, so werden die in der Eingabemaske eingegeben
-            Daten an uns übermittelt und gespeichert.</p>
-          <p>Zum Zeitpunkt der Absendung der Nachricht werden zudem folgende Daten gespeichert:</p>
-          <ul>
-            <li>URL, von der die Anfrage erfolgte</li>
+          <p>{{ 'processing.logs.typePurposeText3' | translate }}</p>
+          <h4>{{ 'processing.logs.legalBasisHeading' | translate }}</h4>
+          <p>{{ 'processing.logs.legalBasisText' | translate }}</p>
+          <h4>{{ 'processing.logs.recipientsHeading' | translate }}</h4>
+          <p>{{ 'processing.logs.recipientsText' | translate }}</p>
+          <h4>{{ 'processing.logs.storageHeading' | translate }}</h4>
+          <p>{{ 'processing.logs.storageText1' | translate }}</p>
+          <p>{{ 'processing.logs.storageText2' | translate }}</p>
+          <h4>{{ 'processing.logs.provisionHeading' | translate }}</h4>
+          <p>{{ 'processing.logs.provisionText1' | translate }}</p>
+          <p>{{ 'processing.logs.provisionText2' | translate }}</p>
+          <h4>{{ 'processing.logs.objectionHeading' | translate }}</h4>
+          <p>{{ 'processing.logs.objectionText' | translate }}</p>
+          <h3>{{ 'processing.contact.heading' | translate }}</h3>
+          <h4>{{ 'processing.contact.typePurposeHeading' | translate }}</h4>
+          <p>{{ 'processing.contact.typePurposeText1' | translate }}</p>
+          <p>{{ 'processing.contact.typePurposeText2' | translate }}</p>
+          <ul class="list">
+            <li>{{ 'processing.contact.typePurposeListUrl' | translate }}</li>
           </ul>
-          <p>Eine Kontaktaufnahme ist über die bereitgestellten E-Mail-Adressen möglich. In diesem Fall werden die mit
-            der E-Mail übermittelten personenbezogenen Daten des Nutzers gespeichert. Hierzu zählen Datum und Uhrzeit
-            des E-Mailversands, E-Mailadresse, IP-Adressen sowie Informationen zu den an der E-Mail-Kommunikation
-            beteiligten Servern.</p>
-          <p>Sie können Sie über die bereitgestellten Telefonnummern Kontakt zu uns aufnehmen. Hierbei erheben wir
-            Protokolldaten, die Ihre Telefonnummer und die Dauer des Gesprächs beinhalten.</p>
-          <p>Unabhängig von der gewählten Kommunikationsart erheben wir den Inhalt Ihrer Anfrage. Ihre Daten werden zum
-            Zweck der individuellen Kommunikation mit Ihnen gespeichert.</p>
-          <h4>Rechtsgrundlage</h4>
-          <p>Die Verarbeitung der Daten erfolgt auf der Grundlage eines berechtigten Interesses (Art. 6 Abs. 1 lit. f
-            DSGVO).</p>
-          <p>Unser berechtigtes Interesse an der Verarbeitung Ihrer Daten ist die Ermöglichung einer unkomplizierten
-            Kontaktaufnahme.</p>
-          <p>Sofern Sie mit uns Kontakt aufnehmen, um ein Angebot zu erfragen, erfolgt die Verarbeitung der Daten zur
-            Durchführung vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO).</p>
-          <h4>Empfänger</h4>
-          <p>Empfänger der Daten sind ggf. technische Dienstleister, die für den Betrieb und die Wartung unserer
-            Webseite als Auftragsverarbeiter tätig werden.</p>
-          <h4>Speicherdauer</h4>
-          <p>Daten werden spätestens [Bitte Informationen ergänzen] nach Bearbeitung der Kontaktaufnahme gelöscht.</p>
-          <p>Sofern es zu einem Vertragsverhältnis kommt, unterliegen wir den gesetzlichen Aufbewahrungsfristen. Diese
-            betragen grundsätzlich 6 oder 10 Jahre aus Gründen der ordnungsmäßigen Buchführung und steuerrechtlichen
-            Anforderungen.</p>
-          <h4>Bereitstellung vorgeschrieben oder erforderlich</h4>
-          <p>Die Bereitstellung Ihrer personenbezogenen Daten erfolgt freiwillig. Wir können Ihre Anfrage jedoch nur
-            bearbeiten, sofern Sie uns die erforderlichen Daten und den Grund der Anfrage mitteilen.</p>
-          <h4>Widerspruch</h4>
-          <p>Lesen Sie dazu die Informationen über Ihr Widerspruchsrecht nach Art. 21 DSGVO weiter unten.</p>
-          <h2>Information über Ihr Widerspruchsrecht nach Art. 21 DSGVO</h2>
-          <h3>Einzelfallbezogenes Widerspruchsrecht</h3>
-          <p>Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die
-            Verarbeitung Sie betreffender personenbezogener Daten, die aufgrund Art. 6 Abs. 1 lit. f DSGVO
-            (Datenverarbeitung auf der Grundlage einer Interessenabwägung) erfolgt, Widerspruch einzulegen; dies gilt
-            auch für ein auf diese Bestimmung gestütztes Profiling im Sinne von Art. 4 Nr. 4 DSGVO.</p>
-          <p>Legen Sie Widerspruch ein, werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir
-            können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und
-            Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von
-            Rechtsansprüchen.</p>
-          <h3>Empfänger eines Widerspruchs</h3>
-          <p>[Bitte Informationen ergänzen]</p>
-          <h2>Änderung unserer Datenschutzerklärung</h2>
-          <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen
-            Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B.
-            bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.</p>
-          <h2>Fragen zum Datenschutz</h2>
-          <p>Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail an den oben genannten
-            Verantwortlichen.</p>
-          <h2>Urheberrechtliche Hinweise</h2>
-          <p><em>Diese Datenschutzerklärung wurde mit Hilfe der activeMind AG erstellt – den Experten für <a
-                href="https://www.activemind.de/datenschutz/datenschutzbeauftragter/" target="_blank"
-                rel="noopener dofollow">externe Datenschutzbeauftragte</a> (Version #2024-10-25).</em></p>
+          <p>{{ 'processing.contact.typePurposeText3' | translate }}</p>
+          <p>{{ 'processing.contact.typePurposeText4' | translate }}</p>
+          <p>{{ 'processing.contact.typePurposeText5' | translate }}</p>
+          <h4>{{ 'processing.contact.legalBasisHeading' | translate }}</h4>
+          <p>{{ 'processing.contact.legalBasisText1' | translate }}</p>
+          <p>{{ 'processing.contact.legalBasisText2' | translate }}</p>
+          <p>{{ 'processing.contact.legalBasisText3' | translate }}</p>
+          <h4>{{ 'processing.contact.recipientsHeading' | translate }}</h4>
+          <p>{{ 'processing.contact.recipientsText' | translate }}</p>
+          <h4>{{ 'processing.contact.storageHeading' | translate }}</h4>
+          <p>{{ 'processing.contact.storageText1' | translate }}</p>
+          <p>{{ 'processing.contact.storageText2' | translate }}</p>
+          <h4>{{ 'processing.contact.provisionHeading' | translate }}</h4>
+          <p>{{ 'processing.contact.provisionText1' | translate }}</p>
+          <p>{{ 'processing.contact.provisionText2' | translate }}</p>
+          <h4>{{ 'processing.contact.objectionHeading' | translate }}</h4>
+          <p>{{ 'processing.contact.objectionText' | translate }}</p>
+        </div>
+        <div>
+          <h2>{{ 'objectionInfo.heading' | translate }}</h2>
+          <h3>{{ 'objectionInfo.caseBasedHeading' | translate }}</h3>
+          <p>{{ 'objectionInfo.caseBasedText1' | translate }}</p>
+          <p>{{ 'objectionInfo.caseBasedText2' | translate }}</p>
+          <h3>{{ 'objectionInfo.recipientHeading' | translate }}</h3>
+          <p>{{ 'objectionInfo.recipientPlaceholder' | translate }}</p>
+        </div>
+        <div>
+          <h2>{{ 'changes.heading' | translate }}</h2>
+          <p>{{ 'changes.text' | translate }}</p>
+        </div>
+        <div>
+          <h2>{{ 'questions.heading' | translate }}</h2>
+          <p>{{ 'questions.text' | translate }}</p>
+        </div>
+        <div>
+          <h2>{{ 'copyright.heading' | translate }}</h2>
+          <p><em>{{'copyright.text1' | translate}}
+              <app-link label="externe Datenschutzbeauftragte" variant="legal-link"
+                href="https://www.activemind.de/datenschutz/datenschutzbeauftragter/" [isExternal]="true"></app-link>
+              {{'copyright.text2' | translate}}</em></p>
         </div>
       </div>
     </article>

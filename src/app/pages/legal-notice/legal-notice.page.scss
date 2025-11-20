@@ -5,10 +5,11 @@
   .headline {
     font-family: var(--font-fira-code);
     font-weight: var(--fw-bold);
-    font-size: var(--fs-hero);
+    font-size: clamp(var(--fs-xxl), 6vw, var(--fs-hero));
     color: var(--color-primary);
     line-height: 1.2;
     padding-bottom: 64px;
+    text-align: center;
   }
 
   .content {
@@ -20,12 +21,15 @@
     flex-direction: column;
     gap: 24px;
 
+    .list li,
     h2,
     p {
       font-family: var(--font-karla);
       font-weight: var(--fw-regular);
       font-size: var(--fs-xs);
       line-height: 1.2;
+      white-space: normal;
+      overflow-wrap: anywhere;
     }
 
     h2 {
@@ -33,6 +37,7 @@
       padding-bottom: 8px;
     }
 
+    .list li,
     p {
       color: var(--color-primary);
     }
@@ -42,23 +47,12 @@
       gap: 4px;
     }
 
-    .list li {
-      font-family: var(--font-karla);
-      font-weight: var(--fw-regular);
-      font-size: var(--fs-xs);
-      color: var(--color-primary);
-    }
-
     .list li::before {
       content: "•";
       color: var(--color-primary);
       font-size: var(--fs-md);
       line-height: 1;
       margin-right: 8px;
-    }
-
-    .highlight-name {
-      color: var(--color-secondary);
     }
   }
 }

@@ -5,9 +5,71 @@
   .headline {
     font-family: var(--font-fira-code);
     font-weight: var(--fw-bold);
-    font-size: var(--fs-hero);
+    font-size: clamp(var(--fs-xxl), 6vw, var(--fs-hero));
     color: var(--color-primary);
     line-height: 1.2;
     padding-bottom: 64px;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 1248px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+
+    .list li,
+    h2,
+    h3,
+    h4,
+    p {
+      font-family: var(--font-karla);
+      font-weight: var(--fw-regular);
+      line-height: 1.2;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+
+    h2 {
+      color: var(--color-secondary);
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-size: var(--fs-lg);
+      padding-bottom: 8px;
+    }
+
+    h4,
+    p {
+      font-size: var(--fs-xs);
+      padding-bottom: 6px;
+    }
+
+    p {
+      color: var(--color-primary);
+    }
+
+    .list {
+      flex-direction: column;
+      gap: 4px;
+      padding: 8px 0 8px 0;
+    }
+
+    .list li {
+      font-size: var(--fs-xs);
+      color: var(--color-primary);
+    }
+
+    .list li::before {
+      content: "•";
+      color: var(--color-primary);
+      font-size: var(--fs-md);
+      line-height: 1;
+      margin-right: 8px;
+    }
   }
 }

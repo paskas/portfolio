@@ -193,7 +193,7 @@
       },
       "revocation": "If you have given us consent, you may revoke it at any time with effect for the future.",
       "complaint": "You may file a complaint with a supervisory authority at any time, e.g. the authority responsible for your place of residence or the authority responsible for us as the controller.",
-      "supervisoryListHtml": "A list of supervisory authorities (for the non-public sector) including contact details can be found at: <a href=\"https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>."
+      "supervisoryListHtml": "A list of supervisory authorities (for the non-public sector) including contact details can be found at:"
     }
   },
   "processing": {
@@ -261,6 +261,7 @@
   },
   "copyright": {
     "heading": "Copyright Notice",
-    "textHtml": "<em>This privacy policy was created with the help of activeMind"
+    "text1": "This privacy policy was created with the help of activeMind",
+    "text2": "(Version #2024-10-25)."
   }
 }
