@@ -15,13 +15,15 @@
 <!-- Internal link-->
 <a class="link" [ngClass]="variant" [routerLink]="routerLink || ['/']" [fragment]="fragment" routerLinkActive="active">
   {{ label }}
-  @if (iconSrc) {
+  @if (iconSrc && variant=== 'logo') {
   <span class="logo">
     <img [src]="iconSrc" [alt]="iconAlt" class="link-logo" />
     @if (iconHoverSrc) {
     <img [src]="iconHoverSrc" [alt]="iconAlt" class="link-logo hover" />
     }
   </span>
+  } @else if (iconSrc && variant === 'logo-icon'){
+  <img [src]="iconSrc" [alt]="iconAlt" class="logo-icon" />
   }
 </a>
 } @else {

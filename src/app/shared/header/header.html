@@ -1,4 +1,8 @@
 <header class="content-wrapper header-content">
+  <div class="mobile-logo">
+    <app-link [isSection]="true" variant="logo-icon" [routerLink]="['/']" iconSrc="/assets/icons/favicon.svg"
+      iconAlt="Header Icon"></app-link>
+  </div>
   <nav>
     <app-language-switch></app-language-switch>
     <div class="menu">
@@ -10,6 +14,9 @@
   </nav>
   <div class="header-logo">
     <app-link [isSection]="true" variant="logo" [routerLink]="['/']" iconSrc="/assets/icons/logo.svg"
-      iconHoverSrc="/assets/icons/logo-outline.svg" iconAlt="Footer Logo"></app-link>
+      iconHoverSrc="/assets/icons/logo-outline.svg" iconAlt="Header Logo"></app-link>
+  </div>
+  <div class="burger-menu">
+    <img src="/assets/icons/burger-menu.svg" alt="Burger Menu">
   </div>
 </header>

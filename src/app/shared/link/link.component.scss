@@ -105,7 +105,6 @@
   border-bottom: 1px solid transparent;
   transition: color 300ms ease, border-color 300ms ease;
 
-
   &:hover {
     color: var(--color-secondary);
     border-bottom-color: var(--color-secondary);
@@ -139,6 +138,12 @@
   &:hover .hover {
     opacity: 1;
   }
+}
+
+.logo-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .footer {

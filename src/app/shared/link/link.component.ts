@@ -16,7 +16,7 @@ export class LinkComponent {
   @Input() href: string = '';
   @Input() routerLink?: string | any[];
   @Input() fragment?: string;
-  @Input() variant: 'section' | 'logo' | 'contact' | 'footer' | 'lateral-mail' | 'legal-link' | 'lateral-icon' | 'overlay-btn' = 'section';
+  @Input() variant: 'section' | 'logo' | 'logo-icon' | 'contact' | 'footer' | 'lateral-mail' | 'legal-link' | 'lateral-icon' | 'overlay-btn' = 'section';
   @Input() isExternal: boolean = false;
   @Input() isSection: boolean = false;
   @Input() iconSrc?: string;
