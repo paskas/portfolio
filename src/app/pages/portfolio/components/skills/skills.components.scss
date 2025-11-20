@@ -39,7 +39,7 @@
 
     span {
       font-family: var(--font-fira-code);
-      font-size: var(--fs-sm);
+      font-size: clamp(var(--fs-xs), 3vw, var(--fs-sm));
       font-weight: var(--fw-regular);
       color: var(--color-secondary);
       line-height: 1.2;

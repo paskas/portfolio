@@ -5,21 +5,21 @@
 
   span.info-subtitle {
     font-family: var(--font-karla);
-    font-size: var(--fs-lg);
+    font-size: clamp(var(--fs-sm), 3vw, var(--fs-lg));
     font-weight: var(--fw-medium);
     color: var(--color-primary);
   }
 
   h2 {
     font-family: var(--font-fira-code);
-    font-size: var(--fs-hero);
+    font-size: clamp(var(--fs-xxxl), 5vw, var(--fs-hero));
     font-weight: var(--fw-bold);
     color: var(--color-primary);
   }
 
   .info-box_text {
     font-family: var(--font-karla);
-    font-size: var(--fs-sm);
+    font-size: clamp(var(--fs-xs), 3vw, var(--fs-sm));
     font-weight: var(--fw-regular);
     color: var(--color-secondary);
   }
@@ -46,7 +46,7 @@
       flex-direction: column;
       gap: 16px;
       font-family: var(--font-karla);
-      font-size: var(--fs-sm);
+      font-size: clamp(var(--fs-xs), 3vw, var(--fs-sm));
       font-weight: var(--fw-regular);
       color: color-mix(in srgb, var(--color-secondary) 80%, var(--color-transparent));
 
@@ -92,7 +92,7 @@
 
       .question {
         font-family: var(--font-fira-code);
-        font-size: var(--fs-lg);
+        font-size: clamp(var(--fs-sm), 3vw, var(--fs-lg));
         font-weight: var(--fw-bold);
         color: var(--color-secondary);
       }
@@ -161,7 +161,7 @@
 
     .issue-question {
       font-family: var(--font-fira-code);
-      font-size: var(--fs-lg);
+      font-size: clamp(var(--fs-sm), 3vw, var(--fs-lg));
       font-weight: var(--fw-bold);
       color: var(--color-primary);
       line-height: 1.2;
@@ -180,7 +180,7 @@
     .info-subtitle {
       font-family: var(--font-karla);
       font-weight: var(--fw-bold);
-      font-size: var(--fs-display);
+      font-size: clamp(var(--fs-xxxxl), 12vw, var(--fs-display));
       line-height: 100px;
       letter-spacing: -2px;
     }
@@ -188,7 +188,7 @@
     h2 {
       font-family: var(--font-karla);
       font-weight: var(--fw-bold);
-      font-size: var(--fs-hero);
+      font-size: clamp(var(--fs-xxxl), 6vw, var(--fs-hero));
       color: var(--color-secondary);
       padding-bottom: 40px;
       line-height: 1;
@@ -204,7 +204,7 @@
       width: 100%;
       max-width: 480px;
       font-family: var(--font-karla);
-      font-size: var(--fs-sm);
+      font-size: clamp(var(--fs-xs), 3vw, var(--fs-sm));
       font-weight: var(--fw-regular);
       color: var(--color-secondary);
       line-height: 1.2;
@@ -212,7 +212,7 @@
 
     .issue-question {
       font-family: var(--font-fira-code);
-      font-size: var(--fs-lg);
+      font-size: clamp(var(--fs-md), 2vw, var(--fs-lg));
       font-weight: var(--fw-bold);
       color: var(--color-primary);
       line-height: 1.2;

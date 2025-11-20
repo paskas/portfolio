@@ -20,7 +20,7 @@
 
       span {
         font-family: var(--font-fira-code);
-        font-size: var(--fs-lg);
+        font-size: clamp(var(--fs-sm), 4vw, var(--fs-lg));
         font-weight: var(--fw-medium);
         color: var(--color-primary);
         line-height: 1.2;
@@ -34,7 +34,7 @@
         border: none;
         outline: none;
         font-family: var(--font-karla);
-        font-size: var(--fs-sm);
+        font-size: clamp(var(--fs-xs), 4vw, var(--fs-sm));
         font-weight: var(--fw-regular);
         color: color-mix(in srgb, var(--color-secondary) 80%, transparent);
         line-height: 1.2;

@@ -9,9 +9,6 @@
   width: 100%;
   max-width: 1248px;
   height: 708px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
 
   &::before {
     content: "";
@@ -36,5 +33,49 @@
     position: absolute;
     right: 0;
     bottom: 0;
+  }
+}
+
+/* 🔽 ab hier responsive Anpassungen */
+
+@media (max-width: 1279px) {
+  :host {
+    padding: 80px 16px;
+  }
+
+  .about-section {
+    max-width: 100%;
+    height: auto;              /* feste Höhe weg */
+    display: flex;
+    flex-direction: column;    /* untereinander */
+    align-items: center;
+  }
+
+  .about-section::before {
+    right: 0;
+    width: 120px;
+    height: 60%;
+    filter: blur(60px);        /* leicht anpassen, damit es nicht dominiert */
+  }
+
+  .about-section .info-media,
+  .about-section .info-about {
+    position: static;          /* 🔑 absolute entfernen */
+    width: 100%;
+    max-width: 568px;
+  }
+
+  .about-section .info-about {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  :host {
+    padding: 64px 16px;
+  }
+
+  .about-section .info-media {
+    height: auto;              /* falls nötig, Bild/Content mitwachsen lassen */
   }
 }
