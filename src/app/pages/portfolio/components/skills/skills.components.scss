@@ -6,8 +6,8 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 72px;
-    padding-block: clamp(16px, 3vw, 48px);
+    gap: var(--gap-xl);
+    padding-block: clamp(40px, 3vw, 48px);
 
     li.skill-card {
       position: relative;
@@ -16,7 +16,7 @@
       justify-content: center;
       flex-direction: column;
       width: 100%;
-      max-width: 98px;
+      max-width: clamp(64px, 10vw, 98px);
       gap: 8px;
     }
 
@@ -56,8 +56,6 @@
   z-index: 10;
   pointer-events: auto;
 }
-
-
 
 .skill-tooltip {
   position: absolute;
@@ -118,5 +116,26 @@
     color: var(--color-primary);
     line-height: 1;
     text-align: center;
+  }
+}
+
+@media(max-width:1279px) {
+  .skillset ul {
+    max-width: 470px;
+    justify-content: center;
+  }
+
+  .skill-tooltip {
+    background: none;
+    right: -14px;
+  }
+
+  .skill-tooltip::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(/assets/icons/skills/text-bubble.svg) no-repeat center / contain;
+    transform: scaleX(-1);
+    z-index: -1;
   }
 }

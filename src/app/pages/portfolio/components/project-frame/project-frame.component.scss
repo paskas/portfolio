@@ -114,3 +114,15 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 1279px) {
+  .project-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-image {
+    display: none;
+  }
+}

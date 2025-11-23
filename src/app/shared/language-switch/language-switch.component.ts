@@ -11,6 +11,10 @@ import { TranslateService } from '@ngx-translate/core';
 export class LanguageSwitchComponent {
   private translate = inject(TranslateService);
   currentLang: 'de' | 'en';
+  uniqueId = Math.random().toString(36).substring(2, 9);
+
+  get idDe() { return `lang-de-${this.uniqueId}`; }
+  get idEn() { return `lang-en-${this.uniqueId}`; }
 
   constructor() {
     const saved = localStorage.getItem('lang') as 'de' | 'en' | null;

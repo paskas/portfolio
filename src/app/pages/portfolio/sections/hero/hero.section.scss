@@ -56,11 +56,12 @@
   }
 
   .left-lateral {
-    height: 312px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
 
     .scroll-down {
       position: relative;
@@ -92,7 +93,7 @@
   }
 
   .right-lateral {
-    height: 590px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,9 +111,13 @@
       gap: 12px;
     }
 
+    .mail {
+      display: none;
+    }
+
     .straight-line {
       width: 1px;
-      height: 100%;
+      height: 186px;
       border-radius: 32px;
       border: 1px solid var(--color-secondary);
     }
@@ -189,5 +194,27 @@
 
   100% {
     transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (max-width: 1279px) {
+  .hero-overlay .left-lateral .straight-line {
+    height: 224px;
+  }
+
+  .hero-overlay .right-lateral .straight-line {
+    height: 112px;
+  }
+
+  .hero-overlay .right-lateral .email-sideway {
+    display: none;
+  }
+
+  .hero-overlay .right-lateral .mail {
+    display: block;
+  }
+
+  .marquee {
+    bottom: 30px;
   }
 }

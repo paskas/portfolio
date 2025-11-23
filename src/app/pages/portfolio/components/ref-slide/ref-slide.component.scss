@@ -9,7 +9,7 @@
   padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   border-radius: 32px;
   border: var(--btn-border);
   background-color: color-mix(in srgb, var(--color-primary) 10%, var(--color-transparent));
@@ -19,7 +19,7 @@
 
   .card-text {
     font-family: var(--font-karla);
-    font-size: var(--fs-sm);
+    font-size: clamp(var(--fs-xxs), 2vw, var(--fs-xs));
     font-weight: var(--fw-regular);
     color: var(--color-secondary);
     line-height: 1.2;
@@ -39,7 +39,7 @@
     font-weight: var(--fw-regular);
     color: var(--color-secondary);
     line-height: 1.2;
-    white-space: nowrap;
+    white-space: pre-line;
     display: inline-block;
   }
 
@@ -85,4 +85,14 @@
 
 .slideshow.is-animating .is-center {
   background-color: color-mix(in srgb, var(--color-primary) 10%, var(--color-transparent));
+}
+
+@media(max-width:959px) {
+  .is-left {
+    transform: translateX(-50%) translateX(-93%) scale(0.8);
+  }
+
+  .is-right {
+    transform: translateX(-50%) translateX(93%) scale(0.8);
+  }
 }

@@ -42,29 +42,29 @@
     transition: color 120ms ease, opacity 200ms ease;
   }
 
-  #lang-en:checked~.en {
+  input[id^="lang-en"]:checked~.en {
     color: var(--color-secondary);
     opacity: 1;
   }
 
-  #lang-de:checked~.de {
+  input[id^="lang-de"]:checked~.de {
     color: var(--color-secondary);
     opacity: 1;
   }
 
-  #lang-en:checked~.de {
+  input[id^="lang-en"]:checked~.de {
     opacity: 0.5;
   }
 
-  #lang-de:checked~.en {
+  input[id^="lang-de"]:checked~.en {
     opacity: 0.5;
   }
 
-  &:hover #lang-en:checked~.de {
+  &:hover input[id^="lang-en"]:checked~.de {
     opacity: 1;
   }
 
-  &:hover #lang-de:checked~.en {
+  &:hover input[id^="lang-de"]:checked~.en {
     opacity: 1;
   }
 
@@ -81,7 +81,7 @@
     pointer-events: none;
   }
 
-  #lang-en:checked~.slider {
+  input[id^="lang-en"]:checked~.slider {
     transform: translateX(100%);
   }
 

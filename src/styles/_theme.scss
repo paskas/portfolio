@@ -13,7 +13,8 @@
   --btn-border-radius-xs: 32px;
   --btn-height: 48px;
 
-  --gap-m: clamp(24px, 4vw, 48px);
+  --gap-m: clamp(16px, 4vw, 48px);
+  --gap-xl: clamp(16px, 5vw, 72px);
 
   .highlight {
     color: var(--color-primary);

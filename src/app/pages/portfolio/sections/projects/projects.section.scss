@@ -13,3 +13,12 @@
   gap: 40px;
   padding-bottom: 144px;
 }
+
+@media (max-width: 1279px) {
+  :host {
+    justify-content: center;
+  }
+  .projects-section{
+    padding-bottom: 0;
+  }
+}

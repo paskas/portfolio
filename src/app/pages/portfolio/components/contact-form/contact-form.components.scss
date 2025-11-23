@@ -18,6 +18,10 @@
       padding: 32px;
       border-top: 1px solid color-mix(in srgb, var(--color-primary) 50%, transparent);
 
+      &.border-bottom {
+        border-bottom: 1px solid color-mix(in srgb, var(--color-primary) 50%, transparent);
+      }
+
       span {
         font-family: var(--font-fira-code);
         font-size: clamp(var(--fs-sm), 4vw, var(--fs-lg));
@@ -44,7 +48,6 @@
 
         &.ng-invalid.ng-touched:placeholder-shown::placeholder {
           opacity: 0;
-
         }
       }
     }
@@ -81,7 +84,7 @@
 
       span {
         font-family: var(--font-karla);
-        font-size: var(--fs-xs);
+        font-size: var(--fs-xxs);
         font-weight: var(--fw-regular);
         color: var(--color-secondary);
         line-height: 1.2;

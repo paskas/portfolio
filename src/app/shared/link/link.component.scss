@@ -196,8 +196,6 @@
   font-size: var(--fs-sm);
   font-weight: var(--fw-regular);
   width: auto;
-  white-space: nowrap;
-  min-width: fit-content;
   border: var(--btn-border-default);
   border-radius: var(--btn-border-radius);
   user-select: none;
@@ -220,5 +218,11 @@
 
   &:hover::after {
     transform: translateX(5px) translateY(-2px);
+  }
+
+  @media(max-width:1247px) {
+    white-space: nowrap;
+    padding: 0 16px 0 16px;
+    font-size: var(--fs-xxs);
   }
 }

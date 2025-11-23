@@ -1,7 +1,7 @@
 <div class="language-switch" role="radiogroup" aria-label="Language switch">
-  <input id="lang-de" name="lang" type="radio" class="toggle" [checked]="currentLang === 'de'"
+  <input id="lang-de" [name]="'lang-' + uniqueId" type="radio" class="toggle" [checked]="currentLang === 'de'"
     (change)="setLanguage('de')" />
-  <input id="lang-en" name="lang" type="radio" class="toggle" [checked]="currentLang === 'en'"
+  <input id="lang-en" [name]="'lang-' + uniqueId" type="radio" class="toggle" [checked]="currentLang === 'en'"
     (change)="setLanguage('en')" />
   <label for="lang-de" class="btn de">DE</label>
   <label for="lang-en" class="btn en">EN</label>

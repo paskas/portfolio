@@ -9,4 +9,20 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
-export class Header { }
+export class Header {
+  isBurgerOpen: boolean = false;
+
+  toggleBurgerMenu(): void {
+    this.isBurgerOpen = !this.isBurgerOpen;
+    if (this.isBurgerOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }
+
+  closeBurgerMenu(): void {
+    this.isBurgerOpen = false;
+    document.body.classList.remove('no-scroll');
+  }
+}

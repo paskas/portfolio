@@ -69,44 +69,44 @@
   "references": {
     "headline": "What others say about me",
     "Burdick": {
-      "text": "Pascal has proven to be a reliable and committed team member. His strong technical knowledge and problem-solving mindset contributed greatly to our project success.",
-      "author": "M. Burdick – Team Partner"
+      "text": "Pascal works clearly, reliably, and with a real sense for effective solutions. His calm and structured approach makes collaboration pleasant and efficient. Anyone working with him can rely on thoughtful, well-crafted results.",
+      "author": "M. Burdick",
+      "authorArt": "Teampartner"
     },
     "Marrocu": {
-      "text": "Working with Pascal was a great experience. He consistently demonstrated responsibility, technical expertise, and a proactive attitude throughout the project.",
-      "author": "M. Marrocu – Team Partner"
+      "text": "Working with Pascal was a great experience. He consistently demonstrated responsibility, expertise, and a proactive work attitude.",
+      "author": "M. Marrocu",
+      "authorArt": "Teampartner"
     },
     "Heim": {
-      "text": "Pascal played a key role in our team success. His ability to take initiative and deliver high quality work made a strong positive impact on our results.",
-      "author": "S. Heim – Team Partner"
+      "text": "Pascal played a key role in our team’s success. His commitment and his ability to deliver high-quality work had a clear, positive impact on our results.",
+      "author": "S. Heim",
+      "authorArt": "Teampartner"
     },
     "Gilles": {
-      "text": "Pascal showed excellent collaboration and technical competence. His dedication and clear communication helped the team stay organized and efficient.",
-      "author": "S. Gilles – Team Partner"
+      "text": "Pascal showed excellent teamwork and technical competence. His clear communication and structured approach helped the team stay focused and efficient at all times.",
+      "author": "S. Gilles",
+      "authorArt": "Teampartner"
     },
-    "Cecilia": {
-      "text": "It was a pleasure working with Pascal. He is reliable, detail oriented, and always willing to support others to ensure the project runs smoothly.",
-      "author": "Cecilia – Team Partner"
-    },
-    "Rangosch": {
-      "text": "Pascal contributed significantly to our project through his technical strength and solution oriented thinking. His reliability and teamwork were highly appreciated.",
-      "author": "C. Rangosch – Trusted Reference"
+    "Berghoff": {
+      "text": "I know Pascal as someone with a true hands-on mentality. When something needs to get done, he rolls up his sleeves and gets started right away. What stands out to me is his persistence — once he begins something, he commits to it with 100%. Thanks to his approachable and open nature, we quickly developed solutions together.",
+      "author": "T. Berghoff",
+      "authorArt": "trust reference"
     },
     "Heidenreich": {
-      "text": "Pascal contributed significantly to our project through his technical strength and solution oriented thinking. His reliability and teamwork were highly appreciated.",
-      "author": "N. Heidenreich – Trusted Reference"
+      "text": "Pascal combines deep curiosity, high energy, and a genuine interest in people. He immerses himself quickly into new topics, understands connections, and brings fresh impulses into any collaboration. In conversations, he is open, direct, and appreciative, using dialogue to make well-informed decisions. One of his greatest strengths is his ability to think critically and question processes constructively. Through his drive, focus, and human warmth, he creates noticeable value in projects and teams.",
+      "author": "N. Heidenreich",
+      "authorArt": "trust reference"
     },
     "Tappe": {
-      "text": "Pascal contributed significantly to our project through his technical strength and solution oriented thinking. His reliability and teamwork were highly appreciated.",
-      "author": "M. Tappe – Trusted Reference"
+      "text": "What I’ve always admired about Pascal is how conscientious and almost meticulous he works. He dives deep into his tasks while remaining impressively focused. This attitude has often inspired and impressed me.",
+      "author": "M. Tappe",
+      "authorArt": "trust reference"
     },
     "Rudnick": {
-      "text": "Pascal contributed significantly to our project through his technical strength and solution oriented thinking. His reliability and teamwork were highly appreciated.",
-      "author": "S. Rudnick – Trusted Reference"
-    },
-    "S-Kasbeitzer": {
-      "text": "Pascal contributed significantly to our project through his technical strength and solution oriented thinking. His reliability and teamwork were highly appreciated.",
-      "author": "S. Kasbeitzer – Trusted Reference"
+      "text": "Pascal is an exceptionally curious and energetic person who brings enthusiasm and heart into everything he does. He has a genuine interest in others and actively seeks meaningful exchange — whether to get advice or share knowledge. His versatility and the courage to pursue a new career path later in life show how open-minded and determined he is. He thinks fast, loves trying new things, and inspires others with his enthusiasm. To me, he is a special person who makes collaboration both constructive and personally enriching.",
+      "author": "S. Rudnick",
+      "authorArt": "trust reference"
     }
   },
   "contact": {

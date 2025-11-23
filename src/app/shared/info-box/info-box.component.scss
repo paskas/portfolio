@@ -12,7 +12,7 @@
 
   h2 {
     font-family: var(--font-fira-code);
-    font-size: clamp(var(--fs-xxxl), 5vw, var(--fs-hero));
+    font-size: clamp(var(--fs-xxl), 5vw, var(--fs-hero));
     font-weight: var(--fw-bold);
     color: var(--color-primary);
   }
@@ -107,6 +107,16 @@
         margin-top: 24px;
       }
     }
+
+    @media (max-width: 1279px) {
+      h2 {
+        padding: 0;
+      }
+
+      .info-box_content {
+        gap: 32px;
+      }
+    }
   }
 
   :host(.variant-projects) .info-box {
@@ -118,9 +128,19 @@
       gap: 40px;
     }
 
+    h2 {
+      text-align: start;
+    }
+
     .info-box_text {
       width: 100%;
       max-width: 456px
+    }
+
+    @media (max-width: 1279px) {
+      .info-box_content {
+        gap: 32px;
+      }
     }
   }
 
@@ -166,6 +186,12 @@
       color: var(--color-primary);
       line-height: 1.2;
       padding-bottom: 16px;
+    }
+
+    @media (max-width: 1279px) {
+      h2 {
+        padding-bottom: 32px;
+      }
     }
   }
 
@@ -217,6 +243,18 @@
       color: var(--color-primary);
       line-height: 1.2;
       padding-bottom: 16px;
+    }
+
+    @media (max-width: 1247px) {
+      gap: 0;
+
+      .info-box_text {
+        padding-bottom: 0;
+      }
+
+      h2 {
+        padding-bottom: 32px;
+      }
     }
   }
 }

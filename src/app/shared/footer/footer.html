@@ -1,20 +1,23 @@
 <footer class="content-wrapper footer-content">
-  <div class="footer-info">
-    <div class="footer-logo">
-      <app-link [isSection]="true" variant="logo" href="#header" iconSrc="/assets/icons/logo.svg"
-        iconHoverSrc="/assets/icons/logo-outline.svg" iconAlt="Footer Logo"></app-link>
+  <div class="footer-desktop">
+    <div class="footer-info">
+      <div class="footer-logo">
+        <app-link [isSection]="true" variant="logo" href="#header" iconSrc="/assets/icons/logo.svg"
+          iconHoverSrc="/assets/icons/logo-outline.svg" iconAlt="Footer Logo"></app-link>
+      </div>
+      <div class="footer-info-text">
+        <span>{{'footer.info1' | translate}}</span>
+        <span>{{'footer.info2' | translate}}</span>
+      </div>
     </div>
-    <div class="footer-info-text">
-      <span>{{'footer.info1' | translate}}</span>
-      <span>{{'footer.info2' | translate}}</span>
+    <span class="copyright-desktop">© Pascal Kasbeitzer 2025</span>
+    <div class="footer-links">
+      <app-link label="GitHub" variant="footer" [isExternal]="true" href="https://github.com/paskas"></app-link>
+      <app-link label="LinkedIn" variant="footer" [isExternal]="true"
+        href="https://www.linkedin.com/in/pascal-kasbeitzer-3638602bb/"></app-link>
+      <app-link label="Email" variant="footer" [isExternal]="true" href="mailto:pascal.kasbeitzer@gmail.com"></app-link>
+      <app-link [label]="'footer.link' | translate" variant="footer" routerLink="/legal-notice"></app-link>
     </div>
   </div>
-  <span class="copyright">© Pascal Kasbeitzer 2025</span>
-  <div class="footer-links">
-    <app-link label="GitHub" variant="footer" [isExternal]="true" href="https://github.com/paskas"></app-link>
-    <app-link label="LinkedIn" variant="footer" [isExternal]="true"
-      href="https://www.linkedin.com/in/pascal-kasbeitzer-3638602bb/"></app-link>
-    <app-link label="Email" variant="footer" [isExternal]="true" href="mailto:pascal.kasbeitzer@gmail.com"></app-link>
-    <app-link [label]="'footer.link' | translate" variant="footer" routerLink="/legal-notice"></app-link>
-  </div>
+  <span class="copyright-mobile">© Pascal Kasbeitzer 2025</span>
 </footer>

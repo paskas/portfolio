@@ -4,7 +4,9 @@
       iconAlt="Header Icon"></app-link>
   </div>
   <nav>
-    <app-language-switch></app-language-switch>
+    <div class="switch-dsktop-wrapper">
+      <app-language-switch></app-language-switch>
+    </div>
     <div class="menu">
       <app-link [label]="'nav.about' | translate" [isSection]="true" [routerLink]="['/']" fragment="aboutMe"></app-link>
       <app-link [label]="'nav.skills' | translate" [isSection]="true" [routerLink]="['/']" fragment="skills"></app-link>
@@ -16,7 +18,20 @@
     <app-link [isSection]="true" variant="logo" [routerLink]="['/']" iconSrc="/assets/icons/logo.svg"
       iconHoverSrc="/assets/icons/logo-outline.svg" iconAlt="Header Logo"></app-link>
   </div>
-  <div class="burger-menu">
+  <div class="burger-menu" (click)="toggleBurgerMenu()">
     <img src="/assets/icons/burger-menu.svg" alt="Burger Menu">
+  </div>
+  <div class="burger-mobile-wrapper" [class.is-open]="isBurgerOpen" (click)="closeBurgerMenu()">
+    <div class="burger-mobile">
+      <app-link [label]="'nav.about' | translate" [isSection]="true" [routerLink]="['/']" fragment="aboutMe"
+        (click)="closeBurgerMenu()"></app-link>
+      <app-link [label]="'nav.skills' | translate" [isSection]="true" [routerLink]="['/']" fragment="skills"
+        (click)="closeBurgerMenu()"></app-link>
+      <app-link [label]="'nav.projects' | translate" [isSection]="true" [routerLink]="['/']" fragment="projects"
+        (click)="closeBurgerMenu()"></app-link>
+      <div class="switch-mobile-wrapper">
+        <app-language-switch></app-language-switch>
+      </div>
+    </div>
   </div>
 </header>

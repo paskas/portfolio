@@ -8,15 +8,15 @@
   left: 0;
   width: 100%;
   max-width: 1248px;
-  height: 708px;
+  height: 936px;
 
   &::before {
     content: "";
     position: absolute;
     right: -40px;
-    bottom: 0;
+    bottom: -48px;
     width: 150px;
-    height: 85%;
+    height: 90%;
     background: #08463B;
     filter: blur(80px);
     opacity: 0.5;
@@ -24,9 +24,27 @@
   }
 
   .info-media {
-    position: absolute;
-    width: 568px;
-    height: 588px;
+    position: relative;
+    inset: 0;
+    transition: opacity 250ms ease, transform 250ms ease;
+    z-index: 2;
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      display: block;
+      background: url("/assets/images/project-img-hover.png") no-repeat center / contain;
+      z-index: -1;
+      opacity: 1;
+      transform: translate(-20px, 20px);
+    }
+
+    .image {
+      width: 100%;
+      max-width: 568px;
+      border-radius: 30px;
+    }
   }
 
   .info-about {
@@ -36,18 +54,16 @@
   }
 }
 
-/* 🔽 ab hier responsive Anpassungen */
-
 @media (max-width: 1279px) {
   :host {
-    padding: 80px 16px;
+    padding: 100px 0 100px 0;
   }
 
   .about-section {
     max-width: 100%;
-    height: auto;              /* feste Höhe weg */
+    height: auto;
     display: flex;
-    flex-direction: column;    /* untereinander */
+    flex-direction: column;
     align-items: center;
   }
 
@@ -55,12 +71,12 @@
     right: 0;
     width: 120px;
     height: 60%;
-    filter: blur(60px);        /* leicht anpassen, damit es nicht dominiert */
+    filter: blur(60px);
   }
 
   .about-section .info-media,
   .about-section .info-about {
-    position: static;          /* 🔑 absolute entfernen */
+    position: static;
     width: 100%;
     max-width: 568px;
   }
@@ -71,11 +87,7 @@
 }
 
 @media (max-width: 480px) {
-  :host {
-    padding: 64px 16px;
-  }
-
   .about-section .info-media {
-    height: auto;              /* falls nötig, Bild/Content mitwachsen lassen */
+    height: auto;
   }
 }

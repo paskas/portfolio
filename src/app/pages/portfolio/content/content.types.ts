@@ -54,6 +54,7 @@ export interface ProjectLinks {
 export interface Slidecard {
   textKey: string;
   authorKey: string;
+  authorArtKey: string;
 }
 
 export interface MarqueeItem {
