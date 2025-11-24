@@ -1,15 +1,14 @@
 <section class="about-section">
   <figure class="info-media">
-    <img class="image" src="/assets/images/photo-me.jpg" alt="IMAGE-Pascal">
+    <div class="image-wrapper" [class.active]="isImageActive" (mouseenter)="activateImageHover()">
+      <img class="image" src="/assets/images/photo-me.jpg" alt="IMAGE-Pascal">
+    </div>
   </figure>
- <app-info-box
-  [variant]="'about'"
-  class="info-about"
-  [content]="{
+  <app-info-box [variant]="'about'" class="info-about" [content]="{
     subtitle: ('about.subtitle' | translate),
     title: ('about.title' | translate),
     text: ('about.text' | translate),
     infos: infos
   }">
-</app-info-box>
+  </app-info-box>
 </section>

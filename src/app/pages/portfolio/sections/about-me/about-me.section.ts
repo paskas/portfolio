@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { InfoBoxComponent } from '../../../../shared/info-box/info-box.component';
-import { ABOUT_INFOS} from '../../content/about.content';
+import { ABOUT_INFOS } from '../../content/about.content';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -12,4 +12,9 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class AboutMeSection {
   infos = ABOUT_INFOS;
+  isImageActive = false;
+
+  activateImageHover() {
+    this.isImageActive = true;
+  }
 }
