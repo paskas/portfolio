@@ -61,16 +61,16 @@ export const OVERLAY_LINKS: ProjectLinks[] = [
   {
     key: 'join',
     github: 'https://github.com/paskas/Join',
-    live: 'https://paskas.github.io/Join/'
+    live: 'https://join.pascal-kasbeitzer.dev'
   },
   {
     key: 'sharkie',
     github: 'https://github.com/paskas/Sharkie-Game',
-    live: 'https://paskas.github.io/Sharkie-Game/'
+    live: 'https://sharkie.pascal-kasbeitzer.dev'
   },
   {
     key: 'pokemon',
     github: 'https://github.com/paskas/Pokedex',
-    live: 'https://paskas.github.io/Pokedex/'
+    live: 'https://pokedex.pascal-kasbeitzer.dev'
   }
 ];

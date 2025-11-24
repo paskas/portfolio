@@ -12,7 +12,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: clamp(30%, 4vw, 0%);
 
     h1,
     h2 {
@@ -203,9 +202,7 @@
     height: 224px;
   }
 
-  .hero-overlay .right-lateral .straight-line {
-    height: 112px;
-  }
+
 
   .hero-overlay .right-lateral .email-sideway {
     display: none;
@@ -220,6 +217,12 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .hero-overlay .right-lateral .straight-line {
+    height: 124px;
+  }
+}
+
 @media (max-width: 480px) {
   .hero-overlay .left-lateral .straight-line {
     height: 156px;
@@ -227,5 +230,14 @@
 
   .hero-overlay .right-lateral .straight-line {
     height: 78px;
+  }
+
+  .marquee {
+    height: 42px;
+    bottom: 20px;
+  }
+
+  .hero-title {
+    margin-bottom: 30%;
   }
 }
