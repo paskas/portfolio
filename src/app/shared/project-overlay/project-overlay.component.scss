@@ -23,6 +23,8 @@
   align-items: center;
 
   .overlay-content {
+    max-height: 80dvh;
+    overflow-y: auto;
     width: 100%;
     display: flex;
     align-items: center;
@@ -99,10 +101,10 @@
 
 @media(max-width:1247px) {
   .project-overlay-position {
-    padding: 0 16px 0 16px;
+    padding: 16px;
   }
 
-  .overlay-content {
+  .project-overlay .overlay-content {
     flex-direction: column-reverse;
     justify-content: center;
   }

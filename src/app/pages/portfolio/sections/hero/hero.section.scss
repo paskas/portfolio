@@ -219,3 +219,13 @@
     bottom: 30px;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-overlay .left-lateral .straight-line {
+    height: 156px;
+  }
+
+  .hero-overlay .right-lateral .straight-line {
+    height: 78px;
+  }
+}
