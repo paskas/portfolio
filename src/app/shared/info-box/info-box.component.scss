@@ -207,7 +207,7 @@
       font-family: var(--font-karla);
       font-weight: var(--fw-bold);
       font-size: clamp(var(--fs-xxxxl), 12vw, var(--fs-display));
-      line-height: 100px;
+      line-height: clamp(50px, 10vw, 100px);
       letter-spacing: -2px;
     }
 
@@ -253,7 +253,7 @@
       }
 
       h2 {
-        padding-bottom: 32px;
+        padding-bottom: 16px;
       }
     }
   }
