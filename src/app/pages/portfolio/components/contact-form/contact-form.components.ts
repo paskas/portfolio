@@ -24,7 +24,7 @@ export class ContactFormComponents {
 
   isSending = false;
   sendSuccess = false;
-  sendError = '';
+  sendError = false;
 
   onSubmit(): void {
     if (this.formGroup.invalid) {
@@ -33,7 +33,7 @@ export class ContactFormComponents {
     }
     this.isSending = true;
     this.sendSuccess = false;
-    this.sendError = '';
+    this.sendError = false;
     const { name, email, message } = this.formGroup.getRawValue();
 
     this.mailContactService.sendMessage$({ name, email, message }).subscribe({
@@ -44,7 +44,7 @@ export class ContactFormComponents {
       },
       error: () => {
         this.isSending = false;
-        this.sendError = 'contact.form.error';
+        this.sendError = true;
       }
     });
   }

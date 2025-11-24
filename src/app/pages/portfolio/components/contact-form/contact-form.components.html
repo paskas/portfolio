@@ -7,7 +7,6 @@
       <small class="error">{{ 'contact.form.name.error' | translate }}</small>
       }
     </label>
-
     <label class="label-frame">
       <span>{{ 'contact.form.email.label' | translate }}</span>
       <input type="email" formControlName="email" [placeholder]="'contact.form.email.placeholder' | translate"
@@ -16,7 +15,6 @@
       <small class="error">{{ 'contact.form.email.error' | translate }}</small>
       }
     </label>
-
     <label class="label-frame border-bottom">
       <span>{{ 'contact.form.message.label' | translate }}</span>
       <textarea formControlName="message" rows="1"
@@ -25,7 +23,6 @@
       <small class="error">{{ 'contact.form.message.error' | translate }}</small>
       }
     </label>
-
     <label class="privacy">
       <input type="checkbox" formControlName="privacy" />
       <span>{{ 'contact.form.privacy.prefix' | translate }}<app-link [label]="'contact.form.privacy.link' | translate"
@@ -36,9 +33,8 @@
       }
     </label>
   </div>
-
   <app-buttons [label]="'contact.form.submitLabel' | translate" type="submit"
     [disabled]="formGroup.invalid || isSending"></app-buttons>
-  @if (sendSuccess) { <p class="submit-success">{{ 'contact.form.sending' | translate }}</p> }
-  @if (sendError) { <p class="submit-error">{{ sendError | translate }}</p> }
+  @if (sendSuccess) { <p class="submit-success">{{ 'contact.form.success' | translate }}</p> }
+  @if (sendError) { <p class="submit-error">{{ 'contact.form.error' | translate }}</p> }
 </form>
