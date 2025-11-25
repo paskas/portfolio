@@ -84,10 +84,11 @@
 
       span {
         font-family: var(--font-karla);
-        font-size: var(--fs-xxs);
+        font-size: var(--fs-xs);
         font-weight: var(--fw-regular);
         color: var(--color-secondary);
         line-height: 1.2;
+        flex: 1;
       }
 
       .checkbox-error {
