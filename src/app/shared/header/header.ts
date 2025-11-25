@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { SHARED_UI } from '..';
 import { TranslateModule } from '@ngx-translate/core';
+import { NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,13 +15,18 @@ import { TranslateModule } from '@ngx-translate/core';
 export class Header {
   isBurgerOpen: boolean = false;
 
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.isBurgerOpen = false;
+        document.body.classList.remove('no-scroll');
+      });
+  }
+
   toggleBurgerMenu(): void {
-    this.isBurgerOpen = !this.isBurgerOpen;
-    if (this.isBurgerOpen) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
+    this.isBurgerOpen = true;
+    document.body.classList.add('no-scroll');
   }
 
   closeBurgerMenu(): void {

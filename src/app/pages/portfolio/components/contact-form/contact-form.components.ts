@@ -4,6 +4,16 @@ import { MailContactService } from '../../../../core/services/mail-contact.servi
 import { SHARED_UI } from '../../../../shared';
 import { TranslateModule } from '@ngx-translate/core';
 
+function trimValidator() {
+  return (control: any) => {
+    if (!control.value) { return undefined; }
+    const value = control.value as string;
+    return value.trim().length === value.length
+      ? undefined
+      : { trimError: true };
+  };
+}
+
 @Component({
   selector: 'app-contact-form',
   standalone: true,
@@ -16,9 +26,9 @@ export class ContactFormComponents {
   private mailContactService = inject(MailContactService)
 
   formGroup: FormGroup = this.formBuilder.group({
-    name: ['', [Validators.required, Validators.minLength(2)]],
-    email: ['', [Validators.required, Validators.email]],
-    message: ['', [Validators.required, Validators.minLength(10)]],
+    name: ['', [Validators.required, Validators.minLength(2), trimValidator()]],
+    email: ['', [Validators.required, Validators.pattern(/^[^\s@]+(\.[^\s@]+)*@[^\s@]+\.[^\s@]{2,}$/)]],
+    message: ['', [Validators.required, Validators.minLength(10), trimValidator()]],
     privacy: [false, [Validators.requiredTrue]]
   });
 
