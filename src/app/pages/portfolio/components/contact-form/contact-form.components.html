@@ -2,7 +2,8 @@
   <div class="contact-labels flex-start">
     <label class="label-frame">
       <span>{{ 'contact.form.name.label' | translate }}</span>
-      <input type="text" formControlName="name" [placeholder]="'contact.form.name.placeholder' | translate" />
+      <input #nameInput type="text" formControlName="name"
+        [placeholder]="'contact.form.name.placeholder' | translate" />
       @if (formGroup.controls['name'].touched && formGroup.controls['name'].invalid) {
       <small class="error">{{ 'contact.form.name.error' | translate }}</small>
       }
