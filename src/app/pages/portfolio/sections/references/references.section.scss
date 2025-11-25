@@ -1,6 +1,6 @@
 .references-section {
-  position: relative;
   width: 100%;
+  height: auto;
   gap: 48px;
 
   &::before {
@@ -30,7 +30,7 @@
     position: relative;
     width: 100%;
     max-width: 1440px;
-    height: clamp(280px, calc(-22vw + 550px), 480px);
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,6 +63,12 @@
       gap: 32px;
     }
   }
+
+  @media (max-width: 480px) {
+    & {
+      gap: 8px;
+    }
+  }
 }
 
 .slide-arrow {
@@ -91,6 +97,7 @@
     transition: width 1000ms ease-in-out;
   }
 }
+
 
 @media(max-width:1279px) {
   .references-section::before {

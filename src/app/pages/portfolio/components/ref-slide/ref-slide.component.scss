@@ -1,3 +1,7 @@
+:host {
+  height: 295px;
+}
+
 .slide-card {
   position: absolute;
   top: 0;
@@ -5,7 +9,7 @@
   margin-block: auto;
   width: 100%;
   max-width: 632px;
-  height: 100%;
+  height: auto;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -94,5 +98,16 @@
 
   .is-right {
     transform: translateX(-50%) translateX(93%) scale(0.8);
+  }
+}
+
+@media(max-width:480px) {
+  :host {
+    height: 500px;
+  }
+
+  .slide-card {
+    height: fit-content;
+    gap: 8px;
   }
 }
