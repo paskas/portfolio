@@ -2,8 +2,8 @@
   <div class="contact-labels flex-start">
     <label class="label-frame">
       <span>{{ 'contact.form.name.label' | translate }}</span>
-      <input #nameInput type="text" formControlName="name"
-        [placeholder]="'contact.form.name.placeholder' | translate" />
+      <input #nameInput type="text" formControlName="name" [placeholder]="'contact.form.name.placeholder' | translate"
+        (blur)="cleanOnBlur('name')" />
       @if (formGroup.controls['name'].touched && formGroup.controls['name'].invalid) {
       <small class="error">{{ 'contact.form.name.error' | translate }}</small>
       }
@@ -11,15 +11,15 @@
     <label class="label-frame">
       <span>{{ 'contact.form.email.label' | translate }}</span>
       <input type="email" formControlName="email" [placeholder]="'contact.form.email.placeholder' | translate"
-        inputmode="email" />
+        inputmode="email" (blur)="cleanOnBlur('email')" />
       @if (formGroup.controls['email'].touched && formGroup.controls['email'].invalid) {
       <small class="error">{{ 'contact.form.email.error' | translate }}</small>
       }
     </label>
     <label class="label-frame border-bottom">
       <span>{{ 'contact.form.message.label' | translate }}</span>
-      <textarea formControlName="message" rows="1"
-        [placeholder]="'contact.form.message.placeholder' | translate"></textarea>
+      <textarea formControlName="message" rows="1" [placeholder]="'contact.form.message.placeholder' | translate"
+        (blur)="cleanOnBlur('message')"></textarea>
       @if (formGroup.controls['message'].touched && formGroup.controls['message'].invalid) {
       <small class="error">{{ 'contact.form.message.error' | translate }}</small>
       }

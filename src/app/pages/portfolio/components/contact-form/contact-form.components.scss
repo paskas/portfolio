@@ -44,7 +44,7 @@
         line-height: 1.2;
         resize: none;
         overflow: hidden;
-        cursor: pointer;
+        cursor: text;
 
         &.ng-invalid.ng-touched:placeholder-shown::placeholder {
           opacity: 0;

@@ -4,17 +4,17 @@ import { MailContactService } from '../../../../core/services/mail-contact.servi
 import { SHARED_UI } from '../../../../shared';
 import { TranslateModule } from '@ngx-translate/core';
 
-function trimValidator() {
-  return (control: any) => {
-    if (!control.value) { return undefined; }
-    const value = control.value as string;
-    if (value !== value.trim()) {
-      return { trimError: true };
+// function trimValidator() {
+//   return (control: any) => {
+//     if (!control.value) { return undefined; }
+//     const value = control.value as string;
+//     if (value !== value.trim()) {
+//       return { trimError: true };
 
-    }
-    return undefined;
-  };
-}
+//     }
+//     return undefined;
+//   };
+// }
 
 @Component({
   selector: 'app-contact-form',
@@ -29,15 +29,27 @@ export class ContactFormComponents {
   private mailContactService = inject(MailContactService)
 
   formGroup: FormGroup = this.formBuilder.group({
-    name: ['', [Validators.required, Validators.minLength(2), trimValidator()]],
+    name: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, Validators.pattern(/^(?!.*\.\.)[^\s@]+(\.[^\s@]+)*@[^\s@]+\.[^\s@]{2,}$/)]],
-    message: ['', [Validators.required, Validators.minLength(10), trimValidator()]],
+    message: ['', [Validators.required, Validators.minLength(10)]],
     privacy: [false, [Validators.requiredTrue]]
   });
 
   isSending = false;
   sendSuccess = false;
   sendError = false;
+
+  cleanOnBlur(inputArea: string): void {
+    const input = this.formGroup.get(inputArea);
+    if (!input) { return; }
+    let value = input.value;
+    if (typeof value !== 'string') { return; }
+    value = value.trim();
+    if (inputArea === 'email') {
+      value = value.replace(/\s+/g, '').toLowerCase();
+    }
+    input.setValue(value, { emitEvent: true });
+  }
 
   onSubmit(): void {
     if (this.formGroup.invalid) {
