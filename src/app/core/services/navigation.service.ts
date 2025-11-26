@@ -11,4 +11,16 @@ export class NavigationService {
       scrollId.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
+
+  scrollToAndFocus(id: string, focusSelector: string): void { 
+    const scrollId = document.getElementById(id);
+    if (!scrollId) { return; }
+    scrollId.scrollIntoView({ behavior: "smooth", block: "start" });
+    setTimeout(() => {
+      const target = document.querySelector(focusSelector) as HTMLElement | null;
+      if (target) {
+        target.focus();
+      }
+    }, 300);
+  }
 }

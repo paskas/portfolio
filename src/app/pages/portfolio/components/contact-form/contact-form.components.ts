@@ -1,4 +1,4 @@
-import { Component, inject, ViewChild } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MailContactService } from '../../../../core/services/mail-contact.service';
 import { SHARED_UI } from '../../../../shared';
@@ -24,8 +24,6 @@ function trimValidator() {
 export class ContactFormComponents {
   private formBuilder = inject(FormBuilder)
   private mailContactService = inject(MailContactService)
-
-  @ViewChild('nameInput') nameInput!: any;
 
   formGroup: FormGroup = this.formBuilder.group({
     name: ['', [Validators.required, Validators.minLength(2), trimValidator()]],
@@ -59,9 +57,5 @@ export class ContactFormComponents {
         this.sendError = true;
       }
     });
-  }
-
-  ngAfterViewInit() {
-    queueMicrotask(() => this.nameInput.nativeElement.focus());
   }
 }

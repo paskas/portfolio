@@ -77,7 +77,7 @@
 
   .project-image {
     position: absolute;
-    right: -340px;
+    right: clamp(-382px, -24vw, -312px);
     top: 0;
     opacity: 0;
     pointer-events: none;

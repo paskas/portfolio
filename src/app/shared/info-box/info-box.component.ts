@@ -17,7 +17,9 @@ export type InfoBoxVariant = 'default' | 'about' | 'skills' | 'projects' | 'cont
 })
 export class InfoBoxComponent {
   constructor(private navigation: NavigationService,
+
     private translate: TranslateService,) { }
+
   @Input({ required: true }) content!: InfoBoxContent;
   @Input() variant: InfoBoxVariant = 'default';
 
@@ -32,6 +34,13 @@ export class InfoBoxComponent {
   }
 
   scrollToContact(sectionId: string): void {
+    if (sectionId === 'contact') {
+      this.navigation.scrollToAndFocus(
+        'contact',
+        '#contact input[formcontrolname="name"]'
+      );
+      return;
+    }
     this.navigation.scrollTo(sectionId);
   }
 }

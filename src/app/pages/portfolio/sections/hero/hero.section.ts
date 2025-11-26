@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { SHARED_UI } from '../../../../shared';
 import { NavigationService } from '../../../../core/services/navigation.service';
 import { MARQUEE_CONTENT } from '../../content/marquee.content';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero',
@@ -13,6 +13,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class HeroSection {
   constructor(private navigation: NavigationService) { }
+
   marqueeContent = MARQUEE_CONTENT;
   marqueeReady = false;
 
@@ -27,6 +28,13 @@ export class HeroSection {
   }
 
   scrollToContact(sectionId: string): void {
+    if (sectionId === 'contact') {
+      this.navigation.scrollToAndFocus(
+        'contact',
+        '#contact input[formcontrolname="name"]'
+      );
+      return;
+    }
     this.navigation.scrollTo(sectionId);
   }
 }

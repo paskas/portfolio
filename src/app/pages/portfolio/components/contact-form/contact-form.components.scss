@@ -68,7 +68,7 @@
     input.ng-invalid.ng-touched:placeholder-shown+.error,
     textarea.ng-invalid.ng-touched:placeholder-shown+.error {
       position: absolute;
-      width: 100%;
+      width: fit-content;
       bottom: 32px;
       transform: translateY(0px);
       transition: transform 300ms ease;
