@@ -8,9 +8,11 @@ function trimValidator() {
   return (control: any) => {
     if (!control.value) { return undefined; }
     const value = control.value as string;
-    return value.trim().length === value.length
-      ? undefined
-      : { trimError: true };
+    if (value !== value.trim()) {
+      return { trimError: true };
+
+    }
+    return undefined;
   };
 }
 
@@ -21,13 +23,14 @@ function trimValidator() {
   templateUrl: './contact-form.components.html',
   styleUrl: './contact-form.components.scss'
 })
+
 export class ContactFormComponents {
   private formBuilder = inject(FormBuilder)
   private mailContactService = inject(MailContactService)
 
   formGroup: FormGroup = this.formBuilder.group({
     name: ['', [Validators.required, Validators.minLength(2), trimValidator()]],
-    email: ['', [Validators.required, Validators.pattern(/^[^\s@]+(\.[^\s@]+)*@[^\s@]+\.[^\s@]{2,}$/)]],
+    email: ['', [Validators.required, Validators.pattern(/^(?!.*\.\.)[^\s@]+(\.[^\s@]+)*@[^\s@]+\.[^\s@]{2,}$/)]],
     message: ['', [Validators.required, Validators.minLength(10), trimValidator()]],
     privacy: [false, [Validators.requiredTrue]]
   });
@@ -44,8 +47,10 @@ export class ContactFormComponents {
     this.isSending = true;
     this.sendSuccess = false;
     this.sendError = false;
-    const { name, email, message } = this.formGroup.getRawValue();
-
+    let { name, email, message } = this.formGroup.getRawValue();
+    name = name.trim();
+    message = message.trim();
+    email = email.trim().toLowerCase();
     this.mailContactService.sendMessage$({ name, email, message }).subscribe({
       next: () => {
         this.isSending = false;
