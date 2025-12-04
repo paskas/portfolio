@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface ContactMessagePayload {
@@ -11,13 +11,19 @@ export interface ContactMessagePayload {
 @Injectable({ providedIn: 'root' })
 export class MailContactService {
   private httpClient = inject(HttpClient);
-  private endpointUrl = '/api/contact';
+  private endpointUrl = 'https://formspree.io/f/mzznvddd';
 
-  sendMessage$(payload: ContactMessagePayload): Observable<string> {
-    return this.httpClient.post(
-      this.endpointUrl,
-      payload,
-      { responseType: 'text' as const }
-    );
+  sendMessage$(payload: ContactMessagePayload): Observable<unknown> {
+    const body = {
+      name: payload.name,
+      email: payload.email,
+      message: payload.message,
+      _replyto: payload.email,
+      _subject: 'Kontaktformular Portfolio',
+    };
+    const headers = new HttpHeaders({
+      Accept: 'application/json',
+    });
+    return this.httpClient.post(this.endpointUrl, body, { headers });
   }
 }
