@@ -2,11 +2,12 @@ import { Component, Input, signal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import type { Skill, Tooltip } from '../../content/content.types';
 import { TranslateModule } from '@ngx-translate/core';
+import { RevealOnScrollDirective } from '../../../../shared/reveal-on-scroll/reveal-on-scroll.directive';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [NgOptimizedImage, TranslateModule],
+  imports: [NgOptimizedImage, TranslateModule, RevealOnScrollDirective],
   templateUrl: './skills.components.html',
   styleUrl: './skills.components.scss'
 })

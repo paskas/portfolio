@@ -3,11 +3,12 @@ import { InfoBoxComponent } from "../../../../shared/info-box/info-box.component
 import { ProjectFrameComponent } from "../../components/project-frame/project-frame.component";
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectOverlayComponent } from '../../../../shared/project-overlay/project-overlay.component';
+import { RevealOnScrollDirective } from '../../../../shared/reveal-on-scroll/reveal-on-scroll.directive';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [InfoBoxComponent, ProjectFrameComponent, TranslateModule, ProjectOverlayComponent],
+  imports: [InfoBoxComponent, ProjectFrameComponent, TranslateModule, ProjectOverlayComponent, RevealOnScrollDirective],
   templateUrl: './projects.section.html',
   styleUrl: './projects.section.scss'
 })

@@ -3,11 +3,12 @@ import { RefSlideComponent } from '../../components/ref-slide/ref-slide.componen
 import { REF_SLIDECARD } from '../../content/refereces.content';
 import { SHARED_UI } from '../../../../shared';
 import { TranslateModule } from '@ngx-translate/core';
+import { RevealOnScrollDirective } from '../../../../shared/reveal-on-scroll/reveal-on-scroll.directive';
 
 
 @Component({
   selector: 'app-references',
-  imports: [...SHARED_UI, RefSlideComponent, TranslateModule],
+  imports: [...SHARED_UI, RefSlideComponent, TranslateModule, RevealOnScrollDirective],
   templateUrl: './references.section.html',
   styleUrl: './references.section.scss'
 })

@@ -1,12 +1,12 @@
 <section class="about-section">
   <figure class="info-media">
-    <div class="image-wrapper reveal reveal-left reveal-fast" appRevealOnScroll [once]="true"
-  [threshold]="0.25" [class.active]="isImageActive" (mouseenter)="activateImageHover()">
+    <div class="image-wrapper reveal reveal-left" appRevealOnScroll [once]="true"
+      [class.active]="isImageActive" (mouseenter)="activateImageHover()">
       <img class="image" src="/assets/images/photo-me.jpg" alt="IMAGE-Pascal">
     </div>
   </figure>
   <app-info-box id="aboutMe" [variant]="'about'" class="info-about reveal reveal-right" appRevealOnScroll [once]="true"
-  [threshold]="0.25" [content]="{
+    [content]="{
     subtitle: ('about.subtitle' | translate),
     title: ('about.title' | translate),
     text: ('about.text' | translate),

@@ -1,7 +1,7 @@
 <article class="skillset">
   <ul>
     @for (skill of skillsList; track trackById($index, skill)) {
-    <li class="skill-card">
+    <li class="skill-card reveal reveal-right" appRevealOnScroll [once]="true">
       <img class="skill-img" ngSrc="{{ skill.iconSrc }}" alt="{{ skill.label }}" width="64" height="64" />
       <span class="skill-span">{{ skill.label }}</span>
       @if (skill.id === 'growth') {

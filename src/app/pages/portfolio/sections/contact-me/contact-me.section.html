@@ -1,5 +1,5 @@
 <section class="contact-me-section">
-  <app-info-box [variant]="'contact'" [content]="{
+  <app-info-box class="reveal reveal-left" appRevealOnScroll [once]="true" [variant]="'contact'" [content]="{
       subtitle: ('contact.subtitle' | translate),
       title: ('contact.title' | translate),
       secondaryTitle: ('contact.secondaryTitle' | translate),
@@ -7,5 +7,5 @@
       question: question,
     }">
   </app-info-box>
-  <app-contact-form></app-contact-form>
+  <app-contact-form class="reveal reveal-right" appRevealOnScroll [once]="true"></app-contact-form>
 </section>

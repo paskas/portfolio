@@ -3,12 +3,13 @@ import { InfoBoxComponent } from '../../../../shared/info-box/info-box.component
 import { SKILL_QUESTION, SKILL_TOOLTIP, SKILLS_DEFAULT } from '../../content/skills.content';
 import { SkillsComponents } from '../../components/skills/skills.components';
 import { TranslateModule } from '@ngx-translate/core';
+import { RevealOnScrollDirective } from '../../../../shared/reveal-on-scroll/reveal-on-scroll.directive';
 
 
 @Component({
   selector: 'app-skills-section',
   standalone: true,
-  imports: [InfoBoxComponent, SkillsComponents, TranslateModule],
+  imports: [InfoBoxComponent, SkillsComponents, TranslateModule, RevealOnScrollDirective],
   templateUrl: './skills.section.html',
   styleUrl: './skills.section.scss'
 })
