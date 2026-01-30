@@ -10,11 +10,11 @@
 }
 
 .reveal-left {
-  transform: translateX(-120px);
+  transform: translateX(calc(-1 * min(120px, 12vw)));
 }
 
 .reveal-right {
-  transform: translateX(120px);
+  transform: translateX(calc(min(120px, 12vw)));
 }
 
 .reveal-bottom {
