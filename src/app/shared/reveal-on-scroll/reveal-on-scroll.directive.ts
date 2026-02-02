@@ -6,7 +6,7 @@ import { AfterViewInit, Directive, ElementRef, Input, OnDestroy } from '@angular
 })
 export class RevealOnScrollDirective implements AfterViewInit, OnDestroy {
   @Input() once = true;
-  @Input() threshold = 0.5;
+  @Input() threshold = 0.7;
   @Input() rootMargin = '0px';
 
   private observer?: IntersectionObserver;
@@ -21,9 +21,10 @@ export class RevealOnScrollDirective implements AfterViewInit, OnDestroy {
   private createObserver(): void {
     this.observer = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting) return;
-        this.element.nativeElement.classList.add('is-visible');
-        if (this.once) this.observer?.unobserve(this.element.nativeElement);
+        if (entry.isIntersecting) {
+          this.element.nativeElement.classList.add('is-visible');
+          if (this.once) this.observer?.unobserve(this.element.nativeElement);
+        } else this.element.nativeElement.classList.remove('is-visible');
       },
       {
         threshold: this.threshold,
