@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
   background: color-mix(in srgb, var(--color-background) 80%, transparent);
-  animation: fadeIn 250ms ease forwards;
 }
 
 .project-overlay {
@@ -18,9 +17,11 @@
   border: var(--btn-border);
   background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
   padding: 80px;
+  margin: 0px 16px;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 250ms ease forwards;
 
   .overlay-content {
     max-height: 80dvh;
@@ -90,12 +91,12 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(100%);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0%);
   }
 }
 
@@ -106,7 +107,6 @@
 
   .project-overlay .overlay-content {
     flex-direction: column-reverse;
-    justify-content: center;
   }
 
   .project-overlay .overlay-content .project-img {
@@ -116,8 +116,10 @@
   }
 
   .project-overlay {
-    min-height: 100dvh;
+    height: 100%;
+    max-width: 568px;
     padding: 95px 12px 95px 12px;
+    margin: unset;
   }
 
   .project-overlay .overlay-close {
@@ -140,5 +142,11 @@
   .project-overlay .overlay-btn {
     justify-content: space-around;
     gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-overlay .overlay-content {
+    max-height: 70dvh;
   }
 }

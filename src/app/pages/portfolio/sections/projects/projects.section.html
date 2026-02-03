@@ -1,3 +1,5 @@
+<app-project-overlay [projectKey]="selectedProjectKey" [isOpen]="!!selectedProjectKey" (close)="closeOverlay()">
+</app-project-overlay>
 <section class="projects-section reveal reveal-left" appRevealOnScroll [once]="true">
   <app-info-box [variant]="'projects'" [content]="{
       subtitle: ('projects.subtitle' | translate),
@@ -6,6 +8,4 @@
     }">
   </app-info-box>
   <app-project-frame (selectProject)="onSelectProject($event)"></app-project-frame>
-  <app-project-overlay [projectKey]="selectedProjectKey" [isOpen]="!!selectedProjectKey" (close)="closeOverlay()">
-  </app-project-overlay>
 </section>

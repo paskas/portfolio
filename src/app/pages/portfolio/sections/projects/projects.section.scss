@@ -5,7 +5,6 @@
 
 .projects-section {
   width: 100%;
-  max-width: 880px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -21,6 +20,7 @@
   }
 
   .projects-section {
+    max-width: 568px;
     padding-bottom: 0;
   }
 }
