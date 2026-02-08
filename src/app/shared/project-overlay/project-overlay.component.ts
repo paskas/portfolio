@@ -15,6 +15,7 @@ export class ProjectOverlayComponent {
   projectFrame = PROJECT_FRAME;
   projectskills = OVERLAY_SKILLS;
   projectLinks = OVERLAY_LINKS;
+  isClosing: boolean = false;
 
   @Input() projectKey: string | null = null;
   @Input() isOpen: boolean = false;
@@ -58,6 +59,11 @@ export class ProjectOverlayComponent {
   }
 
   onClose(): void {
-    this.close.emit();
+    this.isClosing = true;
+    window.setTimeout(() => {
+      this.isClosing = false;
+      this.close.emit();
+      document.body.classList.remove('no-scroll');
+    }, 250);
   }
 }

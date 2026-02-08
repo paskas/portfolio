@@ -20,3 +20,12 @@
 .reveal-bottom {
   transform: translateY(100px);
 }
+
+::view-transition-old(count),
+::view-transition-new(count) {
+  animation-duration: 250ms;
+  animation-name: -ua-view-transition-fade-in, rotate-in;
+}
+::view-transition-old(count) {
+  animation-name: -ua-view-transition-fade-out, rotate-out;
+}

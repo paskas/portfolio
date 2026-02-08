@@ -1,6 +1,6 @@
-@if (isOpen && projectKey) {
-<div class="project-overlay-position">
-  <article class="project-overlay">
+@if (((isOpen && projectKey) || isClosing)) {
+<div class="project-overlay-position" [class.is-closing]="isClosing">
+  <article class="project-overlay" [class.is-closing]="isClosing">
     <app-buttons class="overlay-close" type="button" variant="close" imgSrc="/assets/icons/close-small.svg"
       iconHoverSrc="/assets/icons/close-small-hover.svg" (click)="onClose()">
     </app-buttons>
@@ -35,7 +35,8 @@
       <img class="project-img" [ngSrc]="currentProjectImage" alt="Project screenshot" width="520" height="370" />
       }
     </div>
-    <app-buttons class="overlay-next" [label]="'projects.overlay.nextBtn' | translate" variant="secondary" (click)="showNextProject()"></app-buttons>
+    <app-buttons class="overlay-next" [label]="'projects.overlay.nextBtn' | translate" variant="secondary"
+      (click)="showNextProject()"></app-buttons>
   </article>
 </div>
 }
